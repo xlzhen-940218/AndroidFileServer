@@ -1,0 +1,384 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ body {
+     background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+     min-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 20px;
+ }
+
+ .container {
+     width: 100%;
+     max-width: 1200px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 30px;
+ }
+
+ header {
+     text-align: center;
+     color: white;
+ }
+
+ header h1 {
+     font-size: 2.8rem;
+     margin-bottom: 10px;
+     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+ }
+
+ header p {
+     font-size: 1.2rem;
+     opacity: 0.9;
+     max-width: 600px;
+     margin: 0 auto;
+ }
+
+ .device-card {
+     background: linear-gradient(to bottom right, #2c3e50, #1a1f25);
+     border-radius: 25px;
+     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+     overflow: hidden;
+     width: 100%;
+     max-width: 900px;
+     display: flex;
+     flex-direction: column;
+     color: white;
+     position: relative;
+ }
+
+ .device-header {
+     padding: 25px;
+     text-align: center;
+     background: rgba(0, 0, 0, 0.2);
+     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+ }
+
+ .device-header h2 {
+     font-size: 2.2rem;
+     margin-bottom: 8px;
+     color: #64b5f6;
+ }
+
+ .device-header p {
+     font-size: 1.1rem;
+     color: #bbbbbb;
+ }
+
+ .device-body {
+     display: flex;
+     padding: 30px;
+ }
+
+ .phone-display {
+     flex: 1;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 20px;
+ }
+
+ .phone-frame {
+     width: 280px;
+     height: 580px;
+     background: linear-gradient(to bottom, #111111, #333333);
+     border-radius: 40px;
+     position: relative;
+     box-shadow: 0 0 0 12px #1a1a1a,
+         0 0 0 15px #333333,
+         0 20px 50px rgba(0, 0, 0, 0.7);
+     overflow: hidden;
+ }
+
+ .phone-screen {
+     position: absolute;
+     top: 20px;
+     left: 10px;
+     right: 10px;
+     bottom: 20px;
+     background: linear-gradient(135deg, #1a237e, #283593);
+     border-radius: 30px;
+     overflow: hidden;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     padding: 20px;
+     text-align: center;
+ }
+
+ .status-info {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     padding: 20px;
+ }
+
+ .status-item {
+     margin-bottom: 30px;
+     background: rgba(255, 255, 255, 0.07);
+     padding: 20px;
+     border-radius: 15px;
+     transition: transform 0.3s ease;
+ }
+
+ .status-item:hover {
+     transform: translateY(-5px);
+     background: rgba(255, 255, 255, 0.1);
+ }
+
+ .status-title {
+     display: flex;
+     align-items: center;
+     margin-bottom: 15px;
+     color: #64b5f6;
+ }
+
+ .status-title i {
+     font-size: 1.8rem;
+     margin-right: 15px;
+ }
+
+ .status-title h3 {
+     font-size: 1.5rem;
+ }
+
+ .storage-bar {
+     height: 20px;
+     background: rgba(0, 0, 0, 0.3);
+     border-radius: 10px;
+     margin-top: 10px;
+     overflow: hidden;
+ }
+
+ .storage-fill {
+     height: 100%;
+     width: 65%;
+     background: linear-gradient(to right, #4a148c, #7b1fa2);
+     border-radius: 10px;
+     position: relative;
+     transition: width 0.5s ease;
+ }
+
+ .battery-level {
+     display: flex;
+     align-items: center;
+     margin-top: 10px;
+ }
+
+ .battery-container {
+     width: 200px;
+     height: 40px;
+     background: rgba(0, 0, 0, 0.3);
+     border-radius: 8px;
+     position: relative;
+     margin-right: 15px;
+     overflow: hidden;
+ }
+
+ .battery-fill {
+     height: 100%;
+     width: 75%;
+     background: linear-gradient(to right, #2e7d32, #4caf50);
+     border-radius: 8px;
+     transition: width 0.5s ease;
+ }
+
+ .battery-cap {
+     position: absolute;
+     right: -8px;
+     top: 10px;
+     width: 6px;
+     height: 20px;
+     background: rgba(255, 255, 255, 0.5);
+     border-radius: 0 3px 3px 0;
+ }
+
+ .device-footer {
+     padding: 30px;
+     display: flex;
+     justify-content: center;
+     background: rgba(0, 0, 0, 0.2);
+     border-top: 1px solid rgba(255, 255, 255, 0.1);
+ }
+
+ .connect-btn {
+     padding: 18px 50px;
+     font-size: 1.4rem;
+     border: none;
+     border-radius: 50px;
+     background: #616161;
+     color: white;
+     cursor: pointer;
+     transition: all 0.4s ease;
+     position: relative;
+     overflow: hidden;
+     min-width: 300px;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+ }
+
+ .connect-btn.active {
+     background: linear-gradient(to right, #00c853, #1de9b6);
+     box-shadow: 0 5px 25px rgba(0, 200, 83, 0.4);
+ }
+
+ .connect-btn:disabled {
+     cursor: not-allowed;
+ }
+
+ .pulse {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     background: rgba(255, 255, 255, 0.1);
+     opacity: 0;
+     border-radius: 50px;
+     animation: pulse 2s infinite;
+ }
+
+ @keyframes pulse {
+     0% {
+         transform: scale(0.8);
+         opacity: 0;
+     }
+
+     50% {
+         opacity: 1;
+     }
+
+     100% {
+         transform: scale(1.2);
+         opacity: 0;
+     }
+ }
+
+ .status-indicator {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-top: 15px;
+     font-size: 1.1rem;
+ }
+
+ .indicator-dot {
+     width: 12px;
+     height: 12px;
+     border-radius: 50%;
+     background: #f44336;
+     margin-right: 10px;
+     box-shadow: 0 0 10px #f44336;
+ }
+
+ .indicator-dot.connected {
+     background: #00c853;
+     box-shadow: 0 0 10px #00c853;
+ }
+
+ .phone-content {
+     color: white;
+     text-align: center;
+ }
+
+ .phone-content h3 {
+     font-size: 1.5rem;
+     margin: 15px 0;
+     color: #bb86fc;
+ }
+
+ .phone-content p {
+     font-size: 0.9rem;
+     opacity: 0.8;
+     margin: 5px 0;
+ }
+
+ .android-logo {
+     font-size: 4rem;
+     color: #a4c639;
+     margin-bottom: 15px;
+ }
+
+ .control-panel {
+     background: rgba(0, 0, 0, 0.3);
+     padding: 20px;
+     border-radius: 15px;
+     margin-top: 20px;
+     width: 100%;
+ }
+
+ .control-row {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 15px;
+     margin-bottom: 15px;
+ }
+
+ .control-group {
+     flex: 1;
+     min-width: 200px;
+ }
+
+ .control-group label {
+     display: block;
+     margin-bottom: 5px;
+     color: #bbbbbb;
+ }
+
+ .control-group input,
+ .control-group select {
+     width: 100%;
+     padding: 10px;
+     border-radius: 8px;
+     border: none;
+     background: rgba(255, 255, 255, 0.1);
+     color: white;
+ }
+
+ .update-btn {
+     background: #2196f3;
+     color: white;
+     border: none;
+     padding: 12px 25px;
+     border-radius: 8px;
+     cursor: pointer;
+     font-size: 1rem;
+     transition: background 0.3s;
+ }
+
+ .update-btn:hover {
+     background: #0d8aee;
+ }
+
+ @media (max-width: 768px) {
+     .device-body {
+         flex-direction: column;
+     }
+
+     .phone-display {
+         padding: 10px;
+     }
+
+     .phone-frame {
+         width: 220px;
+         height: 450px;
+     }
+
+     header h1 {
+         font-size: 2.2rem;
+     }
+
+     .connect-btn {
+         min-width: 250px;
+         padding: 15px 40px;
+         font-size: 1.2rem;
+     }
+ }

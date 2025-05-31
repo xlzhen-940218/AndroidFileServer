@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手机文件管理器</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="file-manager">
+        <!-- 左侧边栏 -->
+        <div class="sidebar">
+            <!-- 设备信息 -->
+            <div class="device-info">
+                <div class="device-header">
+                    <div class="phone-icon">
+                        <img id="phone-cover" width="40px" height="80px">
+                    </div>
+                    <div class="device-name">Xiaomi 12 Pro</div>
+                </div>
+                <div class="device-status">
+                    <div class="storage">128GB 可用 / 256GB</div>
+                    <div class="battery">
+                        <div class="battery-level" id="battery-level"></div>
+                        <span id="battery-text">78%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 菜单区域 -->
+            <div class="menu">
+                <div class="menu-title">分类</div>
+                <div class="menu-item active">
+                    <i class="fas fa-images"></i>
+                    <span>图片</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-film"></i>
+                    <span>视频</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-music"></i>
+                    <span>音频</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-file-alt"></i>
+                    <span>文档</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-cube"></i>
+                    <span>安装包</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-file-archive"></i>
+                    <span>压缩包</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-folder"></i>
+                    <span>文件管理</span>
+                </div>
+            </div>
+
+            <!-- 导出设置 -->
+            <div class="export-settings">
+                <div class="export-title">
+                    <i class="fas fa-folder-open"></i>
+                    <span>设置导出目录</span>
+                </div>
+                <div class="export-path">
+                    <span>/storage/emulated/0/Download</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- 主内容区 -->
+        <div class="content">
+            <div class="content-header">
+                <div class="view-toggle">
+                    <div class="view-btn active" id="gridBtn">
+                        <i class="fas fa-th"></i>
+                    </div>
+                    <div class="view-btn" id="listBtn">
+                        <i class="fas fa-list"></i>
+                    </div>
+                </div>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="搜索文件..." id="searchInput">
+                </div>
+            </div>
+
+            <!-- 文件区域 - 宫格视图 -->
+            <div class="files-container">
+                <div class="grid-view active" id="gridView">
+                    <!-- 动态生成宫格视图内容 -->
+                </div>
+
+                <!-- 文件区域 - 列表视图 -->
+                <div class="list-view" id="listView">
+                    <!-- 动态生成列表视图内容 -->
+                </div>
+            </div>
+            
+            <!-- 分页控件 -->
+            <div class="pagination" id="pagination">
+                <button class="page-btn prev-btn disabled">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <!-- 页码按钮会由JS动态生成 -->
+                <button class="page-btn next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <!-- 文件预览区 -->
+            <div class="preview-container" id="previewContainer">
+                <div class="preview-header">
+                    <div class="preview-title" id="previewTitle">
+                        <i class="fas fa-file-image"></i>
+                        <span id="fileName">度假照片.jpg</span>
+                    </div>
+                    <div class="close-preview" id="closePreview">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="preview-content" id="previewContent">
+                    <!-- 预览内容由JS动态生成 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
