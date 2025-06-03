@@ -11,43 +11,46 @@ from datetime import datetime
 import mimetypes
 import os
 
-def parse_ls_output(ls_text):
+def parse_ls_output(ls_text,dir:str):
     result = []
     lines = ls_text.strip().split('\n')
     
     for line in lines:
-        # 使用正则表达式匹配行结构
-        match = re.match(r'^([d-])([rwx-]{9})\s+(\d+)\s+(\w+)\s+(\w+)\s+(\d+\.?\d*[KMG]?)\s+(\d{4}-\d{2}-\d{2})\s+(\d{2}:\d{2})\s+(.+)$', line)
+        # 改进后的正则表达式，处理额外的空格和新的用户/组格式
+        match = re.match(r'^([d-])([rwxst-]{9})\s+(\d+)\s+(\S+)\s+(\S+)\s+(\d+\.?\d*[KMG]?)\s+(\d{4}-\d{2}-\d{2})\s+(\d{2}:\d{2})\s+(.+)$', line)
         if not match:
-            continue
-            
+            # 尝试备用模式处理大小字段前的空格
+            match = re.match(r'^([d-])([rwxst-]{9})\s+(\d+)\s+(\S+)\s+(\S+)\s+(\s*\d+\.?\d*[KMG]?)\s+(\d{4}-\d{2}-\d{2})\s+(\d{2}:\d{2})\s+(.+)$', line)
+            if not match:
+                continue
+        
         # 解析匹配的组
         entry_type = match.group(1)
         permissions = match.group(2)
         links = int(match.group(3))
         owner = match.group(4)
         group = match.group(5)
-        size_str = match.group(6)
+        size_str = match.group(6).strip()  # 移除可能的前导空格
         date_str = match.group(7)
         time_str = match.group(8)
         name = match.group(9)
         
-        # 处理文件大小
+        # 处理文件大小（支持小数和不同单位）
         size_multiplier = 1
-        if 'K' in size_str:
+        size_val = re.search(r'[\d.]+', size_str)
+        if size_val:
+            size_val = float(size_val.group(0))
+        else:
+            size_val = 0.0
+            
+        if 'K' in size_str.upper():
             size_multiplier = 1024
-            size_str = size_str.replace('K', '')
-        elif 'M' in size_str:
+        elif 'M' in size_str.upper():
             size_multiplier = 1024 * 1024
-            size_str = size_str.replace('M', '')
-        elif 'G' in size_str:
+        elif 'G' in size_str.upper():
             size_multiplier = 1024 * 1024 * 1024
-            size_str = size_str.replace('G', '')
         
-        try:
-            size = int(float(size_str) * size_multiplier)
-        except ValueError:
-            size = 0
+        size = int(size_val * size_multiplier)
         
         # 转换日期时间
         try:
@@ -63,14 +66,16 @@ def parse_ls_output(ls_text):
             mime_type, _ = mimetypes.guess_type(name)
             if mime_type is None:
                 mime_type = 'application/octet-stream'
-        
+        if not dir.endswith('/'):
+            dir = dir + '/'
         # 构建结果对象
         entry = {
-            "_data": name,
+            "_data": dir + name,
             "_display_name": name,
             "_size": size,
             "date_added": timestamp,
-            "mime_type": mime_type
+            "mime_type": mime_type,
+            "path":dir
         }
         result.append(entry)
     return result
@@ -107,8 +112,7 @@ def generate_thumbnail(media_path: str) -> str:
         ]
         
         # 执行命令（隐藏命令行窗口）
-        subprocess.run(ffmpeg_cmd, check=True, 
-                      creationflags=subprocess.CREATE_NO_WINDOW)
+        subprocess.run(ffmpeg_cmd, check=True)
         
         return str(thumb_path)
     
@@ -245,6 +249,10 @@ def parse_adb_output(output,type='image'):
                 else:
                     for key in ['_id', '_size']:
                         item[key] = int(item[key])
+                item['path'] = item['_data'][:item['_data'].rfind('/') + 1] # 提取路径
+                if item['_display_name'].__eq__('NULL'):
+                    item['_display_name'] = item['_data'].split('/')[-1]
+
                 result.append(item)
             except (ValueError, TypeError) as e:
                 logger.warning(f"解析行失败: {line} - {str(e)}")
@@ -558,18 +566,18 @@ def get_files():
         id: 设备ID
     """
     device_id = request.args.get('id')
-    
+    path = request.args.get('path', '/sdcard/')
     try:
         # 构建ADB命令
         adb_command = [
-            'shell', "ls", "-lh" ,"/sdcard/",
+            'shell', "ls", "-lh" ,f"'{path}'",
         ]
         
         # 执行命令
         result = run_adb_command(adb_command, device_id)
         
         # 解析输出
-        files_data = parse_ls_output(result.stdout)
+        files_data = parse_ls_output(result.stdout, dir=path)
         return jsonify(files_data)
 
     except RuntimeError as e:
@@ -714,4 +722,4 @@ def device_status():
 if __name__ == '__main__':
     ensure_directory(STORAGE_DIR)
     logger.info("应用启动，存储目录: %s", STORAGE_DIR)
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=5001)

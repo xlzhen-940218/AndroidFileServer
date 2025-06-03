@@ -312,6 +312,49 @@ body {
     color: var(--text-light);
 }
 
+/* 路径导航栏 */
+.path-bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 16px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.path-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 5px 8px;
+    border-radius: 8px;
+}
+
+.path-item:hover {
+    background: rgba(108, 99, 255, 0.1);
+}
+
+.path-item:last-child {
+    color: var(--primary);
+    font-weight: 500;
+    cursor: default;
+}
+
+.path-item:last-child:hover {
+    background: transparent;
+}
+
+.path-separator {
+    margin: 0 10px;
+    color: var(--text-light);
+}
+
+
 /* 文件区域样式 */
 .files-container {
     flex: 1;
@@ -396,7 +439,7 @@ body {
     font-size: 10px;
     font-weight: 500;
     color: var(--primary);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* 列表视图 */
@@ -661,13 +704,33 @@ body {
 }
 
 /* 文件类型颜色 */
-.image-color { color: #FF6B6B; }
-.video-color { color: #4D96FF; }
-.audio-color { color: #FFA41B; }
-.doc-color { color: #6BCB77; }
-.apk-color { color: #9C51E0; }
-.zip-color { color: #FF78F0; }
-.folder-color { color: #FFD93D; }
+.image-color {
+    color: #FF6B6B;
+}
+
+.video-color {
+    color: #4D96FF;
+}
+
+.audio-color {
+    color: #FFA41B;
+}
+
+.doc-color {
+    color: #6BCB77;
+}
+
+.apk-color {
+    color: #9C51E0;
+}
+
+.zip-color {
+    color: #FF78F0;
+}
+
+.folder-color {
+    color: #FFD93D;
+}
 
 /* 滚动条样式 */
 ::-webkit-scrollbar {
@@ -694,14 +757,17 @@ body {
         flex-direction: column;
         height: auto;
     }
+
     .sidebar {
         width: 100%;
         border-right: none;
         border-bottom: 1px solid var(--border);
     }
+
     .grid-view {
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
+
     .preview-container.active {
         width: 100%;
     }
@@ -712,15 +778,30 @@ body {
         flex-direction: column;
         align-items: flex-start;
     }
+
     .search-box {
         width: 100%;
         margin-top: 15px;
     }
+
     .grid-view {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         gap: 12px;
     }
+
     .preview-container.active {
         width: 100%;
+    }
+
+    .path-bar {
+        padding: 12px 15px;
+    }
+
+    .path-item {
+        font-size: 13px;
+    }
+
+    .path-separator {
+        margin: 0 6px;
     }
 }
