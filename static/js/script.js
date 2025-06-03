@@ -91,16 +91,19 @@ function getImages() {
     fetch(`/api/get_images?id=${serial_id}`)
     .then(response => response.json())
     .then(data => {
+        filesData = [];
         // 处理返回的文件数据
         data.forEach(file => {
+            const thumbnail_url = `/api/thumbnail?file_path=${encodeURIComponent(file._data)}&category=images&file_name=${encodeURIComponent(file._display_name)}&id=${serial_id}`;
             const url = `/api/file?file_path=${encodeURIComponent(file._data)}&category=images&file_name=${encodeURIComponent(file._display_name)}&id=${serial_id}`;
             filesData.push({
                 id: file._id,
                 name: file._display_name,
                 size: formatFileSize(file._size),
                 type: "image",
+                mime_type: file.mime_type,
                 date: formatTimestamp(file.date_added),
-                thumbnail: url,
+                thumbnail: thumbnail_url,
                 previewUrl: url
             });
         });
@@ -111,20 +114,95 @@ function getImages() {
     })
     .catch(error => {
         console.error('获取图片失败:', error);
-        // 使用模拟数据
-        for (let i = 1; i <= 52; i++) {
+    });
+}
+
+// 获取图片文件
+function getVideos() {
+    fetch(`/api/get_videos?id=${serial_id}`)
+    .then(response => response.json())
+    .then(data => {
+        filesData = [];
+        // 处理返回的文件数据
+        data.forEach(file => {
+            const thumbnail_url = `/api/thumbnail?file_path=${encodeURIComponent(file._data)}&category=video&file_name=${encodeURIComponent(file._display_name)}&id=${serial_id}`;
+            const url = `/api/file?file_path=${encodeURIComponent(file._data)}&category=video&file_name=${encodeURIComponent(file._display_name)}&id=${serial_id}`;
             filesData.push({
-                id: i,
-                name: `image_${i}.jpg`,
-                size: formatFileSize(Math.floor(Math.random() * 5000000) + 100000),
-                type: "image",
-                date: formatTimestamp(Date.now()/1000 - Math.floor(Math.random() * 2592000)),
-                thumbnail: `/api/file?file_name=image_${i}.jpg`,
-                previewUrl: `/api/file?file_name=image_${i}.jpg`
+                id: file._id,
+                name: file._display_name,
+                size: formatFileSize(file._size),
+                type: "video",
+                mime_type: file.mime_type,
+                date: formatTimestamp(file.date_added),
+                thumbnail: thumbnail_url,
+                previewUrl: url
             });
-        }
+        });
+        
+        // 更新文件列表
         filteredFiles = [...filesData];
         renderFiles();
+    })
+    .catch(error => {
+        console.error('获取视频失败:', error);
+    });
+}
+
+// 获取音频文件
+function getAudios() {
+    fetch(`/api/get_audios?id=${serial_id}`)
+    .then(response => response.json())
+    .then(data => {
+        filesData = [];
+        // 处理返回的文件数据
+        data.forEach(file => {
+            const url = `/api/file?file_path=${encodeURIComponent(file._data)}&category=audio&file_name=${encodeURIComponent(file._display_name)}&id=${serial_id}`;
+            filesData.push({
+                id: file._id,
+                name: file._display_name,
+                size: formatFileSize(file._size),
+                type: "audio",
+                mime_type: file.mime_type,
+                date: formatTimestamp(file.date_added),
+                previewUrl: url
+            });
+        });
+        
+        // 更新文件列表
+        filteredFiles = [...filesData];
+        renderFiles();
+    })
+    .catch(error => {
+        console.error('获取音频失败:', error);
+    });
+}
+
+// 获取文档文件
+function getDocuments(documentType) {
+    fetch(`/api/get_documents?id=${serial_id}&document_type=${documentType}`)
+    .then(response => response.json())
+    .then(data => {
+        filesData = [];
+        // 处理返回的文件数据
+        data.forEach(file => {
+            const url = `/api/file?file_path=${encodeURIComponent(file._data)}&category=${documentType}&file_name=${encodeURIComponent(file._display_name)}&id=${serial_id}`;
+            filesData.push({
+                id: file._id,
+                name: file._display_name,
+                size: formatFileSize(file._size),
+                type: documentType,
+                mime_type: file.mime_type,
+                date: formatTimestamp(file.date_added),
+                previewUrl: url
+            });
+        });
+        
+        // 更新文件列表
+        filteredFiles = [...filesData];
+        renderFiles();
+    })
+    .catch(error => {
+        console.error('获取文档失败:', error);
     });
 }
 
@@ -180,6 +258,20 @@ function setupEventListeners() {
         item.addEventListener('click', function() {
             menuItems.forEach(i => i.classList.remove('active'));
             this.classList.add('active');
+            console.log(`Clicked on ${this.id}`);
+            if(this.id == 'menu-images'){
+                getImages();
+            }else if(this.id == 'menu-videos'){
+                getVideos();
+            }else if(this.id == 'menu-audios'){
+                getAudios();
+            }else if(this.id == 'menu-documents'){
+                getDocuments('document');
+            }else if(this.id == 'menu-apk'){
+                getDocuments('apk');    
+            }else if(this.id == 'menu-archives'){
+                getDocuments('zip'); 
+            }
         });
     });
     
@@ -279,6 +371,22 @@ function renderGridItem(file) {
         case 'document':
             typeClass = 'doc-color';
             iconClass = 'fas fa-file-alt';
+            if(file.mime_type && file.mime_type.includes('pdf')) {
+                typeClass = 'pdf-color';
+                iconClass = 'fas fa-file-pdf';
+            }else if(file.mime_type && file.mime_type.includes('word')) {
+                typeClass = 'doc-color';
+                iconClass = 'fas fa-file-word';
+            }else if(file.mime_type && file.mime_type.includes('excel')) {
+                typeClass = 'xls-color';
+                iconClass = 'fas fa-file-excel';
+            }else if(file.mime_type && file.mime_type.includes('powerpoint')) {
+                typeClass = 'ppt-color';
+                iconClass = 'fas fa-file-powerpoint';
+            }else if(file.mime_type && file.mime_type.includes('text')) {
+                typeClass = 'txt-color';
+                iconClass = 'fas fa-file-alt';
+            }
             break;
         case 'apk':
             typeClass = 'apk-color';
@@ -337,6 +445,22 @@ function renderListItem(file) {
         case 'document':
             typeClass = 'doc-color';
             iconClass = 'fas fa-file-alt';
+             if(file.mime_type && file.mime_type.includes('pdf')) {
+                typeClass = 'pdf-color';
+                iconClass = 'fas fa-file-pdf';
+            }else if(file.mime_type && file.mime_type.includes('word')) {
+                typeClass = 'doc-color';
+                iconClass = 'fas fa-file-word';
+            }else if(file.mime_type && file.mime_type.includes('excel')) {
+                typeClass = 'xls-color';
+                iconClass = 'fas fa-file-excel';
+            }else if(file.mime_type && file.mime_type.includes('powerpoint')) {
+                typeClass = 'ppt-color';
+                iconClass = 'fas fa-file-powerpoint';
+            }else if(file.mime_type && file.mime_type.includes('text')) {
+                typeClass = 'txt-color';
+                iconClass = 'fas fa-file-alt';
+            }
             break;
         case 'apk':
             typeClass = 'apk-color';
@@ -453,7 +577,25 @@ function showPreview(file) {
         case 'image': iconClass = 'fas fa-image'; break;
         case 'video': iconClass = 'fas fa-video'; break;
         case 'audio': iconClass = 'fas fa-music'; break;
-        case 'document': iconClass = 'fas fa-file-alt'; break;
+        case 'document':
+             iconClass = 'fas fa-file-alt';
+              if(file.mime_type && file.mime_type.includes('pdf')) {
+               
+                iconClass = 'fas fa-file-pdf';
+            }else if(file.mime_type && file.mime_type.includes('word')) {
+               
+                iconClass = 'fas fa-file-word';
+            }else if(file.mime_type && file.mime_type.includes('excel')) {
+               
+                iconClass = 'fas fa-file-excel';
+            }else if(file.mime_type && file.mime_type.includes('powerpoint')) {
+               
+                iconClass = 'fas fa-file-powerpoint';
+            }else if(file.mime_type && file.mime_type.includes('text')) {
+              
+                iconClass = 'fas fa-file-alt';
+            }
+             break;
         case 'apk': iconClass = 'fas fa-cube'; break;
         case 'zip': iconClass = 'fas fa-file-archive'; break;
         case 'folder': iconClass = 'fas fa-folder'; break;
@@ -574,6 +716,17 @@ function showPreview(file) {
             case 'document': 
                 fileIcon = 'fas fa-file-alt'; 
                 fileColor = '#6BCB77';
+                 if(file.mime_type && file.mime_type.includes('pdf')) {
+                    fileIcon = 'fas fa-file-pdf';
+                }else if(file.mime_type && file.mime_type.includes('word')) {
+                    fileIcon = 'fas fa-file-word';
+                }else if(file.mime_type && file.mime_type.includes('excel')) {
+                    fileIcon = 'fas fa-file-excel';
+                }else if(file.mime_type && file.mime_type.includes('powerpoint')) {
+                    fileIcon = 'fas fa-file-powerpoint';
+                }else if(file.mime_type && file.mime_type.includes('text')) {
+                    fileIcon = 'fas fa-file-alt';
+                }
                 break;
             case 'apk': 
                 fileIcon = 'fas fa-cube'; 
