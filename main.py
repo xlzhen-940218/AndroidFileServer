@@ -1,13 +1,79 @@
 # app.py
+import logging
 from flask import Flask, render_template, request, jsonify, Response, make_response, send_file
 import subprocess
 import re
-import math
-import os
-import logging
 from functools import wraps
 
 from pathlib import Path
+
+from datetime import datetime
+import mimetypes
+import os
+
+def parse_ls_output(ls_text):
+    result = []
+    lines = ls_text.strip().split('\n')
+    
+    for line in lines:
+        # 使用正则表达式匹配行结构
+        match = re.match(r'^([d-])([rwx-]{9})\s+(\d+)\s+(\w+)\s+(\w+)\s+(\d+\.?\d*[KMG]?)\s+(\d{4}-\d{2}-\d{2})\s+(\d{2}:\d{2})\s+(.+)$', line)
+        if not match:
+            continue
+            
+        # 解析匹配的组
+        entry_type = match.group(1)
+        permissions = match.group(2)
+        links = int(match.group(3))
+        owner = match.group(4)
+        group = match.group(5)
+        size_str = match.group(6)
+        date_str = match.group(7)
+        time_str = match.group(8)
+        name = match.group(9)
+        
+        # 处理文件大小
+        size_multiplier = 1
+        if 'K' in size_str:
+            size_multiplier = 1024
+            size_str = size_str.replace('K', '')
+        elif 'M' in size_str:
+            size_multiplier = 1024 * 1024
+            size_str = size_str.replace('M', '')
+        elif 'G' in size_str:
+            size_multiplier = 1024 * 1024 * 1024
+            size_str = size_str.replace('G', '')
+        
+        try:
+            size = int(float(size_str) * size_multiplier)
+        except ValueError:
+            size = 0
+        
+        # 转换日期时间
+        try:
+            dt = datetime.strptime(f"{date_str} {time_str}", "%Y-%m-%d %H:%M")
+            timestamp = str(int(dt.timestamp()))
+        except ValueError:
+            timestamp = "0"
+        
+        # 确定MIME类型
+        if entry_type == 'd':
+            mime_type = 'inode/directory'
+        else:
+            mime_type, _ = mimetypes.guess_type(name)
+            if mime_type is None:
+                mime_type = 'application/octet-stream'
+        
+        # 构建结果对象
+        entry = {
+            "_data": name,
+            "_display_name": name,
+            "_size": size,
+            "date_added": timestamp,
+            "mime_type": mime_type
+        }
+        result.append(entry)
+    return result
 
 def generate_thumbnail(media_path: str) -> str:
     """
@@ -477,6 +543,42 @@ def get_documents():
         }), 500
     except Exception as e:
         logger.exception("获取文档时发生意外错误")
+        return jsonify({
+            "error": "服务器内部错误",
+            "details": str(e)
+        }), 500
+    
+@app.route('/api/get_files', methods=['GET'])
+@device_id_required
+def get_files():
+    """
+    API: 获取设备文件列表
+
+    参数:
+        id: 设备ID
+    """
+    device_id = request.args.get('id')
+    
+    try:
+        # 构建ADB命令
+        adb_command = [
+            'shell', "ls", "-lh" ,"/sdcard/",
+        ]
+        
+        # 执行命令
+        result = run_adb_command(adb_command, device_id)
+        
+        # 解析输出
+        files_data = parse_ls_output(result.stdout)
+        return jsonify(files_data)
+
+    except RuntimeError as e:
+        return jsonify({
+            "error": "ADB命令执行失败",
+            "details": str(e)
+        }), 500
+    except Exception as e:
+        logger.exception("获取文件时发生意外错误")
         return jsonify({
             "error": "服务器内部错误",
             "details": str(e)

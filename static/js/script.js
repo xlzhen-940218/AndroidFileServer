@@ -206,6 +206,48 @@ function getDocuments(documentType) {
     });
 }
 
+function getFileCategory(file) {
+    const mimeType = file.mime_type;
+    if (mimeType.startsWith("image/")) {
+        return "image";
+    } else if (mimeType.startsWith("video/")) {
+        return "video";
+    } else if (mimeType.startsWith("audio/")) {
+        return "audio";
+    } else {
+        return "document";
+    }
+}
+
+// 获取音频文件
+function getFiles() {
+    fetch(`/api/get_files?id=${serial_id}`)
+    .then(response => response.json())
+    .then(data => {
+        filesData = [];
+        // 处理返回的文件数据
+        data.forEach(file => {
+            const url = `/api/file?file_path=${encodeURIComponent(file._data)}&category=${file.mime_type == "inode/directory"?"folder":getFileCategory(file)}&file_name=${encodeURIComponent(file._display_name)}&id=${serial_id}`;
+            filesData.push({
+                id: file._id,
+                name: file._display_name,
+                size: formatFileSize(file._size),
+                type: file.mime_type == "inode/directory"?"folder":getFileCategory(file),
+                mime_type: file.mime_type,
+                date: formatTimestamp(file.date_added),
+                previewUrl: url
+            });
+        });
+        
+        // 更新文件列表
+        filteredFiles = [...filesData];
+        renderFiles();
+    })
+    .catch(error => {
+        console.error('获取文件失败:', error);
+    });
+}
+
 // 格式化文件大小
 function formatFileSize(bytes) {
     if (bytes < 1024) {
@@ -271,6 +313,8 @@ function setupEventListeners() {
                 getDocuments('apk');    
             }else if(this.id == 'menu-archives'){
                 getDocuments('zip'); 
+            }else if(this.id == 'menu-file-manager'){
+                getFiles();
             }
         });
     });
