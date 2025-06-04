@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html> <!-- 移除硬编码的 lang 属性 -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,34 +30,34 @@
 
             <!-- 菜单区域 -->
             <div class="menu">
-                <div class="menu-title">分类</div>
+                <div class="menu-title" data-lang="categories">分类</div>
                 <div id="menu-images" class="menu-item active">
                     <i class="fas fa-images"></i>
-                    <span>图片</span>
+                    <span data-lang="images">图片</span>
                 </div>
                 <div id="menu-videos" class="menu-item">
                     <i class="fas fa-film"></i>
-                    <span>视频</span>
+                    <span data-lang="videos">视频</span>
                 </div>
                 <div id="menu-audios" class="menu-item">
                     <i class="fas fa-music"></i>
-                    <span>音频</span>
+                    <span data-lang="audios">音频</span>
                 </div>
                 <div id="menu-documents" class="menu-item">
                     <i class="fas fa-file-alt"></i>
-                    <span>文档</span>
+                    <span data-lang="documents">文档</span>
                 </div>
                 <div id="menu-apk" class="menu-item">
                     <i class="fas fa-cube"></i>
-                    <span>安装包</span>
+                    <span data-lang="apk">安装包</span>
                 </div>
                 <div id="menu-archives" class="menu-item">
                     <i class="fas fa-file-archive"></i>
-                    <span>压缩包</span>
+                    <span data-lang="archives">压缩包</span>
                 </div>
                 <div id="menu-file-manager" class="menu-item">
                     <i class="fas fa-folder"></i>
-                    <span>文件管理</span>
+                    <span data-lang="file_manager">文件管理</span>
                 </div>
             </div>
 
@@ -65,7 +65,7 @@
             <div class="export-settings">
                 <div class="export-title">
                     <i class="fas fa-folder-open"></i>
-                    <span>设置导出目录</span>
+                    <span data-lang="export_settings">设置导出目录</span>
                 </div>
                 <div class="export-path">
                     <span>/storage/emulated/0/Download</span>
@@ -87,7 +87,7 @@
                 </div>
                 <div class="search-box">
                     <i class="fas fa-search"></i>
-                    <input type="text" placeholder="搜索文件..." id="searchInput">
+                    <input type="text" placeholder="搜索文件..." id="searchInput" data-lang="search_placeholder">
                 </div>
             </div>
 
@@ -95,7 +95,7 @@
             <div class="path-bar" id="pathBar">
                 <div class="path-item" data-path="/">
                     <i class="fas fa-home"></i>
-                    <span>主目录</span>
+                    <span data-lang="home">主目录</span>
                 </div>
             </div>
 

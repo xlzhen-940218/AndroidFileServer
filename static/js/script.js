@@ -1,3 +1,4 @@
+// script.js
 // 全局变量
 const params = new URLSearchParams(window.location.search);
 const serial_id = params.get('id') || 'default';
@@ -11,6 +12,134 @@ let filteredFiles = [...filesData];
 let currentPreviewFile = null;
 let currentPath = ''; // 当前路径
 let pathHistory = []; // 路径历史
+
+// 多语言支持
+let currentLang = 'zh-CN'; // 默认语言
+const langResources = {
+    'zh-CN': {
+        'title': '手机文件管理器',
+        'categories': '分类',
+        'images': '图片',
+        'videos': '视频',
+        'audios': '音频',
+        'documents': '文档',
+        'apk': '安装包',
+        'archives': '压缩包',
+        'file_manager': '文件管理',
+        'export_settings': '设置导出目录',
+        'search_placeholder': '搜索文件...',
+        'home': '主目录',
+        // 文件类型
+        'image': '图片',
+        'video': '视频',
+        'audio': '音频',
+        'document': '文档',
+        'apk': '安装包',
+        'zip': '压缩包',
+        'folder': '文件夹',
+        // 预览中的标签
+        'type': '类型',
+        'size': '大小',
+        'date': '创建日期',
+        'resolution': '分辨率',
+        'duration': '时长',
+        'location': '位置',
+        'download': '下载',
+        'share': '分享',
+        'delete': '删除',
+        'items_count': '包含项目'
+    },
+    'en': {
+        'title': 'Mobile File Manager',
+        'categories': 'Categories',
+        'images': 'Images',
+        'videos': 'Videos',
+        'audios': 'Audios',
+        'documents': 'Documents',
+        'apk': 'APK',
+        'archives': 'Archives',
+        'file_manager': 'File Manager',
+        'export_settings': 'Export Directory',
+        'search_placeholder': 'Search files...',
+        'home': 'Home',
+        // 文件类型
+        'image': 'Image',
+        'video': 'Video',
+        'audio': 'Audio',
+        'document': 'Document',
+        'apk': 'APK',
+        'zip': 'Archive',
+        'folder': 'Folder',
+        // 预览中的标签
+        'type': 'Type',
+        'size': 'Size',
+        'date': 'Date',
+        'resolution': 'Resolution',
+        'duration': 'Duration',
+        'location': 'Location',
+        'download': 'Download',
+        'share': 'Share',
+        'delete': 'Delete',
+        'items_count': 'Items'
+    }
+};
+
+// 翻译函数
+function t(key) {
+    return langResources[currentLang][key] || key;
+}
+
+// 检测并设置语言
+function detectAndSetLanguage() {
+    const userLang = navigator.language || navigator.userLanguage;
+    // 支持的语言列表
+    const supportedLangs = ['zh-CN', 'en'];
+    
+    // 检查完整匹配
+    if (supportedLangs.includes(userLang)) {
+        currentLang = userLang;
+    } 
+    // 检查主要语言部分（如 zh、en）
+    else {
+        const primaryLang = userLang.split('-')[0];
+        const matchedLang = supportedLangs.find(lang => lang.startsWith(primaryLang));
+        if (matchedLang) {
+            currentLang = matchedLang;
+        }
+    }
+    
+    // 设置HTML lang属性
+    document.documentElement.lang = currentLang;
+    
+    // 应用翻译
+    applyTranslations();
+}
+
+// 应用翻译到页面元素
+function applyTranslations() {
+    // 设置页面标题
+    document.title = t('title');
+    
+    // 翻译所有带有data-lang属性的元素
+    const elements = document.querySelectorAll('[data-lang]');
+    elements.forEach(el => {
+        const key = el.getAttribute('data-lang');
+        if (key) {
+            el.textContent = t(key);
+        }
+    });
+    
+    // 翻译输入框placeholder
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        searchInput.placeholder = t('search_placeholder');
+    }
+    
+    // 重新渲染文件列表（如果需要）
+    if (filteredFiles.length > 0) {
+        renderFiles();
+    }
+}
 
 // DOM 元素
 const gridView = document.getElementById('gridView');
@@ -28,6 +157,9 @@ const pathBar = document.getElementById('pathBar');
 
 // 初始化函数
 function init() {
+    // 检测并设置语言
+    detectAndSetLanguage();
+    
     // 获取设备信息
     fetchDeviceInfo();
 
@@ -243,7 +375,7 @@ function renderPathBar() {
     const homeItem = document.createElement('div');
     homeItem.className = 'path-item';
     homeItem.dataset.path = '/';
-    homeItem.innerHTML = '<i class="fas fa-home"></i><span>主目录</span>';
+    homeItem.innerHTML = `<i class="fas fa-home"></i><span>${t('home')}</span>`;
     homeItem.addEventListener('click', () => navigateToPath('/sdcard/'));
     pathBar.appendChild(homeItem);
 
@@ -642,16 +774,7 @@ function renderListItem(file) {
 
 // 获取类型名称
 function getTypeName(type) {
-    const typeNames = {
-        'image': '图片',
-        'video': '视频',
-        'audio': '音频',
-        'document': '文档',
-        'apk': '安装包',
-        'zip': '压缩包',
-        'folder': '文件夹'
-    };
-    return typeNames[type] || '文件';
+    return t(type) || type;
 }
 
 // 渲染分页控件
@@ -751,19 +874,19 @@ function showPreview(file) {
             <img src="${file.previewUrl}" alt="${file.name}" class="preview-image">
             <div class="preview-details">
                 <div class="detail-item">
-                    <span class="detail-label">类型</span>
-                    <span class="detail-value">图片</span>
+                    <span class="detail-label">${t('type')}</span>
+                    <span class="detail-value">${t('image')}</span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">大小</span>
+                    <span class="detail-label">${t('size')}</span>
                     <span class="detail-value">${file.size}</span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">创建日期</span>
+                    <span class="detail-label">${t('date')}</span>
                     <span class="detail-value">${file.date}</span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">分辨率</span>
+                    <span class="detail-label">${t('resolution')}</span>
                     <span class="detail-value">1920×1080</span>
                 </div>
             </div>
@@ -772,23 +895,23 @@ function showPreview(file) {
         previewHTML = `
             <video controls class="preview-video">
                 <source src="${file.previewUrl}" type="video/mp4">
-                您的浏览器不支持视频播放
+                ${t('video_not_supported')}
             </video>
             <div class="preview-details">
                 <div class="detail-item">
-                    <span class="detail-label">类型</span>
-                    <span class="detail-value">视频</span>
+                    <span class="detail-label">${t('type')}</span>
+                    <span class="detail-value">${t('video')}</span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">大小</span>
+                    <span class="detail-label">${t('size')}</span>
                     <span class="detail-value">${file.size}</span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">创建日期</span>
+                    <span class="detail-label">${t('date')}</span>
                     <span class="detail-value">${file.date}</span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">时长</span>
+                    <span class="detail-label">${t('duration')}</span>
                     <span class="detail-value">5:32</span>
                 </div>
             </div>
@@ -799,24 +922,24 @@ function showPreview(file) {
                 <i class="fas fa-music" style="font-size: 80px; color: #FFA41B; margin-bottom: 20px;"></i>
                 <audio controls style="width: 100%;">
                     <source src="${file.previewUrl}" type="audio/mpeg">
-                    您的浏览器不支持音频播放
+                    ${t('audio_not_supported')}
                 </audio>
             </div>
             <div class="preview-details">
                 <div class="detail-item">
-                    <span class="detail-label">类型</span>
-                    <span class="detail-value">音频</span>
+                    <span class="detail-label">${t('type')}</span>
+                    <span class="detail-value">${t('audio')}</span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">大小</span>
+                    <span class="detail-label">${t('size')}</span>
                     <span class="detail-value">${file.size}</span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">创建日期</span>
+                    <span class="detail-label">${t('date')}</span>
                     <span class="detail-value">${file.date}</span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">时长</span>
+                    <span class="detail-label">${t('duration')}</span>
                     <span class="detail-value">3:45</span>
                 </div>
             </div>
@@ -830,19 +953,19 @@ function showPreview(file) {
             </div>
             <div class="preview-details">
                 <div class="detail-item">
-                    <span class="detail-label">类型</span>
-                    <span class="detail-value">文件夹</span>
+                    <span class="detail-label">${t('type')}</span>
+                    <span class="detail-value">${t('folder')}</span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">包含项目</span>
+                    <span class="detail-label">${t('items_count')}</span>
                     <span class="detail-value">${file.size}</span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">创建日期</span>
+                    <span class="detail-label">${t('date')}</span>
                     <span class="detail-value">${file.date}</span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">位置</span>
+                    <span class="detail-label">${t('location')}</span>
                     <span class="detail-value">/storage/emulated/0/${file.name}</span>
                 </div>
             </div>
@@ -889,19 +1012,19 @@ function showPreview(file) {
             </div>
             <div class="preview-details">
                 <div class="detail-item">
-                    <span class="detail-label">类型</span>
-                    <span class="detail-value">${getTypeName(file.type)}</span>
+                    <span class="detail-label">${t('type')}</span>
+                    <span class="detail-value">${t(file.type)}</span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">大小</span>
+                    <span class="detail-label">${t('size')}</span>
                     <span class="detail-value">${file.size}</span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">创建日期</span>
+                    <span class="detail-label">${t('date')}</span>
                     <span class="detail-value">${file.date}</span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">位置</span>
+                    <span class="detail-label">${t('location')}</span>
                     <span class="detail-value">/storage/emulated/0/Download</span>
                 </div>
             </div>
@@ -912,13 +1035,13 @@ function showPreview(file) {
     previewHTML += `
         <div class="file-actions">
             <button onclick="window.open('${file.previewUrl}')" class="action-btn">
-                <i class="fas fa-download"></i> 下载
+                <i class="fas fa-download"></i> ${t('download')}
             </button>
             <button class="action-btn">
-                <i class="fas fa-share-alt"></i> 分享
+                <i class="fas fa-share-alt"></i> ${t('share')}
             </button>
             <button class="action-btn">
-                <i class="fas fa-trash-alt"></i> 删除
+                <i class="fas fa-trash-alt"></i> ${t('delete')}
             </button>
         </div>
     `;
