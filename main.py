@@ -271,6 +271,61 @@ def wait_connect():
 def home():
     return render_template('index.html')
 
+@app.route('/api/storagedir')
+def get_storage_dir():
+    """API: 获取存储目录"""
+    return jsonify({'storage_dir': STORAGE_DIR})
+
+@app.route('/api/delete_file')
+@device_id_required
+def delete_files(device_id):
+    data = request.args.get('data')
+    if not data:
+        return {'error': 'Missing file'}, 400
+
+    # 在这里处理删除文件的逻辑
+    logger.info(f"Deleting file: {data} from device: {device_id}")
+    # 调用ADB命令删除文件
+    adb_command = ['shell', 'rm', f'"{data}"']
+    run_adb_command(adb_command, device_id)
+
+    return {'message': 'Files deleted successfully'}, 200
+
+@app.route('/api/upload', methods=['POST'])
+@device_id_required
+def upload_file(device_id):
+    category = request.args.get('category')
+
+    if not category:
+        return {'error': 'Missing category'}, 400
+
+    if 'file' not in request.files:
+        return {'error': 'No file part'}, 400
+
+    file = request.files['file']
+    if file.filename == '':
+        return {'error': 'No selected file'}, 400
+
+    if file:
+        if os.path.exists('uploads') is False:
+            os.makedirs('uploads')
+        if not os.path.exists(os.path.join('uploads', category)):
+            os.makedirs(os.path.join('uploads', category))
+        filepath = os.path.join('uploads', category, file.filename)
+        # Here, the actual file writing happens.
+        # For simplicity, we just save the file directly.
+        # The progress will be handled by XMLHttpRequest on the client-side.
+        file.save(filepath)
+        phone_path = f'/sdcard/PC/{category}/{file.filename}'
+        phone_dir = f'/sdcard/PC/{category}/'
+        adb_command = [
+            'push', f'{os.path.abspath(filepath)}', phone_path
+        ]
+    
+        result = run_adb_command(adb_command, device_id)
+        return {'message': 'File uploaded successfully', 'filename': file.filename, 'phonedir': phone_dir}, 200
+
+
 @app.route('/api/file', methods=['GET'])
 @device_id_required
 @handle_api_errors

@@ -12,6 +12,9 @@ let filteredFiles = [...filesData];
 let currentPreviewFile = null;
 let currentPath = ''; // 当前路径
 let pathHistory = []; // 路径历史
+let selectedFiles = [];
+let currentCategory = 'image';
+let currentUploadIndex = 0;
 
 // 多语言支持
 let currentLang = 'zh-CN'; // 默认语言
@@ -45,9 +48,14 @@ const langResources = {
         'duration': '时长',
         'location': '位置',
         'download': '下载',
-        'share': '分享',
+        'rename': '重命名',
         'delete': '删除',
-        'items_count': '包含项目'
+        'items_count': '包含项目',
+        'upload_files': '上传文件',
+        'drag_and_drop': '拖拽文件到此处上传',
+        'allowed_file_types': '允许的文件类型：',
+        'start_upload': '开始上传',
+        'cancel_upload': '取消上传'
     },
     'en': {
         'title': 'Mobile File Manager',
@@ -78,9 +86,14 @@ const langResources = {
         'duration': 'Duration',
         'location': 'Location',
         'download': 'Download',
-        'share': 'Share',
+        'rename': 'Rename',
         'delete': 'Delete',
-        'items_count': 'Items'
+        'items_count': 'Items',
+        'upload_files': 'Upload Files',
+        'drag_and_drop': 'Drag and drop files here to upload',
+        'allowed_file_types': 'Allowed file types: ',
+        'start_upload': 'Start Upload',
+        'cancel_upload': 'Cancel Upload'
     }
 };
 
@@ -94,11 +107,11 @@ function detectAndSetLanguage() {
     const userLang = navigator.language || navigator.userLanguage;
     // 支持的语言列表
     const supportedLangs = ['zh-CN', 'en'];
-    
+
     // 检查完整匹配
     if (supportedLangs.includes(userLang)) {
         currentLang = userLang;
-    } 
+    }
     // 检查主要语言部分（如 zh、en）
     else {
         const primaryLang = userLang.split('-')[0];
@@ -107,10 +120,10 @@ function detectAndSetLanguage() {
             currentLang = matchedLang;
         }
     }
-    
+
     // 设置HTML lang属性
     document.documentElement.lang = currentLang;
-    
+
     // 应用翻译
     applyTranslations();
 }
@@ -119,7 +132,7 @@ function detectAndSetLanguage() {
 function applyTranslations() {
     // 设置页面标题
     document.title = t('title');
-    
+
     // 翻译所有带有data-lang属性的元素
     const elements = document.querySelectorAll('[data-lang]');
     elements.forEach(el => {
@@ -128,13 +141,13 @@ function applyTranslations() {
             el.textContent = t(key);
         }
     });
-    
+
     // 翻译输入框placeholder
     const searchInput = document.getElementById('searchInput');
     if (searchInput) {
         searchInput.placeholder = t('search_placeholder');
     }
-    
+
     // 重新渲染文件列表（如果需要）
     if (filteredFiles.length > 0) {
         renderFiles();
@@ -154,19 +167,45 @@ const previewTitle = document.getElementById('previewTitle');
 const fileName = document.getElementById('fileName');
 const closePreview = document.getElementById('closePreview');
 const pathBar = document.getElementById('pathBar');
+const uploadBtn = document.getElementById('uploadBtn');
+const uploadPanel = document.getElementById('uploadPanel');
+const closeUpload = document.getElementById('closeUpload');
+const uploadArea = document.getElementById('uploadArea');
+const fileInput = document.getElementById('fileInput');
+const confirmUpload = document.getElementById('confirmUpload');
+const cancelUpload = document.getElementById('cancelUpload');
+const uploadHint = document.getElementById('uploadHint');
+const uploadProgress = document.getElementById('uploadProgress');
+const progressFill = document.getElementById('progressFill');
+const progressText = document.getElementById('progressText');
+const exportPath = document.getElementById('exportPath');
 
 // 初始化函数
 function init() {
     // 检测并设置语言
     detectAndSetLanguage();
-    
+
     // 获取设备信息
     fetchDeviceInfo();
+    fetchStorageInfo();
 
     pathBar.style.display = 'none'; // 初始隐藏路径导航栏
 
     // 设置事件监听器
     setupEventListeners();
+}
+
+function fetchStorageInfo() {
+    fetch('/api/storagedir', {
+        method: 'GET'
+    })
+        .then(response => response.json())
+        .then(data => {
+            exportPath.innerText = data.storage_dir;
+        })
+        .catch(error => {
+            console.error('获取存储信息失败:', error);
+        });
 }
 
 // 获取设备信息
@@ -205,6 +244,50 @@ function fetchDeviceInfo() {
         });
 }
 
+function deleteFile(_data) {
+    fetch(`/api/delete_file?id=${serial_id}&data=${_data}`, {
+        method: 'GET'
+    })
+        .then(response => response.json())
+        .then(data => {
+            previewContainer.classList.remove('active');
+
+            setTimeout(() => {
+                switch (currentCategory) {
+                    case 'image':
+                        getImages();
+                        break;
+                    case 'video':
+                        getVideos();
+                        break;
+                    case 'audio':
+                        getAudios();
+                        break;
+                    case 'document':
+                        getDocuments('document');
+                        break;
+                    case 'apk':
+                        getDocuments('apk');
+                        break;
+                    case 'zip':
+                        getDocuments('zip');
+                        break;
+                    case 'all':
+                        pathBar.style.display = '';
+                        //currentPath = '';
+                        pathHistory = [];
+                        renderPathBar();
+                        navigateToPath(currentPath);
+                        break;
+                }
+            }, 500);
+
+        })
+        .catch(error => {
+            console.error('删除文件请求失败:', error);
+        });
+}
+
 // 更新电池状态
 function updateBattery(percent) {
     const batteryElement = document.getElementById('battery-level');
@@ -223,11 +306,29 @@ function updateBattery(percent) {
     batteryElement.style.setProperty('--battery-color', color);
 }
 
+
+// 更新上传提示
+function updateUploadHint() {
+    const typeNames = {
+        'image': 'Photos (JPG, PNG, GIF)',
+        'video': 'Videos (MP4, MOV, AVI)',
+        'audio': 'Audios (MP3, WAV)',
+        'document': 'Documents (PDF, DOC, DOCX)',
+        'apk': 'Apks (APK)',
+        'zip': 'Archives (ZIP, RAR)',
+        'all': 'All Types'
+    };
+
+    uploadHint.textContent = `Allowed file types: ${typeNames[currentCategory] || 'All Types'}`;
+}
+
 // 获取图片文件
 function getImages() {
     fetch(`/api/get_images?id=${serial_id}`)
         .then(response => response.json())
         .then(data => {
+            // 更新上传提示
+            updateUploadHint();
             filesData = [];
             currentPage = 1; // 重置当前页码
             // 处理返回的文件数据
@@ -236,6 +337,7 @@ function getImages() {
                 const url = `/api/file?file_path=${encodeURIComponent(file._data)}&category=images&file_name=${encodeURIComponent(file._display_name)}&id=${serial_id}`;
                 filesData.push({
                     id: file._id,
+                    data: file._data,
                     name: file._display_name,
                     size: formatFileSize(file._size),
                     type: "image",
@@ -243,7 +345,9 @@ function getImages() {
                     date: formatTimestamp(file.date_added),
                     thumbnail: thumbnail_url,
                     previewUrl: url,
-                    path:file.path
+                    path: file.path,
+                    width: file.width,
+                    height: file.height
                 });
             });
 
@@ -269,6 +373,7 @@ function getVideos() {
                 const url = `/api/file?file_path=${encodeURIComponent(file._data)}&category=video&file_name=${encodeURIComponent(file._display_name)}&id=${serial_id}`;
                 filesData.push({
                     id: file._id,
+                    data: file._data,
                     name: file._display_name,
                     size: formatFileSize(file._size),
                     type: "video",
@@ -276,7 +381,9 @@ function getVideos() {
                     date: formatTimestamp(file.date_added),
                     thumbnail: thumbnail_url,
                     previewUrl: url,
-                    path:file.path
+                    path: file.path,
+                    width: file.width,
+                    height: file.height
                 });
             });
 
@@ -301,13 +408,14 @@ function getAudios() {
                 const url = `/api/file?file_path=${encodeURIComponent(file._data)}&category=audio&file_name=${encodeURIComponent(file._display_name)}&id=${serial_id}`;
                 filesData.push({
                     id: file._id,
+                    data: file._data,
                     name: file._display_name,
                     size: formatFileSize(file._size),
                     type: "audio",
                     mime_type: file.mime_type,
                     date: formatTimestamp(file.date_added),
                     previewUrl: url,
-                    path:file.path
+                    path: file.path
                 });
             });
 
@@ -332,13 +440,14 @@ function getDocuments(documentType) {
                 const url = `/api/file?file_path=${encodeURIComponent(file._data)}&category=${documentType}&file_name=${encodeURIComponent(file._display_name)}&id=${serial_id}`;
                 filesData.push({
                     id: file._id,
+                    data: file._data,
                     name: file._display_name,
                     size: formatFileSize(file._size),
                     type: documentType,
                     mime_type: file.mime_type,
                     date: formatTimestamp(file.date_added),
                     previewUrl: url,
-                    path:file.path
+                    path: file.path
                 });
             });
 
@@ -383,7 +492,7 @@ function renderPathBar() {
     let currentPathStr = '';
     for (let i = 0; i < pathParts.length; i++) {
         currentPathStr += '/' + pathParts[i];
-       
+
         const separator = document.createElement('div');
         separator.className = 'path-separator';
         separator.innerHTML = '<i class="fas fa-chevron-right"></i>';
@@ -395,7 +504,7 @@ function renderPathBar() {
             pathItem.classList.add('current');
         }
         pathItem.dataset.path = currentPathStr;
-         if(pathItem.dataset.path === '/sdcard') {
+        if (pathItem.dataset.path === '/sdcard') {
             pathItem.dataset.path = '/sdcard/';
         }
         pathItem.textContent = pathParts[i];
@@ -419,16 +528,17 @@ function getFiles(path = '/sdcard/') {
             data.forEach(file => {
                 var thumbnail_url = null;
                 var category = null;
-                if(file.mime_type != "inode/directory"){
+                if (file.mime_type != "inode/directory") {
                     category = getFileCategory(file);
                     if (category === "images" || category === "videos") {
                         thumbnail_url = `/api/thumbnail?file_path=${encodeURIComponent(file._data)}&category=${category}&file_name=${encodeURIComponent(file._display_name)}&id=${serial_id}`;
                     }
                 }
-             
+
                 const url = `/api/file?file_path=${encodeURIComponent(file._data)}&category=${file.mime_type == "inode/directory" ? "folder" : category}&file_name=${encodeURIComponent(file._display_name)}&id=${serial_id}`;
                 filesData.push({
                     id: file._id,
+                    data: file._data,
                     name: file._display_name,
                     size: formatFileSize(file._size),
                     type: file.mime_type == "inode/directory" ? "folder" : category.substring(0, category.length - 1), // 去掉最后的 's'
@@ -436,7 +546,7 @@ function getFiles(path = '/sdcard/') {
                     date: formatTimestamp(file.date_added),
                     previewUrl: url,
                     thumbnail: thumbnail_url,
-                    path:file.path
+                    path: file.path
                 });
             });
 
@@ -499,6 +609,12 @@ function setupEventListeners() {
     const menuItems = document.querySelectorAll('.menu-item');
     menuItems.forEach(item => {
         item.addEventListener('click', function () {
+            // 记录当前分类
+            currentCategory = this.dataset.category || 'all';
+
+            // 更新上传提示
+            updateUploadHint();
+
             menuItems.forEach(i => i.classList.remove('active'));
             this.classList.add('active');
             console.log(`Clicked on ${this.id}`);
@@ -549,6 +665,173 @@ function setupEventListeners() {
     closePreview.addEventListener('click', () => {
         previewContainer.classList.remove('active');
     });
+
+    // 上传功能
+    uploadBtn.addEventListener('click', () => {
+        uploadPanel.classList.add('active');
+        selectedFiles = [];
+        fileInput.value = '';
+        progressFill.style.width = '0%';
+        progressText.textContent = '0%';
+        uploadProgress.style.display = 'none';
+    });
+
+    closeUpload.addEventListener('click', () => {
+        uploadPanel.classList.remove('active');
+    });
+
+    cancelUpload.addEventListener('click', () => {
+        uploadPanel.classList.remove('active');
+    });
+
+    uploadArea.addEventListener('click', () => {
+        fileInput.click();
+    });
+
+    fileInput.addEventListener('change', function (e) {
+        selectedFiles = Array.from(e.target.files);
+        if (selectedFiles.length > 0) {
+            uploadHint.textContent = `已选择 ${selectedFiles.length} 个文件`;
+        }
+    });
+
+    confirmUpload.addEventListener('click', () => {
+        if (selectedFiles.length === 0) {
+            alert('请先选择要上传的文件');
+            return;
+        }
+
+        // 检查文件类型限制
+        if (!validateFileTypes(selectedFiles)) {
+            return;
+        }
+
+        // 显示上传进度
+        uploadProgress.style.display = 'block';
+        console.log('开始上传文件:', selectedFiles);
+
+        // 模拟上传过程
+        // let progress = 0;
+        // const interval = setInterval(() => {
+        //     progress += 5;
+        //     if (progress > 100) progress = 100;
+
+        //     progressFill.style.width = `${progress}%`;
+        //     progressText.textContent = `${progress}%`;
+
+        //     if (progress === 100) {
+        //         clearInterval(interval);
+
+        //         // 添加文件到列表
+        //         //addFilesToList(selectedFiles);
+
+        //         // 关闭上传面板
+        //         setTimeout(() => {
+        //             uploadPanel.classList.remove('active');
+        //             alert('文件上传成功！');
+        //         }, 500);
+        //     }
+        // }, 100);
+        for (const file of selectedFiles) {
+            const formData = new FormData();
+            formData.append('file', file); // 只上传第一个文件
+
+            const xhr = new XMLHttpRequest();
+
+            // Listen for the upload progress event
+            xhr.upload.onprogress = (event) => {
+                if (event.lengthComputable) {
+                    const percentComplete = (event.loaded / event.total) * 100;
+                    progressFill.style.width = percentComplete.toFixed(2) + '%';
+                    progressText.textContent = percentComplete.toFixed(2) + '%';
+                }
+            };
+
+            // Listen for load (success) event
+            xhr.onload = () => {
+                if (xhr.status === 200) {
+                    const response = JSON.parse(xhr.responseText);
+                    uploadPanel.classList.remove('active');
+                    uploadHint.textContent = `文件上传成功: ${response.filename}`;
+                    progressFill.style.width = '100%'; // Ensure 100% on completion
+                    progressText.textContent = '100%';
+
+                    currentUploadIndex++;
+                    if (currentUploadIndex === selectedFiles.length) {
+                        setTimeout(() => {
+                            pathBar.style.display = '';
+                            currentPath = '';
+                            pathHistory = [];
+                            renderPathBar();
+                            navigateToPath(response.phonedir);
+                        }, 500);
+                    }
+                    // switch (currentCategory) {
+                    //     case 'image':
+                    //         getImages();
+                    //         break;
+                    //     case 'video':
+                    //         getVideos();
+                    //         break;
+                    //     case 'audio':
+                    //         getAudios();
+                    //         break;
+                    //     case 'document':
+                    //         getDocuments('document');
+                    //         break;
+                    //     case 'apk':
+                    //         getDocuments('apk');
+                    //         break;
+                    //     case 'zip':
+                    //         getDocuments('zip');
+                    //         break;
+                    //     case 'all':
+                    //         navigateToPath(response.phonedir);
+                    //         break;
+                    // }
+                } else {
+                    const errorResponse = JSON.parse(xhr.responseText);
+                    alert('文件上传失败:', errorResponse);
+                }
+            };
+
+            // Listen for error event
+            xhr.onerror = () => {
+                alert('网络或服务器错误!');
+            };
+
+            // Open and send the request
+            xhr.open('POST', `/api/upload?id=${serial_id}&category=${currentCategory}`);
+            xhr.send(formData);
+        }
+    });
+
+    // 验证文件类型
+    function validateFileTypes(files) {
+        // 文件管理菜单允许所有类型
+        if (currentCategory === 'all') return true;
+
+        const allowedTypes = {
+            'image': ['image/jpeg', 'image/png', 'image/gif', 'image/webp'],
+            'video': ['video/mp4', 'video/quicktime', 'video/x-msvideo'],
+            'audio': ['audio/mpeg', 'audio/wav', 'audio/ogg'],
+            'document': ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'],
+            'apk': ['application/vnd.android.package-archive'],
+            'zip': ['application/zip', 'application/x-zip-compressed', 'application/x-rar-compressed']
+        };
+
+        const currentAllowed = allowedTypes[currentCategory] || [];
+
+        for (const file of files) {
+            if (!currentAllowed.includes(file.type)) {
+                alert(`错误：文件 ${file.name} 的类型不被允许。当前菜单只允许上传 ${getTypeName(currentCategory)} 文件。`);
+                return false;
+            }
+        }
+
+        return true;
+    }
+
 
     // 文件卡片悬停效果增强
     document.addEventListener('mouseover', function (e) {
@@ -681,7 +964,7 @@ function renderGridItem(file) {
 
     fileCard.addEventListener('click', () => {
         if (file.type === 'folder') {
-            navigateToPath(file.path + (file.path.endsWith("/")? '':'/') + file.name);
+            navigateToPath(file.path + (file.path.endsWith("/") ? '' : '/') + file.name);
         } else {
             showPreview(file);
         }
@@ -763,7 +1046,7 @@ function renderListItem(file) {
 
     listItem.addEventListener('click', () => {
         if (file.type === 'folder') {
-            navigateToPath(file.path  + (file.path.endsWith("/")? '':'/') + file.name);
+            navigateToPath(file.path + (file.path.endsWith("/") ? '' : '/') + file.name);
         } else {
             showPreview(file);
         }
@@ -887,7 +1170,7 @@ function showPreview(file) {
                 </div>
                 <div class="detail-item">
                     <span class="detail-label">${t('resolution')}</span>
-                    <span class="detail-value">1920×1080</span>
+                    <span class="detail-value">${file.width}×${file.height}</span>
                 </div>
             </div>
         `;
@@ -1025,7 +1308,7 @@ function showPreview(file) {
                 </div>
                 <div class="detail-item">
                     <span class="detail-label">${t('location')}</span>
-                    <span class="detail-value">/storage/emulated/0/Download</span>
+                    <span class="detail-value">${file.data}</span>
                 </div>
             </div>
         `;
@@ -1038,9 +1321,9 @@ function showPreview(file) {
                 <i class="fas fa-download"></i> ${t('download')}
             </button>
             <button class="action-btn">
-                <i class="fas fa-share-alt"></i> ${t('share')}
+                <i class="fas fa-share-alt"></i> ${t('rename')}
             </button>
-            <button class="action-btn">
+            <button class="action-btn" onclick="deleteFile('${file.data}')">
                 <i class="fas fa-trash-alt"></i> ${t('delete')}
             </button>
         </div>

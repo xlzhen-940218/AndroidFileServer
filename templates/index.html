@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html> <!-- 移除硬编码的 lang 属性 -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
     <div class="file-manager">
         <!-- 左侧边栏 -->
@@ -31,27 +33,27 @@
             <!-- 菜单区域 -->
             <div class="menu">
                 <div class="menu-title" data-lang="categories">分类</div>
-                <div id="menu-images" class="menu-item active">
+                <div id="menu-images" class="menu-item active" data-category="image">
                     <i class="fas fa-images"></i>
                     <span data-lang="images">图片</span>
                 </div>
-                <div id="menu-videos" class="menu-item">
+                <div id="menu-videos" class="menu-item" data-category="video">
                     <i class="fas fa-film"></i>
                     <span data-lang="videos">视频</span>
                 </div>
-                <div id="menu-audios" class="menu-item">
+                <div id="menu-audios" class="menu-item" data-category="audio">
                     <i class="fas fa-music"></i>
                     <span data-lang="audios">音频</span>
                 </div>
-                <div id="menu-documents" class="menu-item">
+                <div id="menu-documents" class="menu-item" data-category="document">
                     <i class="fas fa-file-alt"></i>
                     <span data-lang="documents">文档</span>
                 </div>
-                <div id="menu-apk" class="menu-item">
+                <div id="menu-apk" class="menu-item" data-category="apk">
                     <i class="fas fa-cube"></i>
                     <span data-lang="apk">安装包</span>
                 </div>
-                <div id="menu-archives" class="menu-item">
+                <div id="menu-archives" class="menu-item" data-category="zip">
                     <i class="fas fa-file-archive"></i>
                     <span data-lang="archives">压缩包</span>
                 </div>
@@ -68,7 +70,7 @@
                     <span data-lang="export_settings">设置导出目录</span>
                 </div>
                 <div class="export-path">
-                    <span>/storage/emulated/0/Download</span>
+                    <span  id="exportPath">/storage/emulated/0/Download</span>
                     <i class="fas fa-chevron-right"></i>
                 </div>
             </div>
@@ -77,21 +79,27 @@
         <!-- 主内容区 -->
         <div class="content">
             <div class="content-header">
-                <div class="view-toggle">
-                    <div class="view-btn active" id="gridBtn">
-                        <i class="fas fa-th"></i>
+                <div class="header-left">
+                    <div class="view-toggle">
+                        <div class="view-btn active" id="gridBtn">
+                            <i class="fas fa-th"></i>
+                        </div>
+                        <div class="view-btn" id="listBtn">
+                            <i class="fas fa-list"></i>
+                        </div>
                     </div>
-                    <div class="view-btn" id="listBtn">
-                        <i class="fas fa-list"></i>
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="搜索文件..." id="searchInput">
                     </div>
                 </div>
-                <div class="search-box">
-                    <i class="fas fa-search"></i>
-                    <input type="text" placeholder="搜索文件..." id="searchInput" data-lang="search_placeholder">
-                </div>
+                <button class="upload-btn" id="uploadBtn">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <span data-lang="upload_files">上传文件</span>
+                </button>
             </div>
 
-              <!-- 路径导航栏 -->
+            <!-- 路径导航栏 -->
             <div class="path-bar" id="pathBar">
                 <div class="path-item" data-path="/">
                     <i class="fas fa-home"></i>
@@ -110,7 +118,7 @@
                     <!-- 动态生成列表视图内容 -->
                 </div>
             </div>
-            
+
             <!-- 分页控件 -->
             <div class="pagination" id="pagination">
                 <button class="page-btn prev-btn disabled">
@@ -138,7 +146,36 @@
             </div>
         </div>
     </div>
-    
+     <!-- 上传面板 -->
+    <div class="upload-panel" id="uploadPanel">
+        <div class="upload-container">
+            <div class="upload-header">
+                <div class="upload-title" data-lang="upload_files">上传文件</div>
+                <div class="close-upload" id="closeUpload">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <div class="upload-text" data-lang="drag_and_drop">点击或拖拽文件到此处上传</div>
+                <div class="upload-hint" id="uploadHint" data-lang="allowed_file_types">允许的文件类型：所有类型</div>
+                <input type="file" class="file-input" id="fileInput" multiple>
+            </div>
+            <div class="upload-btn-panel">
+                <button class="confirm-btn" id="confirmUpload" data-lang="start_upload">开始上传</button>
+                <button class="cancel-btn" id="cancelUpload" data-lang="cancel_upload">取消</button>
+            </div>
+            <div class="upload-progress" id="uploadProgress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-text" id="progressText">0%</div>
+            </div>
+        </div>
+    </div>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
+
 </html>
