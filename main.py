@@ -197,10 +197,10 @@ def parse_adb_output(output, media_type='image'):
         try:
             item = match.groupdict()
             # 转换数值类型字段
-            int_fields = ['_id', '_size'] + (['width', 'height'] if media_type in ('image', 'video') else [])
-            for key in int_fields:
-                if key in item:
-                    item[key] = int(item[key])
+            # int_fields = ['_id', '_size'] + (['width', 'height'] if media_type in ('image', 'video') else [])
+            # for key in int_fields:
+            #     if key in item:
+            #         item[key] = int(item[key])
             
             # 处理显示名称
             if item['_display_name'] == 'NULL':

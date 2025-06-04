@@ -695,6 +695,59 @@ function setupEventListeners() {
         }
     });
 
+    function uploadFile(file) {
+
+        const formData = new FormData();
+        formData.append('file', file); // 只上传第一个文件
+
+        const xhr = new XMLHttpRequest();
+
+        // Listen for the upload progress event
+        xhr.upload.onprogress = (event) => {
+            if (event.lengthComputable) {
+                const percentComplete = (event.loaded / event.total) * 100;
+                progressFill.style.width = percentComplete.toFixed(2) + '%';
+                progressText.textContent = percentComplete.toFixed(2) + '%';
+            }
+        };
+
+        // Listen for load (success) event
+        xhr.onload = () => {
+            if (xhr.status === 200) {
+                const response = JSON.parse(xhr.responseText);
+                uploadPanel.classList.remove('active');
+                uploadHint.textContent = `文件上传成功: ${response.filename}`;
+                progressFill.style.width = '100%'; // Ensure 100% on completion
+                progressText.textContent = '100%';
+
+                currentUploadIndex++;
+                if (currentUploadIndex === selectedFiles.length) {
+                    setTimeout(() => {
+                        pathBar.style.display = '';
+                        currentPath = '';
+                        pathHistory = [];
+                        renderPathBar();
+                        navigateToPath(response.phonedir);
+                    }, 500);
+                    return;
+                }
+                uploadFile(selectedFiles[currentUploadIndex]); // 上传下一个文件
+            } else {
+                const errorResponse = JSON.parse(xhr.responseText);
+                alert('文件上传失败:', errorResponse);
+            }
+        };
+
+        // Listen for error event
+        xhr.onerror = () => {
+            alert('网络或服务器错误!');
+        };
+
+        // Open and send the request
+        xhr.open('POST', `/api/upload?id=${serial_id}&category=${currentCategory}`);
+        xhr.send(formData);
+    }
+
     confirmUpload.addEventListener('click', () => {
         if (selectedFiles.length === 0) {
             alert('请先选择要上传的文件');
@@ -709,101 +762,9 @@ function setupEventListeners() {
         // 显示上传进度
         uploadProgress.style.display = 'block';
         console.log('开始上传文件:', selectedFiles);
-
-        // 模拟上传过程
-        // let progress = 0;
-        // const interval = setInterval(() => {
-        //     progress += 5;
-        //     if (progress > 100) progress = 100;
-
-        //     progressFill.style.width = `${progress}%`;
-        //     progressText.textContent = `${progress}%`;
-
-        //     if (progress === 100) {
-        //         clearInterval(interval);
-
-        //         // 添加文件到列表
-        //         //addFilesToList(selectedFiles);
-
-        //         // 关闭上传面板
-        //         setTimeout(() => {
-        //             uploadPanel.classList.remove('active');
-        //             alert('文件上传成功！');
-        //         }, 500);
-        //     }
-        // }, 100);
-        for (const file of selectedFiles) {
-            const formData = new FormData();
-            formData.append('file', file); // 只上传第一个文件
-
-            const xhr = new XMLHttpRequest();
-
-            // Listen for the upload progress event
-            xhr.upload.onprogress = (event) => {
-                if (event.lengthComputable) {
-                    const percentComplete = (event.loaded / event.total) * 100;
-                    progressFill.style.width = percentComplete.toFixed(2) + '%';
-                    progressText.textContent = percentComplete.toFixed(2) + '%';
-                }
-            };
-
-            // Listen for load (success) event
-            xhr.onload = () => {
-                if (xhr.status === 200) {
-                    const response = JSON.parse(xhr.responseText);
-                    uploadPanel.classList.remove('active');
-                    uploadHint.textContent = `文件上传成功: ${response.filename}`;
-                    progressFill.style.width = '100%'; // Ensure 100% on completion
-                    progressText.textContent = '100%';
-
-                    currentUploadIndex++;
-                    if (currentUploadIndex === selectedFiles.length) {
-                        setTimeout(() => {
-                            pathBar.style.display = '';
-                            currentPath = '';
-                            pathHistory = [];
-                            renderPathBar();
-                            navigateToPath(response.phonedir);
-                        }, 500);
-                    }
-                    // switch (currentCategory) {
-                    //     case 'image':
-                    //         getImages();
-                    //         break;
-                    //     case 'video':
-                    //         getVideos();
-                    //         break;
-                    //     case 'audio':
-                    //         getAudios();
-                    //         break;
-                    //     case 'document':
-                    //         getDocuments('document');
-                    //         break;
-                    //     case 'apk':
-                    //         getDocuments('apk');
-                    //         break;
-                    //     case 'zip':
-                    //         getDocuments('zip');
-                    //         break;
-                    //     case 'all':
-                    //         navigateToPath(response.phonedir);
-                    //         break;
-                    // }
-                } else {
-                    const errorResponse = JSON.parse(xhr.responseText);
-                    alert('文件上传失败:', errorResponse);
-                }
-            };
-
-            // Listen for error event
-            xhr.onerror = () => {
-                alert('网络或服务器错误!');
-            };
-
-            // Open and send the request
-            xhr.open('POST', `/api/upload?id=${serial_id}&category=${currentCategory}`);
-            xhr.send(formData);
-        }
+        currentUploadIndex = 0;
+      
+        uploadFile(selectedFiles[currentUploadIndex]); // 只上传第一个文件
     });
 
     // 验证文件类型

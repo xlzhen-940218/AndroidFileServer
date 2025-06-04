@@ -993,3 +993,885 @@ adb.exe: cannot connect to daemon
 2025-06-04T06:46:03.901Z [INFO]: 成功解析 6866 个image条目
 2025-06-04T06:46:03.921Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:46:03 +0000] "GET /api/get_images?id=7DSSBM9H8T7XCYHM HTTP/1.1" 200 1893558 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
 2025-06-04T06:46:04.133Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:46:04 +0000] "GET /screenshot/7DSSBM9H8T7XCYHM HTTP/1.1" 200 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T12:50:25.593Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T12:50:25.806Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1
+2025-06-04T12:50:25.808Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T12:50:25.808Z [INFO]: 存储目录: /Users/xionglongzhen/GitHub/AndroidFileServer/storage
+2025-06-04T12:50:32.637Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell getprop ro.product.model
+2025-06-04T12:50:32.639Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell df /data
+2025-06-04T12:50:32.641Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell dumpsys battery
+2025-06-04T12:50:32.645Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:50:32 +0000] "GET /api/storagedir HTTP/1.1" 200 71 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:50:33.333Z [ERROR]: 获取电池电量失败: ADB命令失败: * daemon not running; starting now at tcp:5037
+ADB server didn't ACK
+Full server startup log: /var/folders/5n/bk143xd51hg5z_ft32mnjq9c0000gn/T//adb.501.log
+Server had pid: 11591
+--- adb starting (pid 11591) ---
+06-04 20:50:32.674 11589 83168 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+06-04 20:50:32.674 11589 83168 I adb     : main.cpp:63 Version 35.0.2-12147458
+06-04 20:50:32.674 11589 83168 I adb     : main.cpp:63 Installed as /Users/xionglongzhen/Library/Android/sdk/platform-tools/adb
+06-04 20:50:32.674 11589 83168 I adb     : main.cpp:63 Running on Darwin 24.4.0 (arm64)
+06-04 20:50:32.674 11589 83168 I adb     : main.cpp:63 
+06-04 20:50:32.674 11590 83167 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+06-04 20:50:32.674 11590 83167 I adb     : main.cpp:63 Version 35.0.2-12147458
+06-04 20:50:32.674 11590 83167 I adb     : main.cpp:63 Installed as /Users/xionglongzhen/Library/Android/sdk/platform-tools/adb
+06-04 20:50:32.674 11590 83167 I adb     : main.cpp:63 Running on Darwin 24.4.0 (arm64)
+06-04 20:50:32.674 11590 83167 I adb     : main.cpp:63 
+06-04 20:50:32.674 11591 83170 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+06-04 20:50:32.674 11591 83170 I adb     : main.cpp:63 Version 35.0.2-12147458
+06-04 20:50:32.674 11591 83170 I adb     : main.cpp:63 Installed as /Users/xionglongzhen/Library/Android/sdk/platform-tools/adb
+06-04 20:50:32.674 11591 83170 I adb     : main.cpp:63 Running on Darwin 24.4.0 (arm64)
+06-04 20:50:32.674 11591 83170 I adb     : main.cpp:63 
+06-04 20:50:32.682 11590 83167 I adb     : auth.cpp:416 adb_auth_init...
+06-04 20:50:32.684 11589 83188 E adb     : usb_libusb.cpp:627 failed to claim adb interface for device 'HMKNW17807015012': LIBUSB_ERROR_ACCESS
+06-04 20:50:32.684 11591 83185 E adb     : usb_libusb.cpp:627 failed to claim adb interface for device 'HMKNW17807015012': LIBUSB_ERROR_ACCESS
+06-04 20:50:32.687 11590 83167 I adb     : auth.cpp:152 loaded new key from '/Users/xionglongzhen/.android/adbkey' with fingerprint 6F14270FD897EE4DDEF0DD2B8FC3522A79399E6D2F3BE42767C6E26CCB7287A1
+06-04 20:50:32.688 11590 83167 I adb     : udp_socket.cpp:170 AdbUdpSocket fd=9
+06-04 20:50:32.688 11590 83167 I adb     : udp_socket.cpp:170 AdbUdpSocket fd=10
+06-04 20:50:32.688 11590 83167 I adb     : udp_socket.cpp:274 SetMulticastOutboundInterface for index=12
+06-04 20:50:32.688 11590 83167 I adb     : udp_socket.cpp:533 bind endpoint=0.0.0.0:5353
+06-04 20:50:32.688 11590 83167 I adb     : udp_socket.cpp:274 SetMulticastOutboundInterface for index=12
+06-04 20:50:32.688 11590 83167 I adb     : udp_socket.cpp:558 bind endpoint=[0000:0000:0000:0000:0000:0000:0000:0000]:5353 scope_id=0
+06-04 20:50:32.689 11590 83167 I adb     : udp_socket.cpp:170 AdbUdpSocket fd=11
+06-04 20:50:32.689 11590 83167 I adb     : udp_socket.cpp:274 SetMulticastOutboundInterface for index=15
+06-04 20:50:32.689 11591 83185 E adb     : usb_libusb.cpp:627 failed to claim adb interface for device '3b0021ca': LIBUSB_ERROR_ACCESS
+06-04 20:50:32.689 11590 83167 I adb     : udp_socket.cpp:558 bind endpoint=[0000:0000:0000:0000:0000:0000:0000:0000]:5353 scope_id=0
+06-04 20:50:32.690 11590 83182 E adb     : usb_libusb.cpp:627 failed to claim adb interface for device '3b0021ca': LIBUSB_ERROR_ACCESS
+06-04 20:50:32.702 11590 83167 I adb     : transport.cpp:1710 fetching keys for transport HMKNW17807015012
+06-04 20:50:32.702 11590 83167 I adb     : auth.cpp:468 Calling send_auth_response
+06-04 20:50:32.753 11590 83167 I adb     : adb.cpp:181 HMKNW17807015012: offline
+06-04 20:50:33.201 11591 83170 F adb     : main.cpp:163 could not install *smartsocket* listener: Address already in use
+06-04 20:50:33.202 11589 83168 F adb     : main.cpp:163 could not install *smartsocket* listener: Address already in use
+
+* failed to start daemon
+adb: cannot connect to daemon
+
+2025-06-04T12:50:33.387Z [ERROR]: 获取设备名称失败: ADB命令失败: * daemon not running; starting now at tcp:5037
+ADB server didn't ACK
+Full server startup log: /var/folders/5n/bk143xd51hg5z_ft32mnjq9c0000gn/T//adb.501.log
+Server had pid: 11589
+--- adb starting (pid 11589) ---
+--- adb starting (pid 11590) ---
+--- adb starting (pid 11591) ---
+06-04 20:50:32.674 11589 83168 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+06-04 20:50:32.674 11589 83168 I adb     : main.cpp:63 Version 35.0.2-12147458
+06-04 20:50:32.674 11589 83168 I adb     : main.cpp:63 Installed as /Users/xionglongzhen/Library/Android/sdk/platform-tools/adb
+06-04 20:50:32.674 11589 83168 I adb     : main.cpp:63 Running on Darwin 24.4.0 (arm64)
+06-04 20:50:32.674 11589 83168 I adb     : main.cpp:63 
+06-04 20:50:32.674 11590 83167 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+06-04 20:50:32.674 11590 83167 I adb     : main.cpp:63 Version 35.0.2-12147458
+06-04 20:50:32.674 11590 83167 I adb     : main.cpp:63 Installed as /Users/xionglongzhen/Library/Android/sdk/platform-tools/adb
+06-04 20:50:32.674 11590 83167 I adb     : main.cpp:63 Running on Darwin 24.4.0 (arm64)
+06-04 20:50:32.674 11590 83167 I adb     : main.cpp:63 
+06-04 20:50:32.674 11591 83170 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+06-04 20:50:32.674 11591 83170 I adb     : main.cpp:63 Version 35.0.2-12147458
+06-04 20:50:32.674 11591 83170 I adb     : main.cpp:63 Installed as /Users/xionglongzhen/Library/Android/sdk/platform-tools/adb
+06-04 20:50:32.674 11591 83170 I adb     : main.cpp:63 Running on Darwin 24.4.0 (arm64)
+06-04 20:50:32.674 11591 83170 I adb     : main.cpp:63 
+06-04 20:50:32.682 11590 83167 I adb     : auth.cpp:416 adb_auth_init...
+06-04 20:50:32.684 11589 83188 E adb     : usb_libusb.cpp:627 failed to claim adb interface for device 'HMKNW17807015012': LIBUSB_ERROR_ACCESS
+06-04 20:50:32.684 11591 83185 E adb     : usb_libusb.cpp:627 failed to claim adb interface for device 'HMKNW17807015012': LIBUSB_ERROR_ACCESS
+06-04 20:50:32.687 11590 83167 I adb     : auth.cpp:152 loaded new key from '/Users/xionglongzhen/.android/adbkey' with fingerprint 6F14270FD897EE4DDEF0DD2B8FC3522A79399E6D2F3BE42767C6E26CCB7287A1
+06-04 20:50:32.688 11590 83167 I adb     : udp_socket.cpp:170 AdbUdpSocket fd=9
+06-04 20:50:32.688 11590 83167 I adb     : udp_socket.cpp:170 AdbUdpSocket fd=10
+06-04 20:50:32.688 11590 83167 I adb     : udp_socket.cpp:274 SetMulticastOutboundInterface for index=12
+06-04 20:50:32.688 11590 83167 I adb     : udp_socket.cpp:533 bind endpoint=0.0.0.0:5353
+06-04 20:50:32.688 11590 83167 I adb     : udp_socket.cpp:274 SetMulticastOutboundInterface for index=12
+06-04 20:50:32.688 11590 83167 I adb     : udp_socket.cpp:558 bind endpoint=[0000:0000:0000:0000:0000:0000:0000:0000]:5353 scope_id=0
+06-04 20:50:32.689 11590 83167 I adb     : udp_socket.cpp:170 AdbUdpSocket fd=11
+06-04 20:50:32.689 11590 83167 I adb     : udp_socket.cpp:274 SetMulticastOutboundInterface for index=15
+06-04 20:50:32.689 11591 83185 E adb     : usb_libusb.cpp:627 failed to claim adb interface for device '3b0021ca': LIBUSB_ERROR_ACCESS
+06-04 20:50:32.689 11590 83167 I adb     : udp_socket.cpp:558 bind endpoint=[0000:0000:0000:0000:0000:0000:0000:0000]:5353 scope_id=0
+06-04 20:50:32.690 11590 83182 E adb     : usb_libusb.cpp:627 failed to claim adb interface for device '3b0021ca': LIBUSB_ERROR_ACCESS
+06-04 20:50:32.702 11590 83167 I adb     : transport.cpp:1710 fetching keys for transport HMKNW17807015012
+06-04 20:50:32.702 11590 83167 I adb     : auth.cpp:468 Calling send_auth_response
+06-04 20:50:32.753 11590 83167 I adb     : adb.cpp:181 HMKNW17807015012: offline
+06-04 20:50:33.201 11591 83170 F adb     : main.cpp:163 could not install *smartsocket* listener: Address already in use
+06-04 20:50:33.202 11589 83168 F adb     : main.cpp:163 could not install *smartsocket* listener: Address already in use
+
+* failed to start daemon
+adb: cannot connect to daemon
+
+2025-06-04T12:50:35.695Z [ERROR]: 获取存储信息失败: ADB命令失败: * daemon not running; starting now at tcp:5037
+* daemon started successfully
+adb: device '3b0021ca' not found
+
+2025-06-04T12:50:35.697Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:50:35 +0000] "POST /api/device_info HTTP/1.1" 200 126 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:50:35.708Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell content query --uri content://media/external/images/media --projection _id:_data:mime_type:_size:_display_name:width:height:date_added
+2025-06-04T12:50:35.721Z [ERROR]: 获取图像失败: ADB命令失败: adb: device '3b0021ca' not found
+
+2025-06-04T12:50:35.722Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:50:35 +0000] "GET /api/get_images?id=3b0021ca HTTP/1.1" 500 97 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:50:35.722Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:50:35 +0000] "GET /screenshot/3b0021ca HTTP/1.1" 200 - "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:50:35.723Z [ERROR]: ADB命令失败，退出码: 255
+2025-06-04T12:51:03.444Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T12:51:03.543Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1
+2025-06-04T12:51:03.546Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T12:51:03.546Z [INFO]: 存储目录: /Users/xionglongzhen/GitHub/AndroidFileServer/storage
+2025-06-04T12:51:12.475Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell getprop ro.product.model
+2025-06-04T12:51:12.477Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell df /data
+2025-06-04T12:51:12.478Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell dumpsys battery
+2025-06-04T12:51:12.482Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:51:12 +0000] "GET /api/storagedir HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:51:12.492Z [ERROR]: 获取存储信息失败: ADB命令失败: adb: device '3b0021ca' not found
+
+2025-06-04T12:51:12.493Z [ERROR]: 获取电池电量失败: ADB命令失败: adb: device '3b0021ca' not found
+
+2025-06-04T12:51:12.494Z [ERROR]: 获取设备名称失败: ADB命令失败: adb: device '3b0021ca' not found
+
+2025-06-04T12:51:12.495Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:51:12 +0000] "POST /api/device_info HTTP/1.1" 200 126 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:51:12.532Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell content query --uri content://media/external/images/media --projection _id:_data:mime_type:_size:_display_name:width:height:date_added
+2025-06-04T12:51:12.549Z [ERROR]: 获取图像失败: ADB命令失败: adb: device '3b0021ca' not found
+
+2025-06-04T12:51:12.549Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:51:12 +0000] "GET /api/get_images?id=3b0021ca HTTP/1.1" 500 97 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:51:12.551Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:51:12 +0000] "GET /screenshot/3b0021ca HTTP/1.1" 200 - "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:51:12.551Z [ERROR]: ADB命令失败，退出码: 255
+2025-06-04T12:51:22.883Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T12:51:22.983Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1
+2025-06-04T12:51:22.985Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T12:51:22.986Z [INFO]: 存储目录: /Users/xionglongzhen/GitHub/AndroidFileServer/storage
+2025-06-04T12:52:25.837Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell getprop ro.product.model
+2025-06-04T12:52:25.841Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell df /data
+2025-06-04T12:52:25.845Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell dumpsys battery
+2025-06-04T12:52:25.851Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:52:25 +0000] "GET /api/storagedir HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:52:25.859Z [ERROR]: 获取存储信息失败: ADB命令失败: adb: device '3b0021ca' not found
+
+2025-06-04T12:52:25.860Z [ERROR]: 获取设备名称失败: ADB命令失败: adb: device '3b0021ca' not found
+
+2025-06-04T12:52:25.860Z [ERROR]: 获取电池电量失败: ADB命令失败: adb: device '3b0021ca' not found
+
+2025-06-04T12:52:25.861Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:52:25 +0000] "POST /api/device_info HTTP/1.1" 200 126 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:52:25.863Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell content query --uri content://media/external/images/media --projection _id:_data:mime_type:_size:_display_name:width:height:date_added
+2025-06-04T12:52:25.875Z [ERROR]: 获取图像失败: ADB命令失败: adb: device '3b0021ca' not found
+
+2025-06-04T12:52:25.876Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:52:25 +0000] "GET /api/get_images?id=3b0021ca HTTP/1.1" 500 97 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:52:25.877Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:52:25 +0000] "GET /screenshot/3b0021ca HTTP/1.1" 200 - "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:52:37.407Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T12:52:37.519Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1
+2025-06-04T12:52:37.520Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T12:52:37.520Z [INFO]: 存储目录: /Users/xionglongzhen/GitHub/AndroidFileServer/storage
+2025-06-04T12:52:39.584Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell getprop ro.product.model
+2025-06-04T12:52:39.587Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell df /data
+2025-06-04T12:52:39.591Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell dumpsys battery
+2025-06-04T12:52:39.596Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:52:39 +0000] "GET /api/storagedir HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:52:39.606Z [ERROR]: 获取设备名称失败: ADB命令失败: adb: device '3b0021ca' not found
+
+2025-06-04T12:52:39.606Z [ERROR]: 获取存储信息失败: ADB命令失败: adb: device '3b0021ca' not found
+
+2025-06-04T12:52:39.609Z [ERROR]: 获取电池电量失败: ADB命令失败: adb: device '3b0021ca' not found
+
+2025-06-04T12:52:39.610Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:52:39 +0000] "POST /api/device_info HTTP/1.1" 200 126 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:52:39.611Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell content query --uri content://media/external/images/media --projection _id:_data:mime_type:_size:_display_name:width:height:date_added
+2025-06-04T12:52:39.626Z [ERROR]: 获取图像失败: ADB命令失败: adb: device '3b0021ca' not found
+
+2025-06-04T12:52:39.627Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:52:39 +0000] "GET /api/get_images?id=3b0021ca HTTP/1.1" 500 97 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:52:39.628Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:52:39 +0000] "GET /screenshot/3b0021ca HTTP/1.1" 200 - "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:53:18.200Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T12:53:18.335Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1
+2025-06-04T12:53:18.338Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T12:53:18.338Z [INFO]: 存储目录: /Users/xionglongzhen/GitHub/AndroidFileServer/storage
+2025-06-04T12:53:20.566Z [INFO]: 执行ADB命令: adb devices
+2025-06-04T12:53:20.585Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:53:20 +0000] "GET /api/get_device HTTP/1.1" 200 49 "http://127.0.0.1:5001/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:53:20.600Z [INFO]: 执行ADB命令: adb -s HMKNW17807015012 shell getprop ro.product.model
+2025-06-04T12:53:20.603Z [INFO]: 执行ADB命令: adb -s HMKNW17807015012 shell df /data
+2025-06-04T12:53:20.609Z [INFO]: 执行ADB命令: adb -s HMKNW17807015012 shell dumpsys battery
+2025-06-04T12:53:20.690Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:53:20 +0000] "POST /api/device_info HTTP/1.1" 200 138 "http://127.0.0.1:5001/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:53:21.477Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:53:21 +0000] "GET /screenshot/HMKNW17807015012 HTTP/1.1" 200 - "http://127.0.0.1:5001/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:54:02.919Z [INFO]: 执行ADB命令: adb devices
+2025-06-04T12:54:02.960Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:54:02 +0000] "GET /api/get_device HTTP/1.1" 200 41 "http://127.0.0.1:5001/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:54:02.965Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell getprop ro.product.model
+2025-06-04T12:54:02.967Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell df /data
+2025-06-04T12:54:02.968Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell dumpsys battery
+2025-06-04T12:54:03.039Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:54:03 +0000] "POST /api/device_info HTTP/1.1" 200 128 "http://127.0.0.1:5001/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:54:05.135Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:54:05 +0000] "GET /screenshot/3b0021ca HTTP/1.1" 200 - "http://127.0.0.1:5001/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:54:06.233Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell getprop ro.product.model
+2025-06-04T12:54:06.235Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell df /data
+2025-06-04T12:54:06.238Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell dumpsys battery
+2025-06-04T12:54:06.248Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:54:06 +0000] "GET /api/storagedir HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:54:06.342Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:54:06 +0000] "POST /api/device_info HTTP/1.1" 200 128 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:54:06.345Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell content query --uri content://media/external/images/media --projection _id:_data:mime_type:_size:_display_name:width:height:date_added
+2025-06-04T12:54:07.483Z [INFO]: 成功解析 8 个image条目
+2025-06-04T12:54:07.485Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:54:07 +0000] "GET /api/get_images?id=3b0021ca HTTP/1.1" 200 2993 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:54:08.417Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:54:08 +0000] "GET /screenshot/3b0021ca HTTP/1.1" 200 - "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:54:14.010Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:54:14 +0000] "GET /api/file?file_path=%2Fstorage%2Femulated%2F0%2FPictures%2FScreenshots%2FScreenshot_2025-06-04-20-12-27-17_c7ff7d15bebc23227737e36da89a450a.jpg&category=images&file_name=Screenshot_2025-06-04-20-12-27-17_c7ff7d15bebc23227737e36da89a450a.jpg&id=3b0021ca HTTP/1.1" 200 222366 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:54:19.115Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:54:19 +0000] "GET /api/file?file_path=%2Fstorage%2Femulated%2F0%2FPictures%2FScreenshots%2FScreenshot_2025-05-18-16-12-04-48_c7ff7d15bebc23227737e36da89a450a.jpg&category=images&file_name=Screenshot_2025-05-18-16-12-04-48_c7ff7d15bebc23227737e36da89a450a.jpg&id=3b0021ca HTTP/1.1" 200 768643 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:54:22.518Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell rm "/storage/emulated/0/Pictures/Screenshots/Screenshot_2025-05-18-16-12-04-48_c7ff7d15bebc23227737e36da89a450a.jpg"
+2025-06-04T12:54:22.603Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:54:22 +0000] "GET /api/delete_file?id=3b0021ca&data=/storage/emulated/0/Pictures/Screenshots/Screenshot_2025-05-18-16-12-04-48_c7ff7d15bebc23227737e36da89a450a.jpg HTTP/1.1" 200 173 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:54:23.110Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell content query --uri content://media/external/images/media --projection _id:_data:mime_type:_size:_display_name:width:height:date_added
+2025-06-04T12:54:24.276Z [INFO]: 成功解析 7 个image条目
+2025-06-04T12:54:24.278Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:54:24 +0000] "GET /api/get_images?id=3b0021ca HTTP/1.1" 200 2619 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:54:45.328Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell content query --uri content://media/external/video/media --projection _id:_data:mime_type:_size:_display_name:width:height:date_added
+2025-06-04T12:54:46.491Z [INFO]: 成功解析 0 个video条目
+2025-06-04T12:54:46.493Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:54:46 +0000] "GET /api/get_videos?id=3b0021ca HTTP/1.1" 200 2 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:54:49.326Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell content query --uri content://media/external/audio/media --projection _id:_data:mime_type:_size:_display_name:date_added
+2025-06-04T12:54:50.504Z [INFO]: 成功解析 0 个audio条目
+2025-06-04T12:54:50.505Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:54:50 +0000] "GET /api/get_audios?id=3b0021ca HTTP/1.1" 200 2 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:54:51.540Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell content query --uri content://media/external/file --projection _id:_data:mime_type:_size:_display_name:date_added | grep -E '\.(pdf|doc|docx|xls|xlsx|ppt|pptx|txt|odt|ods|odp)'
+2025-06-04T12:54:52.721Z [ERROR]: 获取文档失败: ADB命令失败: 未知错误
+2025-06-04T12:54:52.722Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:54:52 +0000] "GET /api/get_documents?id=3b0021ca&document_type=document HTTP/1.1" 500 75 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:54:54.206Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell content query --uri content://media/external/file --projection _id:_data:mime_type:_size:_display_name:date_added | grep -E '\.(apk)'
+2025-06-04T12:54:55.400Z [ERROR]: 获取文档失败: ADB命令失败: 未知错误
+2025-06-04T12:54:55.401Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:54:55 +0000] "GET /api/get_documents?id=3b0021ca&document_type=apk HTTP/1.1" 500 75 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:54:55.856Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell content query --uri content://media/external/file --projection _id:_data:mime_type:_size:_display_name:date_added | grep -E '\.(zip|rar|7z|tar|gz)'
+2025-06-04T12:54:57.033Z [INFO]: 成功解析 3 个document条目
+2025-06-04T12:54:57.034Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:54:57 +0000] "GET /api/get_documents?id=3b0021ca&document_type=zip HTTP/1.1" 200 709 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:54:58.255Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell ls -lh '/sdcard/'
+2025-06-04T12:54:58.355Z [WARN]: 无法解析行: total 51K
+2025-06-04T12:54:58.356Z [INFO]: 解析行: drwxrwx--- 2 root everybody 3.4K 2023-01-01 00:03 Alarms
+2025-06-04T12:54:58.357Z [INFO]: 解析行: drwxrwx--- 5 root everybody 3.4K 2024-09-09 08:17 Android
+2025-06-04T12:54:58.357Z [INFO]: 解析行: drwxrwx--- 2 root everybody 3.4K 2023-01-01 00:03 Audiobooks
+2025-06-04T12:54:58.357Z [INFO]: 解析行: drwxrwx--- 4 root everybody 3.4K 2025-05-06 22:49 ColorOS
+2025-06-04T12:54:58.357Z [INFO]: 解析行: drwxrwx--- 6 root everybody 3.4K 2025-05-18 15:08 DCIM
+2025-06-04T12:54:58.357Z [INFO]: 解析行: drwxrwx--- 3 root everybody 3.4K 2025-04-19 08:54 Documents
+2025-06-04T12:54:58.357Z [INFO]: 解析行: drwxrwx--- 6 root everybody 3.4K 2025-05-06 23:08 Download
+2025-06-04T12:54:58.358Z [INFO]: 解析行: drwxrwx--- 3 root everybody 3.4K 2023-01-01 00:03 Movies
+2025-06-04T12:54:58.358Z [INFO]: 解析行: drwxrwx--- 3 root everybody 3.4K 2023-01-01 00:03 Music
+2025-06-04T12:54:58.358Z [INFO]: 解析行: drwxrwx--- 2 root everybody 3.4K 2023-01-01 00:03 Notifications
+2025-06-04T12:54:58.358Z [INFO]: 解析行: drwxrwx--- 6 root everybody 3.4K 2024-12-25 23:01 Pictures
+2025-06-04T12:54:58.358Z [INFO]: 解析行: drwxrwx--- 2 root everybody 3.4K 2023-01-01 00:03 Podcasts
+2025-06-04T12:54:58.358Z [INFO]: 解析行: drwxrwx--- 2 root everybody 3.4K 2023-01-01 00:03 Recordings
+2025-06-04T12:54:58.358Z [INFO]: 解析行: drwxrwx--- 2 root everybody 3.4K 2023-01-01 00:03 Ringtones
+2025-06-04T12:54:58.358Z [INFO]: 解析行: drwxrwx--- 2 root everybody 3.4K 2025-03-22 18:12 apm
+2025-06-04T12:54:58.358Z [INFO]: 解析行: drwxrwx--- 3 root everybody 3.4K 2025-05-18 17:41 oua_classifier
+2025-06-04T12:54:58.359Z [INFO]: 解析行: drwxrwx--- 2 root everybody 3.4K 2024-09-23 20:41 qvs
+2025-06-04T12:54:58.359Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:54:58 +0000] "GET /api/get_files?id=3b0021ca&path=%2Fsdcard%2F HTTP/1.1" 200 2420 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:55:02.431Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell ls -lh '/sdcard/Movies/'
+2025-06-04T12:55:02.522Z [WARN]: 无法解析行: total 0
+2025-06-04T12:55:02.523Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:55:02 +0000] "GET /api/get_files?id=3b0021ca&path=%2Fsdcard%2FMovies HTTP/1.1" 200 2 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:55:03.953Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell ls -lh '/sdcard/'
+2025-06-04T12:55:04.057Z [WARN]: 无法解析行: total 51K
+2025-06-04T12:55:04.057Z [INFO]: 解析行: drwxrwx--- 2 root everybody 3.4K 2023-01-01 00:03 Alarms
+2025-06-04T12:55:04.057Z [INFO]: 解析行: drwxrwx--- 5 root everybody 3.4K 2024-09-09 08:17 Android
+2025-06-04T12:55:04.057Z [INFO]: 解析行: drwxrwx--- 2 root everybody 3.4K 2023-01-01 00:03 Audiobooks
+2025-06-04T12:55:04.057Z [INFO]: 解析行: drwxrwx--- 4 root everybody 3.4K 2025-05-06 22:49 ColorOS
+2025-06-04T12:55:04.057Z [INFO]: 解析行: drwxrwx--- 6 root everybody 3.4K 2025-05-18 15:08 DCIM
+2025-06-04T12:55:04.057Z [INFO]: 解析行: drwxrwx--- 3 root everybody 3.4K 2025-04-19 08:54 Documents
+2025-06-04T12:55:04.057Z [INFO]: 解析行: drwxrwx--- 6 root everybody 3.4K 2025-05-06 23:08 Download
+2025-06-04T12:55:04.057Z [INFO]: 解析行: drwxrwx--- 3 root everybody 3.4K 2023-01-01 00:03 Movies
+2025-06-04T12:55:04.058Z [INFO]: 解析行: drwxrwx--- 3 root everybody 3.4K 2023-01-01 00:03 Music
+2025-06-04T12:55:04.058Z [INFO]: 解析行: drwxrwx--- 2 root everybody 3.4K 2023-01-01 00:03 Notifications
+2025-06-04T12:55:04.058Z [INFO]: 解析行: drwxrwx--- 6 root everybody 3.4K 2024-12-25 23:01 Pictures
+2025-06-04T12:55:04.058Z [INFO]: 解析行: drwxrwx--- 2 root everybody 3.4K 2023-01-01 00:03 Podcasts
+2025-06-04T12:55:04.058Z [INFO]: 解析行: drwxrwx--- 2 root everybody 3.4K 2023-01-01 00:03 Recordings
+2025-06-04T12:55:04.058Z [INFO]: 解析行: drwxrwx--- 2 root everybody 3.4K 2023-01-01 00:03 Ringtones
+2025-06-04T12:55:04.058Z [INFO]: 解析行: drwxrwx--- 2 root everybody 3.4K 2025-03-22 18:12 apm
+2025-06-04T12:55:04.058Z [INFO]: 解析行: drwxrwx--- 3 root everybody 3.4K 2025-05-18 17:41 oua_classifier
+2025-06-04T12:55:04.058Z [INFO]: 解析行: drwxrwx--- 2 root everybody 3.4K 2024-09-23 20:41 qvs
+2025-06-04T12:55:04.059Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:55:04 +0000] "GET /api/get_files?id=3b0021ca&path=%2Fsdcard%2F HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:55:23.236Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/all/warp.zip /sdcard/PC/all/warp.zip
+2025-06-04T12:55:23.321Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:55:23 +0000] "POST /api/upload?id=3b0021ca&category=all HTTP/1.1" 200 91 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:55:23.827Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell ls -lh '/sdcard/PC/all/'
+2025-06-04T12:55:23.924Z [WARN]: 无法解析行: total 16K
+2025-06-04T12:55:23.925Z [INFO]: 解析行: -rw-rw---- 1 root everybody 15K 2025-06-04 20:55 warp.zip
+2025-06-04T12:55:23.925Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:55:23 +0000] "GET /api/get_files?id=3b0021ca&path=%2Fsdcard%2FPC%2Fall%2F HTTP/1.1" 200 159 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:55:41.930Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell ls -lh '/sdcard/PC/'
+2025-06-04T12:55:42.005Z [WARN]: 无法解析行: total 3.0K
+2025-06-04T12:55:42.005Z [INFO]: 解析行: drwxrwx--- 2 root everybody 3.4K 2025-06-04 20:55 all
+2025-06-04T12:55:42.006Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:55:42 +0000] "GET /api/get_files?id=3b0021ca&path=%2Fsdcard%2FPC HTTP/1.1" 200 140 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:55:42.662Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell ls -lh '/sdcard/PC/all/'
+2025-06-04T12:55:42.756Z [WARN]: 无法解析行: total 16K
+2025-06-04T12:55:42.757Z [INFO]: 解析行: -rw-rw---- 1 root everybody 15K 2025-06-04 20:55 warp.zip
+2025-06-04T12:55:42.757Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:55:42 +0000] "GET /api/get_files?id=3b0021ca&path=%2Fsdcard%2FPC%2Fall HTTP/1.1" 200 159 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:56:41.493Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/all/VID_20190316_124908.jpg /sdcard/PC/all/VID_20190316_124908.jpg
+2025-06-04T12:56:41.584Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:56:41 +0000] "POST /api/upload?id=3b0021ca&category=all HTTP/1.1" 200 106 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:56:59.160Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell ls -lh '/sdcard/PC/all/'
+2025-06-04T12:56:59.262Z [WARN]: 无法解析行: total 152K
+2025-06-04T12:56:59.262Z [INFO]: 解析行: -rw-rw---- 1 root everybody 134K 2025-06-04 20:56 VID_20190316_124908.jpg
+2025-06-04T12:56:59.262Z [INFO]: 解析行: -rw-rw---- 1 root everybody  15K 2025-06-04 20:55 warp.zip
+2025-06-04T12:56:59.263Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:56:59 +0000] "GET /api/get_files?id=3b0021ca&path=%2Fsdcard%2FPC%2Fall HTTP/1.1" 200 343 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:56:59.270Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/all/VID_20190316_124908.jpg /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/VID_20190316_124908.jpg
+2025-06-04T12:56:59.306Z [INFO]: 文件拉取成功: /sdcard/PC/all/VID_20190316_124908.jpg -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/VID_20190316_124908.jpg
+2025-06-04T12:56:59.309Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:56:59 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fall%2FVID_20190316_124908.jpg&category=images&file_name=VID_20190316_124908.jpg&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:57:00.809Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:57:00 +0000] "GET /api/file?file_path=%2Fsdcard%2FPC%2Fall%2FVID_20190316_124908.jpg&category=images&file_name=VID_20190316_124908.jpg&id=3b0021ca HTTP/1.1" 200 137173 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:57:13.532Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell getprop ro.product.model
+2025-06-04T12:57:13.535Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell df /data
+2025-06-04T12:57:13.537Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell dumpsys battery
+2025-06-04T12:57:13.543Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:57:13 +0000] "GET /api/storagedir HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:57:13.622Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:57:13 +0000] "POST /api/device_info HTTP/1.1" 200 128 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:57:13.630Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell content query --uri content://media/external/images/media --projection _id:_data:mime_type:_size:_display_name:width:height:date_added
+2025-06-04T12:57:14.755Z [INFO]: 成功解析 8 个image条目
+2025-06-04T12:57:14.756Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:57:14 +0000] "GET /api/get_images?id=3b0021ca HTTP/1.1" 200 2869 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:57:14.773Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:57:14 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fall%2FVID_20190316_124908.jpg&category=images&file_name=VID_20190316_124908.jpg&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:57:15.692Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:57:15 +0000] "GET /screenshot/3b0021ca HTTP/1.1" 200 - "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:57:53.420Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T12:57:53.522Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1
+2025-06-04T12:57:53.524Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T12:57:53.525Z [INFO]: 存储目录: /Users/xionglongzhen/GitHub/AndroidFileServer/storage
+2025-06-04T12:58:01.254Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:58:01 +0000] "GET /api/file?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fall%2FVID_20190316_124908.jpg&category=images&file_name=VID_20190316_124908.jpg&id=3b0021ca HTTP/1.1" 200 137173 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:58:05.599Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell getprop ro.product.model
+2025-06-04T12:58:05.602Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell df /data
+2025-06-04T12:58:05.604Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell dumpsys battery
+2025-06-04T12:58:05.608Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:58:05 +0000] "GET /api/storagedir HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:58:05.695Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:58:05 +0000] "POST /api/device_info HTTP/1.1" 200 128 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:58:05.707Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell content query --uri content://media/external/images/media --projection _id:_data:mime_type:_size:_display_name:width:height:date_added
+2025-06-04T12:58:06.843Z [INFO]: 成功解析 8 个image条目
+2025-06-04T12:58:06.845Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:58:06 +0000] "GET /api/get_images?id=3b0021ca HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:58:07.751Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:58:07 +0000] "GET /screenshot/3b0021ca HTTP/1.1" 200 - "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:58:20.475Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell getprop ro.product.model
+2025-06-04T12:58:20.478Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell df /data
+2025-06-04T12:58:20.479Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell dumpsys battery
+2025-06-04T12:58:20.487Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:58:20 +0000] "GET /api/storagedir HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:58:20.561Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:58:20 +0000] "POST /api/device_info HTTP/1.1" 200 128 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:58:20.565Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell content query --uri content://media/external/images/media --projection _id:_data:mime_type:_size:_display_name:width:height:date_added
+2025-06-04T12:58:21.698Z [INFO]: 成功解析 8 个image条目
+2025-06-04T12:58:21.699Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:58:21 +0000] "GET /api/get_images?id=3b0021ca HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:58:22.602Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:58:22 +0000] "GET /screenshot/3b0021ca HTTP/1.1" 200 - "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:58:48.673Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T12:58:48.784Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1
+2025-06-04T12:58:48.785Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T12:58:48.786Z [INFO]: 存储目录: /Users/xionglongzhen/GitHub/AndroidFileServer/storage
+2025-06-04T12:58:51.227Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell getprop ro.product.model
+2025-06-04T12:58:51.231Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell df /data
+2025-06-04T12:58:51.233Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell dumpsys battery
+2025-06-04T12:58:51.240Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:58:51 +0000] "GET /api/storagedir HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:58:51.320Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:58:51 +0000] "POST /api/device_info HTTP/1.1" 200 128 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:58:51.325Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell content query --uri content://media/external/images/media --projection _id:_data:mime_type:_size:_display_name:width:height:date_added
+2025-06-04T12:58:52.480Z [INFO]: 成功解析 8 个image条目
+2025-06-04T12:58:52.481Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:58:52 +0000] "GET /api/get_images?id=3b0021ca HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:58:53.370Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:58:53 +0000] "GET /screenshot/3b0021ca HTTP/1.1" 200 - "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.052Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00008-2139555120.png /sdcard/PC/image/00008-2139555120.png
+2025-06-04T12:59:18.054Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00007-2446117297.png /sdcard/PC/image/00007-2446117297.png
+2025-06-04T12:59:18.055Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00010-4023535154.png /sdcard/PC/image/00010-4023535154.png
+2025-06-04T12:59:18.056Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00009-1983077226.png /sdcard/PC/image/00009-1983077226.png
+2025-06-04T12:59:18.058Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00009-4072672307.png /sdcard/PC/image/00009-4072672307.png
+2025-06-04T12:59:18.066Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00001.png /sdcard/PC/image/00001.png
+2025-06-04T12:59:18.242Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.243Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.257Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00012-3665353271.png /sdcard/PC/image/00012-3665353271.png
+2025-06-04T12:59:18.258Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00011-3665353270.png /sdcard/PC/image/00011-3665353270.png
+2025-06-04T12:59:18.274Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.279Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00013-3665353272.png /sdcard/PC/image/00013-3665353272.png
+2025-06-04T12:59:18.298Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.305Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.310Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00014-3665353273.png /sdcard/PC/image/00014-3665353273.png
+2025-06-04T12:59:18.312Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00015-3665353274.png /sdcard/PC/image/00015-3665353274.png
+2025-06-04T12:59:18.468Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.478Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00016-3665353275.png /sdcard/PC/image/00016-3665353275.png
+2025-06-04T12:59:18.504Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.510Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00017-3665353276.png /sdcard/PC/image/00017-3665353276.png
+2025-06-04T12:59:18.516Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.521Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00018-3665353277.png /sdcard/PC/image/00018-3665353277.png
+2025-06-04T12:59:18.533Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 94 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.540Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00019-3665353278.png /sdcard/PC/image/00019-3665353278.png
+2025-06-04T12:59:18.542Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.544Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.552Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00020-3665353279.png /sdcard/PC/image/00020-3665353279.png
+2025-06-04T12:59:18.553Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00021-3665353280.png /sdcard/PC/image/00021-3665353280.png
+2025-06-04T12:59:18.641Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.641Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.641Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.655Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00023-3665353282.png /sdcard/PC/image/00023-3665353282.png
+2025-06-04T12:59:18.657Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00022-3665353281.png /sdcard/PC/image/00022-3665353281.png
+2025-06-04T12:59:18.659Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00024-3665353283.png /sdcard/PC/image/00024-3665353283.png
+2025-06-04T12:59:18.726Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.733Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.734Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00025-3665353284.png /sdcard/PC/image/00025-3665353284.png
+2025-06-04T12:59:18.739Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00026-3665353285.png /sdcard/PC/image/00026-3665353285.png
+2025-06-04T12:59:18.791Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.798Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00027-3665353286.png /sdcard/PC/image/00027-3665353286.png
+2025-06-04T12:59:18.828Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.833Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00028-3665353287.png /sdcard/PC/image/00028-3665353287.png
+2025-06-04T12:59:18.841Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.846Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00029-3665353288.png /sdcard/PC/image/00029-3665353288.png
+2025-06-04T12:59:18.870Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.878Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00030-3665353289.png /sdcard/PC/image/00030-3665353289.png
+2025-06-04T12:59:18.905Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.909Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00031-3665353290.png /sdcard/PC/image/00031-3665353290.png
+2025-06-04T12:59:18.919Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.924Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00032-3665353291.png /sdcard/PC/image/00032-3665353291.png
+2025-06-04T12:59:18.941Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.946Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00033-3665353292.png /sdcard/PC/image/00033-3665353292.png
+2025-06-04T12:59:18.990Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:18 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:18.995Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00034-3665353293.png /sdcard/PC/image/00034-3665353293.png
+2025-06-04T12:59:19.057Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.062Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00035-3665353294.png /sdcard/PC/image/00035-3665353294.png
+2025-06-04T12:59:19.075Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.080Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00036-3665353295.png /sdcard/PC/image/00036-3665353295.png
+2025-06-04T12:59:19.099Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.105Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00037-3665353296.png /sdcard/PC/image/00037-3665353296.png
+2025-06-04T12:59:19.113Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.118Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/00038-3665353297.png /sdcard/PC/image/00038-3665353297.png
+2025-06-04T12:59:19.134Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.147Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/IMG_0001.JPG /sdcard/PC/image/IMG_0001.JPG
+2025-06-04T12:59:19.155Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.168Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/IMG_0002.JPG /sdcard/PC/image/IMG_0002.JPG
+2025-06-04T12:59:19.188Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.205Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/IMG_0003.JPG /sdcard/PC/image/IMG_0003.JPG
+2025-06-04T12:59:19.231Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.248Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/IMG_0005.JPG /sdcard/PC/image/IMG_0005.JPG
+2025-06-04T12:59:19.255Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.257Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-01-2.3.12172-0BE430ACF43AC91411219FD0C73D9887.jpg /sdcard/PC/image/magazine-unlock-01-2.3.12172-0BE430ACF43AC91411219FD0C73D9887.jpg
+2025-06-04T12:59:19.300Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 105 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.302Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-01-2.3.12172-0E94279D99D7129318AFE1C6E68EA3A0.jpg /sdcard/PC/image/magazine-unlock-01-2.3.12172-0E94279D99D7129318AFE1C6E68EA3A0.jpg
+2025-06-04T12:59:19.494Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 150 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.497Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-01-2.3.12172-01D0989F04290F0DA133C81D1E4AA4AA.jpg /sdcard/PC/image/magazine-unlock-01-2.3.12172-01D0989F04290F0DA133C81D1E4AA4AA.jpg
+2025-06-04T12:59:19.593Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 150 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.598Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-01-2.3.12172-08F2E66F466643C9ED50F0BD15A1AEEC.jpg /sdcard/PC/image/magazine-unlock-01-2.3.12172-08F2E66F466643C9ED50F0BD15A1AEEC.jpg
+2025-06-04T12:59:19.641Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 97 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.645Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-01-2.3.12172-13F8A17F091A08B87FC27152D1078A50.jpg /sdcard/PC/image/magazine-unlock-01-2.3.12172-13F8A17F091A08B87FC27152D1078A50.jpg
+2025-06-04T12:59:19.662Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 97 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.666Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-01-2.3.12172-103C4098C450A09893FF8E22F4A7E24C.jpg /sdcard/PC/image/magazine-unlock-01-2.3.12172-103C4098C450A09893FF8E22F4A7E24C.jpg
+2025-06-04T12:59:19.717Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 150 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.720Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 97 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.722Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-01-2.3.2022081201-418F0465819CB18037BDCB1DAB63DA06.jpg /sdcard/PC/image/magazine-unlock-01-2.3.2022081201-418F0465819CB18037BDCB1DAB63DA06.jpg
+2025-06-04T12:59:19.724Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-01-2.3.2022081201-1303A33E67DC6143CC2091362BA013B1.jpg /sdcard/PC/image/magazine-unlock-01-2.3.2022081201-1303A33E67DC6143CC2091362BA013B1.jpg
+2025-06-04T12:59:19.739Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 150 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.742Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-01-2.3.2022081201-3416FFC791BD7957F33258757DDA2E2A.jpg /sdcard/PC/image/magazine-unlock-01-2.3.2022081201-3416FFC791BD7957F33258757DDA2E2A.jpg
+2025-06-04T12:59:19.754Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 97 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.757Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 150 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.757Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-01-2.3.2022081201-B45BE9FE294A68CF5C0D48DFF15A6E6B.jpg /sdcard/PC/image/magazine-unlock-01-2.3.2022081201-B45BE9FE294A68CF5C0D48DFF15A6E6B.jpg
+2025-06-04T12:59:19.760Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-01-2.3.2022081201-FC2A80D5582B97D261D1498A6EE39C0D.jpg /sdcard/PC/image/magazine-unlock-01-2.3.2022081201-FC2A80D5582B97D261D1498A6EE39C0D.jpg
+2025-06-04T12:59:19.778Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 150 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.781Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.783Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-01-2.3.2022081301-5EC9C114A9E3ED8727FB7806604F639E.jpg /sdcard/PC/image/magazine-unlock-01-2.3.2022081301-5EC9C114A9E3ED8727FB7806604F639E.jpg
+2025-06-04T12:59:19.784Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-01-2.3.2022081301-868FAF76D780EFE4BE22AD55745BFD82.jpg /sdcard/PC/image/magazine-unlock-01-2.3.2022081301-868FAF76D780EFE4BE22AD55745BFD82.jpg
+2025-06-04T12:59:19.790Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.793Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-01-2.3.2022081301-E6446FBF41CD264B216FA70A480E87E6.jpg /sdcard/PC/image/magazine-unlock-01-2.3.2022081301-E6446FBF41CD264B216FA70A480E87E6.jpg
+2025-06-04T12:59:19.827Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.831Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-02-2.3.2022081301-14EE583E744E4CA220861565960B6715.jpg /sdcard/PC/image/magazine-unlock-02-2.3.2022081301-14EE583E744E4CA220861565960B6715.jpg
+2025-06-04T12:59:19.833Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.833Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.836Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-02-2.3.2022081301-84FA68F58DA87337D5A97C4A2542B298.jpg /sdcard/PC/image/magazine-unlock-02-2.3.2022081301-84FA68F58DA87337D5A97C4A2542B298.jpg
+2025-06-04T12:59:19.837Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-02-2.3.2022081301-83CF522B329105BAFED8402E73EF752E.jpg /sdcard/PC/image/magazine-unlock-02-2.3.2022081301-83CF522B329105BAFED8402E73EF752E.jpg
+2025-06-04T12:59:19.848Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.849Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.852Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-03-2.3.2022081201-85A159091BF07F7EE6C1817DEE7BFF75.jpg /sdcard/PC/image/magazine-unlock-03-2.3.2022081201-85A159091BF07F7EE6C1817DEE7BFF75.jpg
+2025-06-04T12:59:19.853Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-03-2.3.2022081201-77964D9D89621D98E5507E2D3C4E925D.jpg /sdcard/PC/image/magazine-unlock-03-2.3.2022081201-77964D9D89621D98E5507E2D3C4E925D.jpg
+2025-06-04T12:59:19.863Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.866Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-03-2.3.2022081201-57942250B85CEA980ECEDF165C05A2CA.jpg /sdcard/PC/image/magazine-unlock-03-2.3.2022081201-57942250B85CEA980ECEDF165C05A2CA.jpg
+2025-06-04T12:59:19.879Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.881Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-03-2.3.2022081201-DE920A96E3FA5115981F726CA9E25C3B.jpg /sdcard/PC/image/magazine-unlock-03-2.3.2022081201-DE920A96E3FA5115981F726CA9E25C3B.jpg
+2025-06-04T12:59:19.894Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.897Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-03-2.3.2022081201-F92DA8C73BEF15F5409C4D77A7619952.jpg /sdcard/PC/image/magazine-unlock-03-2.3.2022081201-F92DA8C73BEF15F5409C4D77A7619952.jpg
+2025-06-04T12:59:19.902Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.904Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-03-2.3.2022081201-FFC3BB0CC0A58080599C3E28AA8B2665.jpg /sdcard/PC/image/magazine-unlock-03-2.3.2022081201-FFC3BB0CC0A58080599C3E28AA8B2665.jpg
+2025-06-04T12:59:19.913Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.915Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-03-2.3.2022081301-30BE46986CA75B518FE4ED6D9E72D006.jpg /sdcard/PC/image/magazine-unlock-03-2.3.2022081301-30BE46986CA75B518FE4ED6D9E72D006.jpg
+2025-06-04T12:59:19.924Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.927Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-03-2.3.2022081301-206E14859BB6191A60CDC432BFCE1F7E.jpg /sdcard/PC/image/magazine-unlock-03-2.3.2022081301-206E14859BB6191A60CDC432BFCE1F7E.jpg
+2025-06-04T12:59:19.935Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.937Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-03-2.3.2022081301-6813BFA5F2A4F7895743EFDE1A94032C.jpg /sdcard/PC/image/magazine-unlock-03-2.3.2022081301-6813BFA5F2A4F7895743EFDE1A94032C.jpg
+2025-06-04T12:59:19.955Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.958Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-03-2.3.2022081301-48734A0E5A4BDE16AF6696B28EBEE6A3.jpg /sdcard/PC/image/magazine-unlock-03-2.3.2022081301-48734A0E5A4BDE16AF6696B28EBEE6A3.jpg
+2025-06-04T12:59:19.968Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.970Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-03-2.3.2022081301-C650A87159EECCF39E8D3502CEC5CE69.jpg /sdcard/PC/image/magazine-unlock-03-2.3.2022081301-C650A87159EECCF39E8D3502CEC5CE69.jpg
+2025-06-04T12:59:19.978Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.982Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-03-2.3.2022081301-F6234D80AE41126BB7AF93D1CF66EBD3.jpg /sdcard/PC/image/magazine-unlock-03-2.3.2022081301-F6234D80AE41126BB7AF93D1CF66EBD3.jpg
+2025-06-04T12:59:19.988Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:19.989Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-04-2.3.2022081201-910CABF8A83FE33B5DEC48B90D12222E.jpg /sdcard/PC/image/magazine-unlock-04-2.3.2022081201-910CABF8A83FE33B5DEC48B90D12222E.jpg
+2025-06-04T12:59:19.999Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:19 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.002Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-04-2.3.2022081201-5780FB1A935F92C057B8E080B0557E5E.jpg /sdcard/PC/image/magazine-unlock-04-2.3.2022081201-5780FB1A935F92C057B8E080B0557E5E.jpg
+2025-06-04T12:59:20.014Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.017Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-05-2.3.2022081201-3C93EA2D8B342F75A059F182AFB672A1.jpg /sdcard/PC/image/magazine-unlock-05-2.3.2022081201-3C93EA2D8B342F75A059F182AFB672A1.jpg
+2025-06-04T12:59:20.023Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.026Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-05-2.3.2022081201-4DAF4AACA0CD462404B72CC6255E13A6.jpg /sdcard/PC/image/magazine-unlock-05-2.3.2022081201-4DAF4AACA0CD462404B72CC6255E13A6.jpg
+2025-06-04T12:59:20.058Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.060Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.063Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-05-2.3.2022081201-B431B109E13ACB8D08BE0AFF9234D319.jpg /sdcard/PC/image/magazine-unlock-05-2.3.2022081201-B431B109E13ACB8D08BE0AFF9234D319.jpg
+2025-06-04T12:59:20.064Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-05-2.3.2022081201-638B4E7CD3352D6E4A89EC56B40B579A.jpg /sdcard/PC/image/magazine-unlock-05-2.3.2022081201-638B4E7CD3352D6E4A89EC56B40B579A.jpg
+2025-06-04T12:59:20.069Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.072Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-05-2.3.2022081301-4A5CF528187E88FBC83789A45FF3AC15.jpg /sdcard/PC/image/magazine-unlock-05-2.3.2022081301-4A5CF528187E88FBC83789A45FF3AC15.jpg
+2025-06-04T12:59:20.084Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.087Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-05-2.3.2022081301-04FE785307058A7C0E231F65665D1C27.jpg /sdcard/PC/image/magazine-unlock-05-2.3.2022081301-04FE785307058A7C0E231F65665D1C27.jpg
+2025-06-04T12:59:20.107Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.108Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.112Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-05-2.3.2022081301-29C3A1323401A9BB9AEFB95A7CD46C83.jpg /sdcard/PC/image/magazine-unlock-05-2.3.2022081301-29C3A1323401A9BB9AEFB95A7CD46C83.jpg
+2025-06-04T12:59:20.114Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-05-2.3.2022081301-7C2E5465F3B38D0A0F2A4B3EF5A25F9B.jpg /sdcard/PC/image/magazine-unlock-05-2.3.2022081301-7C2E5465F3B38D0A0F2A4B3EF5A25F9B.jpg
+2025-06-04T12:59:20.123Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.127Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-06-2.3.2022081201-138D162058691F0BBF46DAA4B5630F8C.jpg /sdcard/PC/image/magazine-unlock-06-2.3.2022081201-138D162058691F0BBF46DAA4B5630F8C.jpg
+2025-06-04T12:59:20.152Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.152Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.156Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-06-2.3.2022081201-90884B4935FF95115B7F0E44ACA69AB0.jpg /sdcard/PC/image/magazine-unlock-06-2.3.2022081201-90884B4935FF95115B7F0E44ACA69AB0.jpg
+2025-06-04T12:59:20.157Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-06-2.3.2022081201-1535BAFC59A5CDC9C0D183E4AF3B74D3.jpg /sdcard/PC/image/magazine-unlock-06-2.3.2022081201-1535BAFC59A5CDC9C0D183E4AF3B74D3.jpg
+2025-06-04T12:59:20.169Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.172Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.175Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-06-2.3.2022081201-BA908CAF0160B48F3F6DC71FBDB274F2.jpg /sdcard/PC/image/magazine-unlock-06-2.3.2022081201-BA908CAF0160B48F3F6DC71FBDB274F2.jpg
+2025-06-04T12:59:20.176Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/magazine-unlock-06-2.3.2022081201-89622881B7EB9C375BE32DF519048E98.jpg /sdcard/PC/image/magazine-unlock-06-2.3.2022081201-89622881B7EB9C375BE32DF519048E98.jpg
+2025-06-04T12:59:20.184Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.189Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-01-2.3.001-bigpicture_01_1.jpg /sdcard/PC/image/MagazinePic-01-2.3.001-bigpicture_01_1.jpg
+2025-06-04T12:59:20.219Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.219Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.221Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.229Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-01-2.3.001-bigpicture_01_3.jpg /sdcard/PC/image/MagazinePic-01-2.3.001-bigpicture_01_3.jpg
+2025-06-04T12:59:20.230Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-01-2.3.001-bigpicture_01_2.jpg /sdcard/PC/image/MagazinePic-01-2.3.001-bigpicture_01_2.jpg
+2025-06-04T12:59:20.231Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-01-2.3.001-bigpicture_01_4.jpg /sdcard/PC/image/MagazinePic-01-2.3.001-bigpicture_01_4.jpg
+2025-06-04T12:59:20.232Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.240Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-01-2.3.001-bigpicture_01_5.jpg /sdcard/PC/image/MagazinePic-01-2.3.001-bigpicture_01_5.jpg
+2025-06-04T12:59:20.249Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 155 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.254Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-01-2.3.001-bigpicture_01_6.jpg /sdcard/PC/image/MagazinePic-01-2.3.001-bigpicture_01_6.jpg
+2025-06-04T12:59:20.295Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 127 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.301Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-01-2.3.001-bigpicture_01_7.jpg /sdcard/PC/image/MagazinePic-01-2.3.001-bigpicture_01_7.jpg
+2025-06-04T12:59:20.334Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 127 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.338Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 127 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.342Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-01-2.3.001-bigpicture_01_9.jpg /sdcard/PC/image/MagazinePic-01-2.3.001-bigpicture_01_9.jpg
+2025-06-04T12:59:20.343Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-01-2.3.001-bigpicture_01_8.jpg /sdcard/PC/image/MagazinePic-01-2.3.001-bigpicture_01_8.jpg
+2025-06-04T12:59:20.346Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 127 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.348Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-01-2.3.001-bigpicture_01_10.jpg /sdcard/PC/image/MagazinePic-01-2.3.001-bigpicture_01_10.jpg
+2025-06-04T12:59:20.367Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 127 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.373Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-01-2.3.001-bigpicture_01_11.jpg /sdcard/PC/image/MagazinePic-01-2.3.001-bigpicture_01_11.jpg
+2025-06-04T12:59:20.382Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 127 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.388Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-01-2.3.001-bigpicture_01_12.jpg /sdcard/PC/image/MagazinePic-01-2.3.001-bigpicture_01_12.jpg
+2025-06-04T12:59:20.444Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 127 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.445Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 127 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.445Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 128 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.454Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-04-2.3.001-bigpicture_04_1.jpg /sdcard/PC/image/MagazinePic-04-2.3.001-bigpicture_04_1.jpg
+2025-06-04T12:59:20.455Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-02-2.3.001-bigpicture_02_1.jpg /sdcard/PC/image/MagazinePic-02-2.3.001-bigpicture_02_1.jpg
+2025-06-04T12:59:20.456Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-05-2.3.001-bigpicture_05_1.jpg /sdcard/PC/image/MagazinePic-05-2.3.001-bigpicture_05_1.jpg
+2025-06-04T12:59:20.470Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 127 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.476Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-05-2.3.001-bigpicture_05_2.jpg /sdcard/PC/image/MagazinePic-05-2.3.001-bigpicture_05_2.jpg
+2025-06-04T12:59:20.485Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 128 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.489Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-05-2.3.001-bigpicture_05_3.jpg /sdcard/PC/image/MagazinePic-05-2.3.001-bigpicture_05_3.jpg
+2025-06-04T12:59:20.541Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 128 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.546Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-05-2.3.001-bigpicture_05_4.jpg /sdcard/PC/image/MagazinePic-05-2.3.001-bigpicture_05_4.jpg
+2025-06-04T12:59:20.551Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 127 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.553Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-05-2.3.001-bigpicture_05_5.jpg /sdcard/PC/image/MagazinePic-05-2.3.001-bigpicture_05_5.jpg
+2025-06-04T12:59:20.570Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 127 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.570Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 127 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.578Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-05-2.3.001-bigpicture_05_6.jpg /sdcard/PC/image/MagazinePic-05-2.3.001-bigpicture_05_6.jpg
+2025-06-04T12:59:20.580Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-07-2.3.001-bigpicture_07_1.jpg /sdcard/PC/image/MagazinePic-07-2.3.001-bigpicture_07_1.jpg
+2025-06-04T12:59:20.587Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 127 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.593Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-07-2.3.001-bigpicture_07_2.jpg /sdcard/PC/image/MagazinePic-07-2.3.001-bigpicture_07_2.jpg
+2025-06-04T12:59:20.606Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 127 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.610Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-07-2.3.001-bigpicture_07_3.jpg /sdcard/PC/image/MagazinePic-07-2.3.001-bigpicture_07_3.jpg
+2025-06-04T12:59:20.612Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 127 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.615Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-07-2.3.001-bigpicture_07_4.jpg /sdcard/PC/image/MagazinePic-07-2.3.001-bigpicture_07_4.jpg
+2025-06-04T12:59:20.640Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 127 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.646Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-11-2.3.001-bigpicture_11_1.jpg /sdcard/PC/image/MagazinePic-11-2.3.001-bigpicture_11_1.jpg
+2025-06-04T12:59:20.673Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 127 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.678Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/MagazinePic-11-2.3.001-bigpicture_11_2.jpg /sdcard/PC/image/MagazinePic-11-2.3.001-bigpicture_11_2.jpg
+2025-06-04T12:59:20.684Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 127 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.688Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20220815-173209.jpg /sdcard/PC/image/Screenshot_20220815-173209.jpg
+2025-06-04T12:59:20.717Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 127 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.720Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20220817-173258.jpg /sdcard/PC/image/Screenshot_20220817-173258.jpg
+2025-06-04T12:59:20.743Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 127 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.743Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 127 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.747Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20220817-173333.jpg /sdcard/PC/image/Screenshot_20220817-173333.jpg
+2025-06-04T12:59:20.749Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20220818-173350.jpg /sdcard/PC/image/Screenshot_20220818-173350.jpg
+2025-06-04T12:59:20.775Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 127 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.776Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.780Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20220818-173408.jpg /sdcard/PC/image/Screenshot_20220818-173408.jpg
+2025-06-04T12:59:20.781Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20220818-173355.jpg /sdcard/PC/image/Screenshot_20220818-173355.jpg
+2025-06-04T12:59:20.797Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 127 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.800Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20220819-173230.jpg /sdcard/PC/image/Screenshot_20220819-173230.jpg
+2025-06-04T12:59:20.814Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.817Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20220819-173252.jpg /sdcard/PC/image/Screenshot_20220819-173252.jpg
+2025-06-04T12:59:20.825Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.829Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20220827-141525.jpg /sdcard/PC/image/Screenshot_20220827-141525.jpg
+2025-06-04T12:59:20.838Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.841Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20220827-173025.jpg /sdcard/PC/image/Screenshot_20220827-173025.jpg
+2025-06-04T12:59:20.849Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.853Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20220831-142546.jpg /sdcard/PC/image/Screenshot_20220831-142546.jpg
+2025-06-04T12:59:20.858Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.861Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20220905-172522.jpg /sdcard/PC/image/Screenshot_20220905-172522.jpg
+2025-06-04T12:59:20.880Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.884Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20220909-173112.jpg /sdcard/PC/image/Screenshot_20220909-173112.jpg
+2025-06-04T12:59:20.908Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.908Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.914Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20220909-173128.jpg /sdcard/PC/image/Screenshot_20220909-173128.jpg
+2025-06-04T12:59:20.916Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20220912-172911.jpg /sdcard/PC/image/Screenshot_20220912-172911.jpg
+2025-06-04T12:59:20.929Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.933Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20220916-145844.jpg /sdcard/PC/image/Screenshot_20220916-145844.jpg
+2025-06-04T12:59:20.937Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.939Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20220916-145854.jpg /sdcard/PC/image/Screenshot_20220916-145854.jpg
+2025-06-04T12:59:20.965Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.968Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.971Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20220919-170801.jpg /sdcard/PC/image/Screenshot_20220919-170801.jpg
+2025-06-04T12:59:20.972Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20220919-170828.jpg /sdcard/PC/image/Screenshot_20220919-170828.jpg
+2025-06-04T12:59:20.993Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:20.993Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:20 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:21.000Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20230310-214432.jpg /sdcard/PC/image/Screenshot_20230310-214432.jpg
+2025-06-04T12:59:21.001Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20230310-214416.jpg /sdcard/PC/image/Screenshot_20230310-214416.jpg
+2025-06-04T12:59:21.029Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:21 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:21.029Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:21 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:21.033Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20230312-190439.jpg /sdcard/PC/image/Screenshot_20230312-190439.jpg
+2025-06-04T12:59:21.034Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20230312-133916.jpg /sdcard/PC/image/Screenshot_20230312-133916.jpg
+2025-06-04T12:59:21.036Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:21 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:21.038Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20230312-191149.jpg /sdcard/PC/image/Screenshot_20230312-191149.jpg
+2025-06-04T12:59:21.081Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:21 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:21.086Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20230315-211336.jpg /sdcard/PC/image/Screenshot_20230315-211336.jpg
+2025-06-04T12:59:21.112Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:21 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:21.112Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:21 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:21.112Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:21 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:21.113Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:21 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:21.121Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20230315-211437.jpg /sdcard/PC/image/Screenshot_20230315-211437.jpg
+2025-06-04T12:59:21.122Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20230316-204810.jpg /sdcard/PC/image/Screenshot_20230316-204810.jpg
+2025-06-04T12:59:21.123Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20230316-204911.jpg /sdcard/PC/image/Screenshot_20230316-204911.jpg
+2025-06-04T12:59:21.123Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20230316-204819.jpg /sdcard/PC/image/Screenshot_20230316-204819.jpg
+2025-06-04T12:59:21.126Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:21 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:21.130Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20230316-205203.jpg /sdcard/PC/image/Screenshot_20230316-205203.jpg
+2025-06-04T12:59:21.150Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:21 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:21.154Z [INFO]: 执行ADB命令: adb -s 3b0021ca push /Users/xionglongzhen/GitHub/AndroidFileServer/uploads/image/Screenshot_20230509-220017.jpg /sdcard/PC/image/Screenshot_20230509-220017.jpg
+2025-06-04T12:59:21.189Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:21 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:21.190Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:21 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:21.190Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:21 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:21.202Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:21 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:21.216Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:21 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:21.227Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:21 +0000] "POST /api/upload?id=3b0021ca&category=image HTTP/1.1" 200 115 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:21.736Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell ls -lh '/sdcard/PC/image/'
+2025-06-04T12:59:21.858Z [WARN]: 无法解析行: total 104M
+2025-06-04T12:59:21.858Z [INFO]: 解析行: -rw-rw---- 1 root everybody 5.3M 2025-06-04 20:59 00001.png
+2025-06-04T12:59:21.859Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00007-2446117297.png
+2025-06-04T12:59:21.859Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00008-2139555120.png
+2025-06-04T12:59:21.859Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00009-1983077226.png
+2025-06-04T12:59:21.859Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00009-4072672307.png
+2025-06-04T12:59:21.859Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00010-4023535154.png
+2025-06-04T12:59:21.859Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00011-3665353270.png
+2025-06-04T12:59:21.859Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00012-3665353271.png
+2025-06-04T12:59:21.859Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00013-3665353272.png
+2025-06-04T12:59:21.860Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.2M 2025-06-04 20:59 00014-3665353273.png
+2025-06-04T12:59:21.860Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00015-3665353274.png
+2025-06-04T12:59:21.860Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00016-3665353275.png
+2025-06-04T12:59:21.860Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00017-3665353276.png
+2025-06-04T12:59:21.860Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00018-3665353277.png
+2025-06-04T12:59:21.860Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.2M 2025-06-04 20:59 00019-3665353278.png
+2025-06-04T12:59:21.860Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.2M 2025-06-04 20:59 00020-3665353279.png
+2025-06-04T12:59:21.860Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.2M 2025-06-04 20:59 00021-3665353280.png
+2025-06-04T12:59:21.860Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00022-3665353281.png
+2025-06-04T12:59:21.860Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.2M 2025-06-04 20:59 00023-3665353282.png
+2025-06-04T12:59:21.860Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00024-3665353283.png
+2025-06-04T12:59:21.860Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.2M 2025-06-04 20:59 00025-3665353284.png
+2025-06-04T12:59:21.860Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00026-3665353285.png
+2025-06-04T12:59:21.860Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.2M 2025-06-04 20:59 00027-3665353286.png
+2025-06-04T12:59:21.860Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00028-3665353287.png
+2025-06-04T12:59:21.860Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00029-3665353288.png
+2025-06-04T12:59:21.860Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00030-3665353289.png
+2025-06-04T12:59:21.860Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.2M 2025-06-04 20:59 00031-3665353290.png
+2025-06-04T12:59:21.860Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00032-3665353291.png
+2025-06-04T12:59:21.860Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00033-3665353292.png
+2025-06-04T12:59:21.860Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00034-3665353293.png
+2025-06-04T12:59:21.860Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00035-3665353294.png
+2025-06-04T12:59:21.860Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.2M 2025-06-04 20:59 00036-3665353295.png
+2025-06-04T12:59:21.861Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00037-3665353296.png
+2025-06-04T12:59:21.861Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.1M 2025-06-04 20:59 00038-3665353297.png
+2025-06-04T12:59:21.861Z [INFO]: 解析行: -rw-rw---- 1 root everybody 4.0M 2025-06-04 20:59 IMG_0001.JPG
+2025-06-04T12:59:21.861Z [INFO]: 解析行: -rw-rw---- 1 root everybody 3.9M 2025-06-04 20:59 IMG_0002.JPG
+2025-06-04T12:59:21.861Z [INFO]: 解析行: -rw-rw---- 1 root everybody 5.2M 2025-06-04 20:59 IMG_0003.JPG
+2025-06-04T12:59:21.861Z [INFO]: 解析行: -rw-rw---- 1 root everybody 5.1M 2025-06-04 20:59 IMG_0005.JPG
+2025-06-04T12:59:21.861Z [INFO]: 解析行: -rw-rw---- 1 root everybody 761K 2025-06-04 20:59 MagazinePic-01-2.3.001-bigpicture_01_1.jpg
+2025-06-04T12:59:21.861Z [INFO]: 解析行: -rw-rw---- 1 root everybody 481K 2025-06-04 20:59 MagazinePic-01-2.3.001-bigpicture_01_10.jpg
+2025-06-04T12:59:21.861Z [INFO]: 解析行: -rw-rw---- 1 root everybody 875K 2025-06-04 20:59 MagazinePic-01-2.3.001-bigpicture_01_11.jpg
+2025-06-04T12:59:21.861Z [INFO]: 解析行: -rw-rw---- 1 root everybody 875K 2025-06-04 20:59 MagazinePic-01-2.3.001-bigpicture_01_12.jpg
+2025-06-04T12:59:21.861Z [INFO]: 解析行: -rw-rw---- 1 root everybody 740K 2025-06-04 20:59 MagazinePic-01-2.3.001-bigpicture_01_2.jpg
+2025-06-04T12:59:21.861Z [INFO]: 解析行: -rw-rw---- 1 root everybody 888K 2025-06-04 20:59 MagazinePic-01-2.3.001-bigpicture_01_3.jpg
+2025-06-04T12:59:21.861Z [INFO]: 解析行: -rw-rw---- 1 root everybody 897K 2025-06-04 20:59 MagazinePic-01-2.3.001-bigpicture_01_4.jpg
+2025-06-04T12:59:21.861Z [INFO]: 解析行: -rw-rw---- 1 root everybody 772K 2025-06-04 20:59 MagazinePic-01-2.3.001-bigpicture_01_5.jpg
+2025-06-04T12:59:21.861Z [INFO]: 解析行: -rw-rw---- 1 root everybody 792K 2025-06-04 20:59 MagazinePic-01-2.3.001-bigpicture_01_6.jpg
+2025-06-04T12:59:21.861Z [INFO]: 解析行: -rw-rw---- 1 root everybody 789K 2025-06-04 20:59 MagazinePic-01-2.3.001-bigpicture_01_7.jpg
+2025-06-04T12:59:21.861Z [INFO]: 解析行: -rw-rw---- 1 root everybody 940K 2025-06-04 20:59 MagazinePic-01-2.3.001-bigpicture_01_8.jpg
+2025-06-04T12:59:21.861Z [INFO]: 解析行: -rw-rw---- 1 root everybody 857K 2025-06-04 20:59 MagazinePic-01-2.3.001-bigpicture_01_9.jpg
+2025-06-04T12:59:21.861Z [INFO]: 解析行: -rw-rw---- 1 root everybody 562K 2025-06-04 20:59 MagazinePic-02-2.3.001-bigpicture_02_1.jpg
+2025-06-04T12:59:21.861Z [INFO]: 解析行: -rw-rw---- 1 root everybody 856K 2025-06-04 20:59 MagazinePic-04-2.3.001-bigpicture_04_1.jpg
+2025-06-04T12:59:21.861Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.0M 2025-06-04 20:59 MagazinePic-05-2.3.001-bigpicture_05_1.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody 934K 2025-06-04 20:59 MagazinePic-05-2.3.001-bigpicture_05_2.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody 553K 2025-06-04 20:59 MagazinePic-05-2.3.001-bigpicture_05_3.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody 641K 2025-06-04 20:59 MagazinePic-05-2.3.001-bigpicture_05_4.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody 152K 2025-06-04 20:59 MagazinePic-05-2.3.001-bigpicture_05_5.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody 955K 2025-06-04 20:59 MagazinePic-05-2.3.001-bigpicture_05_6.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody 955K 2025-06-04 20:59 MagazinePic-07-2.3.001-bigpicture_07_1.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.0M 2025-06-04 20:59 MagazinePic-07-2.3.001-bigpicture_07_2.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody 1.0M 2025-06-04 20:59 MagazinePic-07-2.3.001-bigpicture_07_3.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody 679K 2025-06-04 20:59 MagazinePic-07-2.3.001-bigpicture_07_4.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody 940K 2025-06-04 20:59 MagazinePic-11-2.3.001-bigpicture_11_1.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody 761K 2025-06-04 20:59 MagazinePic-11-2.3.001-bigpicture_11_2.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody 176K 2025-06-04 20:59 Screenshot_20220815-173209.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody 113K 2025-06-04 20:59 Screenshot_20220817-173258.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody 118K 2025-06-04 20:59 Screenshot_20220817-173333.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody 126K 2025-06-04 20:59 Screenshot_20220818-173350.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody 186K 2025-06-04 20:59 Screenshot_20220818-173355.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody  81K 2025-06-04 20:59 Screenshot_20220818-173408.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody 199K 2025-06-04 20:59 Screenshot_20220819-173230.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody 201K 2025-06-04 20:59 Screenshot_20220819-173252.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody 137K 2025-06-04 20:59 Screenshot_20220827-141525.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody 196K 2025-06-04 20:59 Screenshot_20220827-173025.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody 341K 2025-06-04 20:59 Screenshot_20220831-142546.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody 329K 2025-06-04 20:59 Screenshot_20220905-172522.jpg
+2025-06-04T12:59:21.862Z [INFO]: 解析行: -rw-rw---- 1 root everybody 399K 2025-06-04 20:59 Screenshot_20220909-173112.jpg
+2025-06-04T12:59:21.863Z [INFO]: 解析行: -rw-rw---- 1 root everybody 530K 2025-06-04 20:59 Screenshot_20220909-173128.jpg
+2025-06-04T12:59:21.863Z [INFO]: 解析行: -rw-rw---- 1 root everybody 486K 2025-06-04 20:59 Screenshot_20220912-172911.jpg
+2025-06-04T12:59:21.863Z [INFO]: 解析行: -rw-rw---- 1 root everybody 629K 2025-06-04 20:59 Screenshot_20220916-145844.jpg
+2025-06-04T12:59:21.863Z [INFO]: 解析行: -rw-rw---- 1 root everybody 209K 2025-06-04 20:59 Screenshot_20220916-145854.jpg
+2025-06-04T12:59:21.863Z [INFO]: 解析行: -rw-rw---- 1 root everybody 528K 2025-06-04 20:59 Screenshot_20220919-170801.jpg
+2025-06-04T12:59:21.863Z [INFO]: 解析行: -rw-rw---- 1 root everybody 547K 2025-06-04 20:59 Screenshot_20220919-170828.jpg
+2025-06-04T12:59:21.863Z [INFO]: 解析行: -rw-rw---- 1 root everybody 845K 2025-06-04 20:59 Screenshot_20230310-214416.jpg
+2025-06-04T12:59:21.863Z [INFO]: 解析行: -rw-rw---- 1 root everybody 810K 2025-06-04 20:59 Screenshot_20230310-214432.jpg
+2025-06-04T12:59:21.863Z [INFO]: 解析行: -rw-rw---- 1 root everybody 410K 2025-06-04 20:59 Screenshot_20230312-133916.jpg
+2025-06-04T12:59:21.863Z [INFO]: 解析行: -rw-rw---- 1 root everybody 213K 2025-06-04 20:59 Screenshot_20230312-190439.jpg
+2025-06-04T12:59:21.863Z [INFO]: 解析行: -rw-rw---- 1 root everybody 205K 2025-06-04 20:59 Screenshot_20230312-191149.jpg
+2025-06-04T12:59:21.863Z [INFO]: 解析行: -rw-rw---- 1 root everybody 382K 2025-06-04 20:59 Screenshot_20230315-211336.jpg
+2025-06-04T12:59:21.863Z [INFO]: 解析行: -rw-rw---- 1 root everybody 379K 2025-06-04 20:59 Screenshot_20230315-211437.jpg
+2025-06-04T12:59:21.863Z [INFO]: 解析行: -rw-rw---- 1 root everybody 557K 2025-06-04 20:59 Screenshot_20230316-204810.jpg
+2025-06-04T12:59:21.863Z [INFO]: 解析行: -rw-rw---- 1 root everybody 605K 2025-06-04 20:59 Screenshot_20230316-204819.jpg
+2025-06-04T12:59:21.863Z [INFO]: 解析行: -rw-rw---- 1 root everybody 218K 2025-06-04 20:59 Screenshot_20230316-204911.jpg
+2025-06-04T12:59:21.863Z [INFO]: 解析行: -rw-rw---- 1 root everybody 217K 2025-06-04 20:59 Screenshot_20230316-205203.jpg
+2025-06-04T12:59:21.863Z [INFO]: 解析行: -rw-rw---- 1 root everybody 316K 2025-06-04 20:59 Screenshot_20230509-220017.jpg
+2025-06-04T12:59:21.863Z [INFO]: 解析行: -rw-rw---- 1 root everybody 187K 2025-06-04 20:59 magazine-unlock-01-2.3.12172-01D0989F04290F0DA133C81D1E4AA4AA.jpg
+2025-06-04T12:59:21.863Z [INFO]: 解析行: -rw-rw---- 1 root everybody 118K 2025-06-04 20:59 magazine-unlock-01-2.3.12172-08F2E66F466643C9ED50F0BD15A1AEEC.jpg
+2025-06-04T12:59:21.864Z [INFO]: 解析行: -rw-rw---- 1 root everybody 439K 2025-06-04 20:59 magazine-unlock-01-2.3.12172-0BE430ACF43AC91411219FD0C73D9887.jpg
+2025-06-04T12:59:21.864Z [INFO]: 解析行: -rw-rw---- 1 root everybody 233K 2025-06-04 20:59 magazine-unlock-01-2.3.12172-0E94279D99D7129318AFE1C6E68EA3A0.jpg
+2025-06-04T12:59:21.864Z [INFO]: 解析行: -rw-rw---- 1 root everybody 317K 2025-06-04 20:59 magazine-unlock-01-2.3.12172-103C4098C450A09893FF8E22F4A7E24C.jpg
+2025-06-04T12:59:21.864Z [INFO]: 解析行: -rw-rw---- 1 root everybody 259K 2025-06-04 20:59 magazine-unlock-01-2.3.12172-13F8A17F091A08B87FC27152D1078A50.jpg
+2025-06-04T12:59:21.864Z [INFO]: 解析行: -rw-rw---- 1 root everybody 267K 2025-06-04 20:59 magazine-unlock-01-2.3.2022081201-1303A33E67DC6143CC2091362BA013B1.jpg
+2025-06-04T12:59:21.864Z [INFO]: 解析行: -rw-rw---- 1 root everybody 134K 2025-06-04 20:59 magazine-unlock-01-2.3.2022081201-3416FFC791BD7957F33258757DDA2E2A.jpg
+2025-06-04T12:59:21.864Z [INFO]: 解析行: -rw-rw---- 1 root everybody 125K 2025-06-04 20:59 magazine-unlock-01-2.3.2022081201-418F0465819CB18037BDCB1DAB63DA06.jpg
+2025-06-04T12:59:21.864Z [INFO]: 解析行: -rw-rw---- 1 root everybody 360K 2025-06-04 20:59 magazine-unlock-01-2.3.2022081201-B45BE9FE294A68CF5C0D48DFF15A6E6B.jpg
+2025-06-04T12:59:21.864Z [INFO]: 解析行: -rw-rw---- 1 root everybody 277K 2025-06-04 20:59 magazine-unlock-01-2.3.2022081201-FC2A80D5582B97D261D1498A6EE39C0D.jpg
+2025-06-04T12:59:21.864Z [INFO]: 解析行: -rw-rw---- 1 root everybody 308K 2025-06-04 20:59 magazine-unlock-01-2.3.2022081301-5EC9C114A9E3ED8727FB7806604F639E.jpg
+2025-06-04T12:59:21.864Z [INFO]: 解析行: -rw-rw---- 1 root everybody 237K 2025-06-04 20:59 magazine-unlock-01-2.3.2022081301-868FAF76D780EFE4BE22AD55745BFD82.jpg
+2025-06-04T12:59:21.864Z [INFO]: 解析行: -rw-rw---- 1 root everybody 401K 2025-06-04 20:59 magazine-unlock-01-2.3.2022081301-E6446FBF41CD264B216FA70A480E87E6.jpg
+2025-06-04T12:59:21.864Z [INFO]: 解析行: -rw-rw---- 1 root everybody  86K 2025-06-04 20:59 magazine-unlock-02-2.3.2022081301-14EE583E744E4CA220861565960B6715.jpg
+2025-06-04T12:59:21.864Z [INFO]: 解析行: -rw-rw---- 1 root everybody 187K 2025-06-04 20:59 magazine-unlock-02-2.3.2022081301-83CF522B329105BAFED8402E73EF752E.jpg
+2025-06-04T12:59:21.864Z [INFO]: 解析行: -rw-rw---- 1 root everybody  93K 2025-06-04 20:59 magazine-unlock-02-2.3.2022081301-84FA68F58DA87337D5A97C4A2542B298.jpg
+2025-06-04T12:59:21.864Z [INFO]: 解析行: -rw-rw---- 1 root everybody 198K 2025-06-04 20:59 magazine-unlock-03-2.3.2022081201-57942250B85CEA980ECEDF165C05A2CA.jpg
+2025-06-04T12:59:21.864Z [INFO]: 解析行: -rw-rw---- 1 root everybody  66K 2025-06-04 20:59 magazine-unlock-03-2.3.2022081201-77964D9D89621D98E5507E2D3C4E925D.jpg
+2025-06-04T12:59:21.864Z [INFO]: 解析行: -rw-rw---- 1 root everybody  42K 2025-06-04 20:59 magazine-unlock-03-2.3.2022081201-85A159091BF07F7EE6C1817DEE7BFF75.jpg
+2025-06-04T12:59:21.865Z [INFO]: 解析行: -rw-rw---- 1 root everybody  67K 2025-06-04 20:59 magazine-unlock-03-2.3.2022081201-DE920A96E3FA5115981F726CA9E25C3B.jpg
+2025-06-04T12:59:21.865Z [INFO]: 解析行: -rw-rw---- 1 root everybody 115K 2025-06-04 20:59 magazine-unlock-03-2.3.2022081201-F92DA8C73BEF15F5409C4D77A7619952.jpg
+2025-06-04T12:59:21.865Z [INFO]: 解析行: -rw-rw---- 1 root everybody  78K 2025-06-04 20:59 magazine-unlock-03-2.3.2022081201-FFC3BB0CC0A58080599C3E28AA8B2665.jpg
+2025-06-04T12:59:21.865Z [INFO]: 解析行: -rw-rw---- 1 root everybody  62K 2025-06-04 20:59 magazine-unlock-03-2.3.2022081301-206E14859BB6191A60CDC432BFCE1F7E.jpg
+2025-06-04T12:59:21.865Z [INFO]: 解析行: -rw-rw---- 1 root everybody  66K 2025-06-04 20:59 magazine-unlock-03-2.3.2022081301-30BE46986CA75B518FE4ED6D9E72D006.jpg
+2025-06-04T12:59:21.865Z [INFO]: 解析行: -rw-rw---- 1 root everybody 129K 2025-06-04 20:59 magazine-unlock-03-2.3.2022081301-48734A0E5A4BDE16AF6696B28EBEE6A3.jpg
+2025-06-04T12:59:21.865Z [INFO]: 解析行: -rw-rw---- 1 root everybody  82K 2025-06-04 20:59 magazine-unlock-03-2.3.2022081301-6813BFA5F2A4F7895743EFDE1A94032C.jpg
+2025-06-04T12:59:21.865Z [INFO]: 解析行: -rw-rw---- 1 root everybody  79K 2025-06-04 20:59 magazine-unlock-03-2.3.2022081301-C650A87159EECCF39E8D3502CEC5CE69.jpg
+2025-06-04T12:59:21.865Z [INFO]: 解析行: -rw-rw---- 1 root everybody 165K 2025-06-04 20:59 magazine-unlock-03-2.3.2022081301-F6234D80AE41126BB7AF93D1CF66EBD3.jpg
+2025-06-04T12:59:21.865Z [INFO]: 解析行: -rw-rw---- 1 root everybody 116K 2025-06-04 20:59 magazine-unlock-04-2.3.2022081201-5780FB1A935F92C057B8E080B0557E5E.jpg
+2025-06-04T12:59:21.865Z [INFO]: 解析行: -rw-rw---- 1 root everybody 101K 2025-06-04 20:59 magazine-unlock-04-2.3.2022081201-910CABF8A83FE33B5DEC48B90D12222E.jpg
+2025-06-04T12:59:21.865Z [INFO]: 解析行: -rw-rw---- 1 root everybody 205K 2025-06-04 20:59 magazine-unlock-05-2.3.2022081201-3C93EA2D8B342F75A059F182AFB672A1.jpg
+2025-06-04T12:59:21.865Z [INFO]: 解析行: -rw-rw---- 1 root everybody 319K 2025-06-04 20:59 magazine-unlock-05-2.3.2022081201-4DAF4AACA0CD462404B72CC6255E13A6.jpg
+2025-06-04T12:59:21.865Z [INFO]: 解析行: -rw-rw---- 1 root everybody 349K 2025-06-04 20:59 magazine-unlock-05-2.3.2022081201-638B4E7CD3352D6E4A89EC56B40B579A.jpg
+2025-06-04T12:59:21.865Z [INFO]: 解析行: -rw-rw---- 1 root everybody 312K 2025-06-04 20:59 magazine-unlock-05-2.3.2022081201-B431B109E13ACB8D08BE0AFF9234D319.jpg
+2025-06-04T12:59:21.865Z [INFO]: 解析行: -rw-rw---- 1 root everybody 128K 2025-06-04 20:59 magazine-unlock-05-2.3.2022081301-04FE785307058A7C0E231F65665D1C27.jpg
+2025-06-04T12:59:21.865Z [INFO]: 解析行: -rw-rw---- 1 root everybody 163K 2025-06-04 20:59 magazine-unlock-05-2.3.2022081301-29C3A1323401A9BB9AEFB95A7CD46C83.jpg
+2025-06-04T12:59:21.865Z [INFO]: 解析行: -rw-rw---- 1 root everybody 400K 2025-06-04 20:59 magazine-unlock-05-2.3.2022081301-4A5CF528187E88FBC83789A45FF3AC15.jpg
+2025-06-04T12:59:21.865Z [INFO]: 解析行: -rw-rw---- 1 root everybody 522K 2025-06-04 20:59 magazine-unlock-05-2.3.2022081301-7C2E5465F3B38D0A0F2A4B3EF5A25F9B.jpg
+2025-06-04T12:59:21.865Z [INFO]: 解析行: -rw-rw---- 1 root everybody 503K 2025-06-04 20:59 magazine-unlock-06-2.3.2022081201-138D162058691F0BBF46DAA4B5630F8C.jpg
+2025-06-04T12:59:21.865Z [INFO]: 解析行: -rw-rw---- 1 root everybody 222K 2025-06-04 20:59 magazine-unlock-06-2.3.2022081201-1535BAFC59A5CDC9C0D183E4AF3B74D3.jpg
+2025-06-04T12:59:21.866Z [INFO]: 解析行: -rw-rw---- 1 root everybody 749K 2025-06-04 20:59 magazine-unlock-06-2.3.2022081201-89622881B7EB9C375BE32DF519048E98.jpg
+2025-06-04T12:59:21.866Z [INFO]: 解析行: -rw-rw---- 1 root everybody 117K 2025-06-04 20:59 magazine-unlock-06-2.3.2022081201-90884B4935FF95115B7F0E44ACA69AB0.jpg
+2025-06-04T12:59:21.866Z [INFO]: 解析行: -rw-rw---- 1 root everybody 212K 2025-06-04 20:59 magazine-unlock-06-2.3.2022081201-BA908CAF0160B48F3F6DC71FBDB274F2.jpg
+2025-06-04T12:59:21.867Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:21 +0000] "GET /api/get_files?id=3b0021ca&path=%2Fsdcard%2FPC%2Fimage%2F HTTP/1.1" 200 31319 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:21.877Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00001.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00001.png
+2025-06-04T12:59:21.881Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00007-2446117297.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00007-2446117297.png
+2025-06-04T12:59:21.883Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00008-2139555120.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00008-2139555120.png
+2025-06-04T12:59:21.888Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00009-1983077226.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00009-1983077226.png
+2025-06-04T12:59:21.894Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00009-4072672307.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00009-4072672307.png
+2025-06-04T12:59:21.899Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00010-4023535154.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00010-4023535154.png
+2025-06-04T12:59:22.197Z [INFO]: 文件拉取成功: /sdcard/PC/image/00007-2446117297.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00007-2446117297.png
+2025-06-04T12:59:22.204Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00007-2446117297.png&category=images&file_name=00007-2446117297.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.205Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00015-3665353274.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00015-3665353274.png
+2025-06-04T12:59:22.210Z [INFO]: 文件拉取成功: /sdcard/PC/image/00001.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00001.png
+2025-06-04T12:59:22.212Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00001.png&category=images&file_name=00001.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.212Z [INFO]: 文件拉取成功: /sdcard/PC/image/00009-1983077226.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00009-1983077226.png
+2025-06-04T12:59:22.214Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00009-1983077226.png&category=images&file_name=00009-1983077226.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.214Z [INFO]: 文件拉取成功: /sdcard/PC/image/00008-2139555120.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00008-2139555120.png
+2025-06-04T12:59:22.215Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00008-2139555120.png&category=images&file_name=00008-2139555120.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.216Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00017-3665353276.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00017-3665353276.png
+2025-06-04T12:59:22.219Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00013-3665353272.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00013-3665353272.png
+2025-06-04T12:59:22.223Z [INFO]: 文件拉取成功: /sdcard/PC/image/00009-4072672307.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00009-4072672307.png
+2025-06-04T12:59:22.224Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00009-4072672307.png&category=images&file_name=00009-4072672307.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.224Z [INFO]: 文件拉取成功: /sdcard/PC/image/00010-4023535154.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00010-4023535154.png
+2025-06-04T12:59:22.225Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00010-4023535154.png&category=images&file_name=00010-4023535154.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.226Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00016-3665353275.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00016-3665353275.png
+2025-06-04T12:59:22.228Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00011-3665353270.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00011-3665353270.png
+2025-06-04T12:59:22.231Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00012-3665353271.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00012-3665353271.png
+2025-06-04T12:59:22.302Z [INFO]: 文件拉取成功: /sdcard/PC/image/00015-3665353274.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00015-3665353274.png
+2025-06-04T12:59:22.302Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00015-3665353274.png&category=images&file_name=00015-3665353274.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.304Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00014-3665353273.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00014-3665353273.png
+2025-06-04T12:59:22.393Z [INFO]: 文件拉取成功: /sdcard/PC/image/00017-3665353276.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00017-3665353276.png
+2025-06-04T12:59:22.394Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00017-3665353276.png&category=images&file_name=00017-3665353276.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.395Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00018-3665353277.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00018-3665353277.png
+2025-06-04T12:59:22.417Z [INFO]: 文件拉取成功: /sdcard/PC/image/00013-3665353272.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00013-3665353272.png
+2025-06-04T12:59:22.418Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00013-3665353272.png&category=images&file_name=00013-3665353272.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.418Z [INFO]: 文件拉取成功: /sdcard/PC/image/00016-3665353275.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00016-3665353275.png
+2025-06-04T12:59:22.419Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00016-3665353275.png&category=images&file_name=00016-3665353275.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.421Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00020-3665353279.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00020-3665353279.png
+2025-06-04T12:59:22.423Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00019-3665353278.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00019-3665353278.png
+2025-06-04T12:59:22.425Z [INFO]: 文件拉取成功: /sdcard/PC/image/00011-3665353270.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00011-3665353270.png
+2025-06-04T12:59:22.425Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00011-3665353270.png&category=images&file_name=00011-3665353270.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.426Z [INFO]: 文件拉取成功: /sdcard/PC/image/00012-3665353271.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00012-3665353271.png
+2025-06-04T12:59:22.426Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00012-3665353271.png&category=images&file_name=00012-3665353271.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.428Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00021-3665353280.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00021-3665353280.png
+2025-06-04T12:59:22.430Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00022-3665353281.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00022-3665353281.png
+2025-06-04T12:59:22.490Z [INFO]: 文件拉取成功: /sdcard/PC/image/00014-3665353273.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00014-3665353273.png
+2025-06-04T12:59:22.490Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00014-3665353273.png&category=images&file_name=00014-3665353273.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.491Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00023-3665353282.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00023-3665353282.png
+2025-06-04T12:59:22.493Z [INFO]: 文件拉取成功: /sdcard/PC/image/00018-3665353277.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00018-3665353277.png
+2025-06-04T12:59:22.493Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00018-3665353277.png&category=images&file_name=00018-3665353277.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.494Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00024-3665353283.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00024-3665353283.png
+2025-06-04T12:59:22.613Z [INFO]: 文件拉取成功: /sdcard/PC/image/00021-3665353280.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00021-3665353280.png
+2025-06-04T12:59:22.614Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00021-3665353280.png&category=images&file_name=00021-3665353280.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.615Z [INFO]: 文件拉取成功: /sdcard/PC/image/00022-3665353281.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00022-3665353281.png
+2025-06-04T12:59:22.616Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00022-3665353281.png&category=images&file_name=00022-3665353281.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.616Z [INFO]: 文件拉取成功: /sdcard/PC/image/00019-3665353278.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00019-3665353278.png
+2025-06-04T12:59:22.617Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00019-3665353278.png&category=images&file_name=00019-3665353278.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.617Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00025-3665353284.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00025-3665353284.png
+2025-06-04T12:59:22.621Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00026-3665353285.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00026-3665353285.png
+2025-06-04T12:59:22.624Z [INFO]: 文件拉取成功: /sdcard/PC/image/00020-3665353279.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00020-3665353279.png
+2025-06-04T12:59:22.624Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00020-3665353279.png&category=images&file_name=00020-3665353279.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.625Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00027-3665353286.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00027-3665353286.png
+2025-06-04T12:59:22.627Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00028-3665353287.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00028-3665353287.png
+2025-06-04T12:59:22.692Z [INFO]: 文件拉取成功: /sdcard/PC/image/00023-3665353282.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00023-3665353282.png
+2025-06-04T12:59:22.693Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00023-3665353282.png&category=images&file_name=00023-3665353282.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.693Z [INFO]: 文件拉取成功: /sdcard/PC/image/00024-3665353283.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00024-3665353283.png
+2025-06-04T12:59:22.694Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00024-3665353283.png&category=images&file_name=00024-3665353283.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.694Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00029-3665353288.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00029-3665353288.png
+2025-06-04T12:59:22.696Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00030-3665353289.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00030-3665353289.png
+2025-06-04T12:59:22.801Z [INFO]: 文件拉取成功: /sdcard/PC/image/00026-3665353285.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00026-3665353285.png
+2025-06-04T12:59:22.801Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00026-3665353285.png&category=images&file_name=00026-3665353285.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.802Z [INFO]: 文件拉取成功: /sdcard/PC/image/00025-3665353284.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00025-3665353284.png
+2025-06-04T12:59:22.802Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00025-3665353284.png&category=images&file_name=00025-3665353284.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.802Z [INFO]: 文件拉取成功: /sdcard/PC/image/00028-3665353287.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00028-3665353287.png
+2025-06-04T12:59:22.803Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00028-3665353287.png&category=images&file_name=00028-3665353287.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.803Z [INFO]: 文件拉取成功: /sdcard/PC/image/00027-3665353286.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00027-3665353286.png
+2025-06-04T12:59:22.804Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00027-3665353286.png&category=images&file_name=00027-3665353286.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.804Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00031-3665353290.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00031-3665353290.png
+2025-06-04T12:59:22.806Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00032-3665353291.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00032-3665353291.png
+2025-06-04T12:59:22.807Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00033-3665353292.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00033-3665353292.png
+2025-06-04T12:59:22.809Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00034-3665353293.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00034-3665353293.png
+2025-06-04T12:59:22.872Z [INFO]: 文件拉取成功: /sdcard/PC/image/00030-3665353289.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00030-3665353289.png
+2025-06-04T12:59:22.873Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00030-3665353289.png&category=images&file_name=00030-3665353289.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.873Z [INFO]: 文件拉取成功: /sdcard/PC/image/00029-3665353288.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00029-3665353288.png
+2025-06-04T12:59:22.873Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00029-3665353288.png&category=images&file_name=00029-3665353288.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.876Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00035-3665353294.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00035-3665353294.png
+2025-06-04T12:59:22.878Z [INFO]: 执行ADB命令: adb -s 3b0021ca pull /sdcard/PC/image/00036-3665353295.png /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00036-3665353295.png
+2025-06-04T12:59:22.995Z [INFO]: 文件拉取成功: /sdcard/PC/image/00033-3665353292.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00033-3665353292.png
+2025-06-04T12:59:22.995Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00033-3665353292.png&category=images&file_name=00033-3665353292.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.997Z [INFO]: 文件拉取成功: /sdcard/PC/image/00034-3665353293.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00034-3665353293.png
+2025-06-04T12:59:22.997Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00034-3665353293.png&category=images&file_name=00034-3665353293.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.997Z [INFO]: 文件拉取成功: /sdcard/PC/image/00032-3665353291.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00032-3665353291.png
+2025-06-04T12:59:22.998Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00032-3665353291.png&category=images&file_name=00032-3665353291.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:22.998Z [INFO]: 文件拉取成功: /sdcard/PC/image/00031-3665353290.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00031-3665353290.png
+2025-06-04T12:59:22.998Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:22 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00031-3665353290.png&category=images&file_name=00031-3665353290.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:23.064Z [INFO]: 文件拉取成功: /sdcard/PC/image/00035-3665353294.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00035-3665353294.png
+2025-06-04T12:59:23.066Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:23 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00035-3665353294.png&category=images&file_name=00035-3665353294.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T12:59:23.066Z [INFO]: 文件拉取成功: /sdcard/PC/image/00036-3665353295.png -> /Users/xionglongzhen/GitHub/AndroidFileServer/storage/3b0021ca/images/00036-3665353295.png
+2025-06-04T12:59:23.067Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:12:59:23 +0000] "GET /api/thumbnail?file_path=%2Fsdcard%2FPC%2Fimage%2F00036-3665353295.png&category=images&file_name=00036-3665353295.png&id=3b0021ca HTTP/1.1" 404 842 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:13.858Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell getprop ro.product.model
+2025-06-04T13:00:13.861Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell df /data
+2025-06-04T13:00:13.863Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell dumpsys battery
+2025-06-04T13:00:13.869Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:13 +0000] "GET /api/storagedir HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:13.965Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:13 +0000] "POST /api/device_info HTTP/1.1" 200 128 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:13.977Z [INFO]: 执行ADB命令: adb -s 3b0021ca shell content query --uri content://media/external/images/media --projection _id:_data:mime_type:_size:_display_name:width:height:date_added
+2025-06-04T13:00:14.617Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:14 +0000] "GET /screenshot/3b0021ca HTTP/1.1" 200 - "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.295Z [INFO]: 成功解析 147 个image条目
+2025-06-04T13:00:15.297Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/get_images?id=3b0021ca HTTP/1.1" 200 43331 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.314Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00009-4072672307.png&category=images&file_name=00009-4072672307.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.316Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00007-2446117297.png&category=images&file_name=00007-2446117297.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.319Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00010-4023535154.png&category=images&file_name=00010-4023535154.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.324Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00013-3665353272.png&category=images&file_name=00013-3665353272.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.325Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00001.png&category=images&file_name=00001.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.327Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00011-3665353270.png&category=images&file_name=00011-3665353270.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.328Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00014-3665353273.png&category=images&file_name=00014-3665353273.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.329Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00015-3665353274.png&category=images&file_name=00015-3665353274.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.330Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00008-2139555120.png&category=images&file_name=00008-2139555120.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.331Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00009-1983077226.png&category=images&file_name=00009-1983077226.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.332Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00016-3665353275.png&category=images&file_name=00016-3665353275.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.332Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00018-3665353277.png&category=images&file_name=00018-3665353277.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.333Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00017-3665353276.png&category=images&file_name=00017-3665353276.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.335Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00019-3665353278.png&category=images&file_name=00019-3665353278.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.339Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00012-3665353271.png&category=images&file_name=00012-3665353271.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.339Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00020-3665353279.png&category=images&file_name=00020-3665353279.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.340Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00022-3665353281.png&category=images&file_name=00022-3665353281.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.341Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00024-3665353283.png&category=images&file_name=00024-3665353283.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.342Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00023-3665353282.png&category=images&file_name=00023-3665353282.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.342Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00025-3665353284.png&category=images&file_name=00025-3665353284.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.343Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00021-3665353280.png&category=images&file_name=00021-3665353280.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.345Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00026-3665353285.png&category=images&file_name=00026-3665353285.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.345Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00027-3665353286.png&category=images&file_name=00027-3665353286.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+2025-06-04T13:00:15.346Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:13:00:15 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FPC%2Fimage%2F00028-3665353287.png&category=images&file_name=00028-3665353287.png&id=3b0021ca HTTP/1.1" 404 938 "http://127.0.0.1:5001/index.html?id=3b0021ca" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
