@@ -5,7 +5,7 @@
 **Android文件管理器** 是一个基于网页的安卓设备文件浏览和管理工具，前端使用 HTML 编写，后端使用 Python 实现。通过 ADB（Android Debug Bridge）与安卓设备通信，支持图像、音频、视频的缩略图和预览，借助 FFmpeg 生成媒体缩略图，提供简洁直观的文件管理界面。
 
 **Android File Manager** is a web-based file explorer and manager for Android devices. It uses HTML for the frontend and Python for the backend. The project connects to Android devices via ADB (Android Debug Bridge), provides previews for media files using FFmpeg, and offers a clean interface for managing files.
-
+![alt text](preview/3FD65107-850B-44ad-AA4D-AB4FF27FD1E3.png "preivew gui")
 ---
 
 ## 🚀 当前功能 / Features
