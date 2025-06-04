@@ -19,9 +19,9 @@ app.use('/static', express.static(path.join(__dirname, 'static')));
 // 中间件：重写Flask模板语法到Node.js路径
 app.use(async (req, res, next) => {
   // 只处理HTML文件
-  if (req.path.endsWith('.html')) {
+  if (req.path.endsWith('.html') || req.path === '/') {
     try {
-      const filePath = path.join(__dirname, 'templates', req.path);
+      const filePath = path.join(__dirname, 'templates', req.path === '/' ? 'device_connect.html' : req.path);
         // 使用正确的文件读取方式
         fs.readFile(filePath, 'utf8', (err, data) => {
           if (err) {

@@ -953,3 +953,43 @@ adb.exe: cannot connect to daemon
 2025-06-04T06:23:17.699Z [ERROR]: 传输中断:
 2025-06-04T06:23:20.468Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:23:20 +0000] "GET /api/file?file_path=%2Fstorage%2Femulated%2F0%2FMusic%2FQQMusic%2F%E5%90%B4%E8%8B%A5%E5%B8%8C%20-%20%E8%B6%8A%E9%9A%BE%E8%B6%8A%E7%88%B1%20(%E7%B2%A4%E8%AF%AD)%20%5Bqmms2%5D.mp3&category=audio&file_name=%E5%90%B4%E8%8B%A5%E5%B8%8C%20-%20%E8%B6%8A%E9%9A%BE%E8%B6%8A%E7%88%B1%20(%E7%B2%A4%E8%AF%AD)%20%5Bqmms2%5D.mp3&id=7DSSBM9H8T7XCYHM HTTP/1.1" 206 9319056 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
 2025-06-04T06:23:20.469Z [ERROR]: 传输中断:
+2025-06-04T06:42:30.456Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T06:42:30.527Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1-full_build-www.gyan.dev
+2025-06-04T06:42:30.532Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T06:42:30.532Z [INFO]: 存储目录: C:\Users\xiong\AndroidFileServer\storage
+2025-06-04T06:42:42.092Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:42:42 +0000] "GET / HTTP/1.1" 200 2817 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:42:42.111Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:42:42 +0000] "GET /%7B%7B%20url_for('static',%20filename='css/device_connect.css')%20%7D%7D HTTP/1.1" 404 227 "http://127.0.0.1:5001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:42:42.115Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:42:42 +0000] "GET /%7B%7B%20url_for('static',%20filename='js/device_connect.js')%20%7D%7D HTTP/1.1" 404 225 "http://127.0.0.1:5001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:42:42.244Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:42:42 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://127.0.0.1:5001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:42:46.790Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:42:46 +0000] "GET /%7B%7B%20url_for('static',%20filename='css/device_connect.css')%20%7D%7D HTTP/1.1" 404 227 "http://127.0.0.1:5001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:42:46.823Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:42:46 +0000] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 187 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:43:39.086Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:43:39 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:43:43.340Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T06:43:43.391Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1-full_build-www.gyan.dev
+2025-06-04T06:43:43.394Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T06:43:43.395Z [INFO]: 存储目录: C:\Users\xiong\AndroidFileServer\storage
+2025-06-04T06:43:45.868Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:43:45 +0000] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 187 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:43:45.871Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:43:45 +0000] "GET /%7B%7B%20url_for('static',%20filename='css/device_connect.css')%20%7D%7D HTTP/1.1" 404 227 "http://127.0.0.1:5001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:43:49.807Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:43:49 +0000] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 187 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:44:13.508Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:44:13 +0000] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 187 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:45:07.168Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T06:45:07.217Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1-full_build-www.gyan.dev
+2025-06-04T06:45:07.221Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T06:45:07.221Z [INFO]: 存储目录: C:\Users\xiong\AndroidFileServer\storage
+2025-06-04T06:45:09.926Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:45:09 +0000] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 187 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:45:10.978Z [INFO]: 执行ADB命令: adb devices
+2025-06-04T06:45:11.007Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:45:11 +0000] "GET /api/get_device HTTP/1.1" 200 49 "http://127.0.0.1:5001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:45:11.031Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell getprop ro.product.model
+2025-06-04T06:45:11.039Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell df /data
+2025-06-04T06:45:11.046Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell dumpsys battery
+2025-06-04T06:45:11.168Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:45:11 +0000] "POST /api/device_info HTTP/1.1" 200 137 "http://127.0.0.1:5001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:45:12.040Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:45:12 +0000] "GET /screenshot/7DSSBM9H8T7XCYHM HTTP/1.1" 200 - "http://127.0.0.1:5001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:46:01.972Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:46:01 +0000] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 187 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:46:02.018Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell getprop ro.product.model
+2025-06-04T06:46:02.029Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell df /data
+2025-06-04T06:46:02.036Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell dumpsys battery
+2025-06-04T06:46:02.106Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:46:02 +0000] "POST /api/device_info HTTP/1.1" 200 137 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:46:02.163Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell content query --uri content://media/external/images/media --projection _id:_data:mime_type:_size:_display_name:width:height:date_added
+2025-06-04T06:46:03.901Z [INFO]: 成功解析 6866 个image条目
+2025-06-04T06:46:03.921Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:46:03 +0000] "GET /api/get_images?id=7DSSBM9H8T7XCYHM HTTP/1.1" 200 1893558 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:46:04.133Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:46:04 +0000] "GET /screenshot/7DSSBM9H8T7XCYHM HTTP/1.1" 200 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
