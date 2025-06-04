@@ -2,9 +2,9 @@
 
 ## 🧩 项目简介 / Project Overview
 
-**Android文件管理器** 是一个基于网页的安卓设备文件浏览和管理工具，前端使用 HTML 编写，后端使用 Python 实现。通过 ADB（Android Debug Bridge）与安卓设备通信，支持图像、音频、视频的缩略图和预览，借助 FFmpeg 生成媒体缩略图，提供简洁直观的文件管理界面。
+**Android文件管理器** 是一个基于网页的安卓设备文件浏览和管理工具，前端使用 HTML 编写，后端使用 Python和Nodejs 实现。通过 ADB（Android Debug Bridge）与安卓设备通信，支持图像、音频、视频的缩略图和预览，借助 FFmpeg 生成媒体缩略图，提供简洁直观的文件管理界面。
 
-**Android File Manager** is a web-based file explorer and manager for Android devices. It uses HTML for the frontend and Python for the backend. The project connects to Android devices via ADB (Android Debug Bridge), provides previews for media files using FFmpeg, and offers a clean interface for managing files.
+**Android File Manager** is a web-based file explorer and manager for Android devices. It uses HTML for the frontend and Python and Nodejs for the backend. The project connects to Android devices via ADB (Android Debug Bridge), provides previews for media files using FFmpeg, and offers a clean interface for managing files.
 ![alt text](preview/3FD65107-850B-44ad-AA4D-AB4FF27FD1E3.png "preivew gui")
 ---
 
@@ -40,7 +40,7 @@
 
 | 前端 Frontend | 后端 Backend | 工具 Tools |
 |---------------|---------------|-------------|
-| HTML/CSS/JS   | Python + Flask| ADB, FFmpeg |
+| HTML/CSS/JS   | Python + Flask (Nodejs + express)| ADB, FFmpeg |
 
 ---
 
@@ -56,19 +56,24 @@
 ## 📱 使用说明 / Usage
 
 1. **连接安卓设备 Connect Android device via USB**
-   ```bash
+  ```bash
    adb devices
-
+  ```
 2. **启动后端服务 Start the backend**
 
-   ```bash
-   python app.py
-   ```
+  ***python start***
+  ```bash
+  python main.py
+  ```
+  ***or nodejs start***
+  ```bash
+  node main.js
+  ```
 3. **在浏览器访问 Open in browser**
 
-   ```
-   http://localhost:5001/
-   ```
+  ```
+  http://localhost:5001/
+  ```
 
 ---
 
