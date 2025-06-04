@@ -85,10 +85,3 @@ This project uses FFmpeg for thumbnail generation and ADB for device file access
 ## 📜 License
 
 [MIT License](LICENSE)
-
-```
-
----
-
-如需我帮你生成 logo、搭建自动化打包脚本或添加截图预览段落，也可以继续告诉我。
-```
