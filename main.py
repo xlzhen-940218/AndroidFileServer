@@ -10,6 +10,9 @@ from pathlib import Path
 from datetime import datetime
 import mimetypes
 import os
+from install_tools import install_adb, install_ffmpeg, verify_installation, install_all
+
+
 
 def parse_ls_output(ls_text,dir:str):
     result = []
@@ -720,6 +723,26 @@ def device_status():
     return jsonify(get_adb_devices())
 
 if __name__ == '__main__':
+
+    # 验证安装
+    success, version_info = verify_installation("adb")
+    print(f"ADB验证结果: {success}, 信息: {version_info}")
+
+    if not success:
+        # 单独安装ADB
+        success, message = install_adb()
+        print(f"ADB安装结果: {success}, 信息: {message}")
+
+    # 验证安装
+    success, version_info = verify_installation("ffmpeg")
+    print(f"FFmpeg验证结果: {success}, 信息: {version_info}")
+
+    if not success:
+        # 单独安装FFmpeg
+        success, message = install_ffmpeg()
+        print(f"FFmpeg安装结果: {success}, 信息: {message}")
+
+
     ensure_directory(STORAGE_DIR)
     logger.info("应用启动，存储目录: %s", STORAGE_DIR)
     app.run(debug=True, host='0.0.0.0', port=5001)

@@ -1,3 +1,4 @@
 /.cache_thumbnail
 /.venv
 /storage
+/__pycache__
