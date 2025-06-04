@@ -1,0 +1,955 @@
+2025-06-04T04:00:55.877Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T04:00:55.951Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1-full_build-www.gyan.dev
+2025-06-04T04:00:55.954Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T04:00:55.954Z [INFO]: 存储目录: C:\Users\xiong\AndroidFileServer\storage
+2025-06-04T04:01:10.004Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:01:10 +0000] "GET /index.html?id=7DSSBM9H8T7XCYHM HTTP/1.1" 200 5920 "http://127.0.0.1:5001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:01:10.029Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:01:10 +0000] "GET /%7B%7B%20url_for('static',%20filename='css/style.css')%20%7D%7D HTTP/1.1" 404 218 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:01:10.032Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:01:10 +0000] "GET /%7B%7B%20url_for('static',%20filename='js/script.js')%20%7D%7D HTTP/1.1" 404 217 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:01:13.703Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:01:13 +0000] "GET /%7B%7B%20url_for('static',%20filename='css/style.css')%20%7D%7D HTTP/1.1" 404 218 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:01:13.704Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:01:13 +0000] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 187 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:08:14.557Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T04:08:14.620Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1-full_build-www.gyan.dev
+2025-06-04T04:08:14.623Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T04:08:14.623Z [INFO]: 存储目录: C:\Users\xiong\AndroidFileServer\storage
+2025-06-04T04:08:19.324Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:08:19 +0000] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 187 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:12:51.752Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T04:12:51.810Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1-full_build-www.gyan.dev
+2025-06-04T04:12:51.813Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T04:12:51.814Z [INFO]: 存储目录: C:\Users\xiong\AndroidFileServer\storage
+2025-06-04T04:12:56.170Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:12:56 +0000] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 187 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:13:26.551Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:13:26 +0000] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 187 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:13:33.140Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:13:33 +0000] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 187 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:13:39.368Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T04:13:39.426Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1-full_build-www.gyan.dev
+2025-06-04T04:13:39.430Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T04:13:39.430Z [INFO]: 存储目录: C:\Users\xiong\AndroidFileServer\storage
+2025-06-04T04:13:41.640Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:13:41 +0000] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 187 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:14:44.191Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T04:14:44.255Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1-full_build-www.gyan.dev
+2025-06-04T04:14:44.259Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T04:14:44.259Z [INFO]: 存储目录: C:\Users\xiong\AndroidFileServer\storage
+2025-06-04T04:14:48.494Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:14:48 +0000] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 187 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:15:43.235Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T04:15:43.297Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1-full_build-www.gyan.dev
+2025-06-04T04:15:43.300Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T04:15:43.300Z [INFO]: 存储目录: C:\Users\xiong\AndroidFileServer\storage
+2025-06-04T04:15:46.889Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:15:46 +0000] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 187 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:17:05.910Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T04:17:05.969Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1-full_build-www.gyan.dev
+2025-06-04T04:17:05.972Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T04:17:05.973Z [INFO]: 存储目录: C:\Users\xiong\AndroidFileServer\storage
+2025-06-04T04:17:08.757Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:17:08 +0000] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 187 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:17:08.822Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell getprop ro.product.model
+2025-06-04T04:17:08.836Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell df /data
+2025-06-04T04:17:08.846Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell dumpsys battery
+2025-06-04T04:17:10.960Z [ERROR]: 获取设备名称失败: ADB命令失败: * daemon not running; starting now at tcp:5037
+* daemon started successfully
+adb.exe: device '7DSSBM9H8T7XCYHM' not found
+
+2025-06-04T04:17:11.767Z [ERROR]: 获取存储信息失败: ADB命令失败: * daemon not running; starting now at tcp:5037
+could not read ok from ADB Server
+* failed to start daemon
+adb.exe: cannot connect to daemon
+
+2025-06-04T04:17:11.780Z [ERROR]: 获取电池电量失败: ADB命令失败: * daemon not running; starting now at tcp:5037
+could not read ok from ADB Server
+* failed to start daemon
+adb.exe: cannot connect to daemon
+
+2025-06-04T04:17:11.781Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:17:11 +0000] "POST /api/device_info HTTP/1.1" 200 134 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:17:11.786Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell content query --uri content://media/external/images/media --projection _id:_data:mime_type:_size:_display_name:width:height:date_added
+2025-06-04T04:17:11.825Z [ERROR]: 获取图像失败: ADB命令失败: adb.exe: device '7DSSBM9H8T7XCYHM' not found
+
+2025-06-04T04:17:11.826Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:17:11 +0000] "GET /api/get_images?id=7DSSBM9H8T7XCYHM HTTP/1.1" 500 111 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:17:11.831Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:17:11 +0000] "GET /screenshot/7DSSBM9H8T7XCYHM HTTP/1.1" 200 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:17:11.832Z [ERROR]: ADB命令失败，退出码: 4294967295
+2025-06-04T04:17:53.438Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T04:17:53.496Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1-full_build-www.gyan.dev
+2025-06-04T04:17:53.499Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T04:17:53.500Z [INFO]: 存储目录: C:\Users\xiong\AndroidFileServer\storage
+2025-06-04T04:17:55.638Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:17:55 +0000] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 187 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:17:55.712Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell getprop ro.product.model
+2025-06-04T04:17:55.723Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell df /data
+2025-06-04T04:17:55.733Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell dumpsys battery
+2025-06-04T04:17:55.807Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:17:55 +0000] "POST /api/device_info HTTP/1.1" 200 138 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:17:55.845Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell content query --uri content://media/external/images/media --projection _id:_data:mime_type:_size:_display_name:width:height:date_added
+2025-06-04T04:17:57.099Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:17:57 +0000] "GET /screenshot/7DSSBM9H8T7XCYHM HTTP/1.1" 200 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:17:57.791Z [INFO]: 成功解析 6866 个image条目
+2025-06-04T04:17:57.807Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:17:57 +0000] "GET /api/get_images?id=7DSSBM9H8T7XCYHM HTTP/1.1" 200 1893558 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:18:01.395Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:18:01 +0000] "GET /api/file?file_path=%2Fstorage%2Femulated%2F0%2FDownload%2FVID_20190316_124908.jpg&category=images&file_name=VID_20190316_124908.jpg&id=7DSSBM9H8T7XCYHM HTTP/1.1" 200 137173 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:18:03.351Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:18:03 +0000] "GET /api/file?file_path=%2Fstorage%2Femulated%2F0%2FDownload%2FVID_20190316_124908.jpg&category=images&file_name=VID_20190316_124908.jpg&id=7DSSBM9H8T7XCYHM HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:18:07.545Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell content query --uri content://media/external/video/media --projection _id:_data:mime_type:_size:_display_name:width:height:date_added
+2025-06-04T04:18:08.781Z [INFO]: 成功解析 1462 个video条目
+2025-06-04T04:18:08.787Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:18:08 +0000] "GET /api/get_videos?id=7DSSBM9H8T7XCYHM HTTP/1.1" 200 408879 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:18:11.207Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell content query --uri content://media/external/audio/media --projection _id:_data:mime_type:_size:_display_name:date_added
+2025-06-04T04:18:12.352Z [INFO]: 成功解析 359 个audio条目
+2025-06-04T04:18:12.355Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:18:12 +0000] "GET /api/get_audios?id=7DSSBM9H8T7XCYHM HTTP/1.1" 200 164565 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:18:16.989Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM pull /storage/emulated/0/Music/QQMusic/邓瑞霞 - 笑看风云 [qmms2].mp3 C:\Users\xiong\AndroidFileServer\storage\7DSSBM9H8T7XCYHM\audio\邓瑞霞 - 笑看风云 [qmms2].mp3
+2025-06-04T04:18:17.365Z [INFO]: 文件拉取成功: /storage/emulated/0/Music/QQMusic/邓瑞霞 - 笑看风云 [qmms2].mp3 -> C:\Users\xiong\AndroidFileServer\storage\7DSSBM9H8T7XCYHM\audio\邓瑞霞 - 笑看风云 [qmms2].mp3
+2025-06-04T04:18:17.373Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:18:17 +0000] "GET /api/file?file_path=%2Fstorage%2Femulated%2F0%2FMusic%2FQQMusic%2F%E9%82%93%E7%91%9E%E9%9C%9E%20-%20%E7%AC%91%E7%9C%8B%E9%A3%8E%E4%BA%91%20%5Bqmms2%5D.mp3&category=audio&file_name=%E9%82%93%E7%91%9E%E9%9C%9E%20-%20%E7%AC%91%E7%9C%8B%E9%A3%8E%E4%BA%91%20%5Bqmms2%5D.mp3&id=7DSSBM9H8T7XCYHM HTTP/1.1" 206 10911061 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:18:17.373Z [ERROR]: 发送文件失败: Request aborted
+2025-06-04T04:22:34.565Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T04:22:34.625Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1-full_build-www.gyan.dev
+2025-06-04T04:22:34.628Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T04:22:34.628Z [INFO]: 存储目录: C:\Users\xiong\AndroidFileServer\storage
+2025-06-04T04:22:38.586Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:22:38 +0000] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 187 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:22:38.640Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell getprop ro.product.model
+2025-06-04T04:22:38.651Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell df /data
+2025-06-04T04:22:38.662Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell dumpsys battery
+2025-06-04T04:22:38.735Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:22:38 +0000] "POST /api/device_info HTTP/1.1" 200 138 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:22:38.751Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell content query --uri content://media/external/images/media --projection _id:_data:mime_type:_size:_display_name:width:height:date_added
+2025-06-04T04:22:39.771Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:22:39 +0000] "GET /screenshot/7DSSBM9H8T7XCYHM HTTP/1.1" 200 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:22:40.135Z [INFO]: 成功解析 6866 个image条目
+2025-06-04T04:22:40.152Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:22:40 +0000] "GET /api/get_images?id=7DSSBM9H8T7XCYHM HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:22:40.928Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell content query --uri content://media/external/audio/media --projection _id:_data:mime_type:_size:_display_name:date_added
+2025-06-04T04:22:42.097Z [INFO]: 成功解析 359 个audio条目
+2025-06-04T04:22:42.098Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:22:42 +0000] "GET /api/get_audios?id=7DSSBM9H8T7XCYHM HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:25:09.301Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T04:25:09.363Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1-full_build-www.gyan.dev
+2025-06-04T04:25:09.366Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T04:25:09.366Z [INFO]: 存储目录: C:\Users\xiong\AndroidFileServer\storage
+2025-06-04T04:25:13.549Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:25:13 +0000] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 187 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:25:13.609Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell getprop ro.product.model
+2025-06-04T04:25:13.620Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell df /data
+2025-06-04T04:25:13.630Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell dumpsys battery
+2025-06-04T04:25:13.712Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:25:13 +0000] "POST /api/device_info HTTP/1.1" 200 135 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:25:13.729Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell content query --uri content://media/external/images/media --projection _id:_data:mime_type:_size:_display_name:width:height:date_added
+2025-06-04T04:25:14.152Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:25:14 +0000] "GET /screenshot/7DSSBM9H8T7XCYHM HTTP/1.1" 200 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:25:15.150Z [INFO]: 成功解析 6866 个image条目
+2025-06-04T04:25:15.169Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:25:15 +0000] "GET /api/get_images?id=7DSSBM9H8T7XCYHM HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:25:15.782Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell content query --uri content://media/external/audio/media --projection _id:_data:mime_type:_size:_display_name:date_added
+2025-06-04T04:25:16.978Z [INFO]: 成功解析 359 个audio条目
+2025-06-04T04:25:16.980Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:25:16 +0000] "GET /api/get_audios?id=7DSSBM9H8T7XCYHM HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:25:19.344Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:25:19 +0000] "GET /api/file?file_path=%2Fstorage%2Femulated%2F0%2FMusic%2FQQMusic%2F%E9%82%93%E7%91%9E%E9%9C%9E%20-%20%E7%AC%91%E7%9C%8B%E9%A3%8E%E4%BA%91%20%5Bqmms2%5D.mp3&category=audio&file_name=%E9%82%93%E7%91%9E%E9%9C%9E%20-%20%E7%AC%91%E7%9C%8B%E9%A3%8E%E4%BA%91%20%5Bqmms2%5D.mp3&id=7DSSBM9H8T7XCYHM HTTP/1.1" 206 10911061 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:25:19.346Z [ERROR]: 传输中断:
+2025-06-04T04:25:20.862Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:25:20 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:25:20.865Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:25:20 +0000] "GET /api/file?file_path=%2Fstorage%2Femulated%2F0%2FMusic%2FQQMusic%2F%E9%82%93%E7%91%9E%E9%9C%9E%20-%20%E7%AC%91%E7%9C%8B%E9%A3%8E%E4%BA%91%20%5Bqmms2%5D.mp3&category=audio&file_name=%E9%82%93%E7%91%9E%E9%9C%9E%20-%20%E7%AC%91%E7%9C%8B%E9%A3%8E%E4%BA%91%20%5Bqmms2%5D.mp3&id=7DSSBM9H8T7XCYHM HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:25:23.034Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:25:23 +0000] "GET /api/file?file_path=%2Fstorage%2Femulated%2F0%2FMusic%2FQQMusic%2F%E9%82%93%E7%91%9E%E9%9C%9E%20-%20%E7%AC%91%E7%9C%8B%E9%A3%8E%E4%BA%91%20%5Bqmms2%5D.mp3&category=audio&file_name=%E9%82%93%E7%91%9E%E9%9C%9E%20-%20%E7%AC%91%E7%9C%8B%E9%A3%8E%E4%BA%91%20%5Bqmms2%5D.mp3&id=7DSSBM9H8T7XCYHM HTTP/1.1" 206 8944981 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:25:23.035Z [ERROR]: 传输中断:
+2025-06-04T04:25:30.908Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:25:30 +0000] "GET /api/file?file_path=%2Fstorage%2Femulated%2F0%2FMusic%2FQQMusic%2F%E9%82%93%E7%91%9E%E9%9C%9E%20-%20%E7%AC%91%E7%9C%8B%E9%A3%8E%E4%BA%91%20%5Bqmms2%5D.mp3&category=audio&file_name=%E9%82%93%E7%91%9E%E9%9C%9E%20-%20%E7%AC%91%E7%9C%8B%E9%A3%8E%E4%BA%91%20%5Bqmms2%5D.mp3&id=7DSSBM9H8T7XCYHM HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:25:38.472Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell content query --uri content://media/external/video/media --projection _id:_data:mime_type:_size:_display_name:width:height:date_added
+2025-06-04T04:25:39.669Z [INFO]: 成功解析 1462 个video条目
+2025-06-04T04:25:39.673Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:25:39 +0000] "GET /api/get_videos?id=7DSSBM9H8T7XCYHM HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:25:43.707Z [INFO]: 确保目录存在: C:\Users\xiong\AndroidFileServer\storage\7DSSBM9H8T7XCYHM\video
+2025-06-04T04:25:43.707Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM pull /storage/emulated/0/Pictures/WeiXin/mmexport1676712077989.mp4 C:\Users\xiong\AndroidFileServer\storage\7DSSBM9H8T7XCYHM\video\mmexport1676712077989.mp4
+2025-06-04T04:25:43.891Z [INFO]: 文件拉取成功: /storage/emulated/0/Pictures/WeiXin/mmexport1676712077989.mp4 -> C:\Users\xiong\AndroidFileServer\storage\7DSSBM9H8T7XCYHM\video\mmexport1676712077989.mp4
+2025-06-04T04:25:43.949Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:25:43 +0000] "GET /api/file?file_path=%2Fstorage%2Femulated%2F0%2FPictures%2FWeiXin%2Fmmexport1676712077989.mp4&category=video&file_name=mmexport1676712077989.mp4&id=7DSSBM9H8T7XCYHM HTTP/1.1" 206 4648916 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:25:43.949Z [ERROR]: 传输中断:
+2025-06-04T04:25:47.841Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:25:47 +0000] "GET /api/file?file_path=%2Fstorage%2Femulated%2F0%2FMusic%2FQQMusic%2F%E9%82%93%E7%91%9E%E9%9C%9E%20-%20%E7%AC%91%E7%9C%8B%E9%A3%8E%E4%BA%91%20%5Bqmms2%5D.mp3&category=audio&file_name=%E9%82%93%E7%91%9E%E9%9C%9E%20-%20%E7%AC%91%E7%9C%8B%E9%A3%8E%E4%BA%91%20%5Bqmms2%5D.mp3&id=7DSSBM9H8T7XCYHM HTTP/1.1" 206 5602645 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:25:47.841Z [ERROR]: 传输中断:
+2025-06-04T04:25:48.939Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:25:48 +0000] "GET /api/file?file_path=%2Fstorage%2Femulated%2F0%2FPictures%2FWeiXin%2Fmmexport1676712077989.mp4&category=video&file_name=mmexport1676712077989.mp4&id=7DSSBM9H8T7XCYHM HTTP/1.1" 206 3272660 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:25:54.253Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell content query --uri content://media/external/file --projection _id:_data:mime_type:_size:_display_name:date_added | grep -E '\.(pdf|doc|docx|xls|xlsx|ppt|pptx|txt|odt|ods|odp)'
+2025-06-04T04:25:55.859Z [INFO]: 成功解析 123 个document条目
+2025-06-04T04:25:55.860Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:25:55 +0000] "GET /api/get_documents?id=7DSSBM9H8T7XCYHM&document_type=document HTTP/1.1" 200 31561 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:26:02.777Z [INFO]: 确保目录存在: C:\Users\xiong\AndroidFileServer\storage\7DSSBM9H8T7XCYHM\document
+2025-06-04T04:26:02.778Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM pull /storage/emulated/0/Download/拼多多商家电子发票.pdf C:\Users\xiong\AndroidFileServer\storage\7DSSBM9H8T7XCYHM\document\拼多多商家电子发票.pdf
+2025-06-04T04:26:02.837Z [INFO]: 文件拉取成功: /storage/emulated/0/Download/拼多多商家电子发票.pdf -> C:\Users\xiong\AndroidFileServer\storage\7DSSBM9H8T7XCYHM\document\拼多多商家电子发票.pdf
+2025-06-04T04:26:02.839Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:26:02 +0000] "GET /api/file?file_path=%2Fstorage%2Femulated%2F0%2FDownload%2F%E6%8B%BC%E5%A4%9A%E5%A4%9A%E5%95%86%E5%AE%B6%E7%94%B5%E5%AD%90%E5%8F%91%E7%A5%A8.pdf&category=document&file_name=%E6%8B%BC%E5%A4%9A%E5%A4%9A%E5%95%86%E5%AE%B6%E7%94%B5%E5%AD%90%E5%8F%91%E7%A5%A8.pdf&id=7DSSBM9H8T7XCYHM HTTP/1.1" 200 52924 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:26:08.139Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell ls -lh '/sdcard/'
+2025-06-04T04:26:08.312Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:26:08 +0000] "GET /api/get_files?id=7DSSBM9H8T7XCYHM&path=%2Fsdcard%2F HTTP/1.1" 200 170 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:27:43.195Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T04:27:43.256Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1-full_build-www.gyan.dev
+2025-06-04T04:27:43.259Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T04:27:43.259Z [INFO]: 存储目录: C:\Users\xiong\AndroidFileServer\storage
+2025-06-04T04:27:46.672Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell ls -lh '/sdcard/'
+2025-06-04T04:27:46.768Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 8.0K 2023-12-22 16:04 谷歌绕过企业锁
+2025-06-04T04:27:46.771Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:27:46 +0000] "GET /api/get_files?id=7DSSBM9H8T7XCYHM&path=%2Fsdcard%2F HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:28:19.201Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T04:28:19.259Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1-full_build-www.gyan.dev
+2025-06-04T04:28:19.263Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T04:28:19.263Z [INFO]: 存储目录: C:\Users\xiong\AndroidFileServer\storage
+2025-06-04T04:28:22.027Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell ls -lh '/sdcard/'
+2025-06-04T04:28:22.135Z [WARN]: 无法解析行: total 313K
+2025-06-04T04:28:22.136Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 -1983762891
+2025-06-04T04:28:22.136Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 5.3M 2023-05-03 21:27 00001.png
+2025-06-04T04:28:22.136Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 0_FaceDistinguish
+2025-06-04T04:28:22.137Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 4.0M 2023-12-01 09:30 11月份加班报销.zip
+2025-06-04T04:28:22.137Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-02-25 22:19 123云盘
+2025-06-04T04:28:22.137Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 20220822232256
+2025-06-04T04:28:22.137Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw  56K 2025-02-22 00:13 2023-07-08
+2025-06-04T04:28:22.137Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 120K 2025-02-22 00:13 2023-07-09
+2025-06-04T04:28:22.138Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-02 15:33 Alarms
+2025-06-04T04:28:22.138Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 AliYunPan
+2025-06-04T04:28:22.138Z [WARN]: 无法解析行: drwxrws--x  9 media_rw media_rw 3.3K 2024-11-24 14:34 Android
+2025-06-04T04:28:22.138Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 AnyMirror
+2025-06-04T04:28:22.138Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-01-01 00:01 Audiobooks
+2025-06-04T04:28:22.138Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:40 Backup
+2025-06-04T04:28:22.138Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 BaiduNetdisk
+2025-06-04T04:28:22.138Z [WARN]: 无法解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2024-04-08 21:40 ColorOS
+2025-06-04T04:28:22.138Z [WARN]: 无法解析行: drwxrws--- 26 u0_a237  media_rw 3.3K 2025-06-02 15:33 DCIM
+2025-06-04T04:28:22.138Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-01-02 23:43 DingTalk
+2025-06-04T04:28:22.138Z [WARN]: 无法解析行: drwxrws--- 19 u0_a237  media_rw 3.3K 2025-05-21 09:58 Documents
+2025-06-04T04:28:22.138Z [WARN]: 无法解析行: drwxrws--- 41 u0_a237  media_rw 8.0K 2025-06-02 15:33 Download
+2025-06-04T04:28:22.139Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-04-15 10:27 Fonts
+2025-06-04T04:28:22.139Z [WARN]: 无法解析行: drwxrws--- 20 u0_a237  media_rw 3.3K 2024-02-08 10:37 Games
+2025-06-04T04:28:22.139Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 IntsigLog
+2025-06-04T04:28:22.139Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:55 LMC8.4
+2025-06-04T04:28:22.139Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-05-04 08:39 Local
+2025-06-04T04:28:22.139Z [WARN]: 无法解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2023-11-14 15:41 MIUI
+2025-06-04T04:28:22.139Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-03-12 20:27 MT2
+2025-06-04T04:28:22.139Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-04-12 10:03 MiShare
+2025-06-04T04:28:22.139Z [WARN]: 无法解析行: drwxrws--- 10 u0_a237  media_rw 3.3K 2025-06-02 15:33 Movies
+2025-06-04T04:28:22.139Z [WARN]: 无法解析行: drwxrws---  7 u0_a237  media_rw 3.3K 2025-06-02 15:33 Music
+2025-06-04T04:28:22.139Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-05-23 19:25 MxPlayerAd
+2025-06-04T04:28:22.139Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-12-25 22:47 My Documents
+2025-06-04T04:28:22.139Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-05-23 17:56 New Folder
+2025-06-04T04:28:22.140Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-06-02 15:33 Notifications
+2025-06-04T04:28:22.140Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-05-11 17:16 Octopus
+2025-06-04T04:28:22.140Z [WARN]: 无法解析行: drwxrws--- 35 u0_a237  media_rw 8.0K 2025-06-02 15:33 Pictures
+2025-06-04T04:28:22.140Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-02 15:33 Podcasts
+2025-06-04T04:28:22.140Z [WARN]: 无法解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2024-02-17 19:43 PonyEmu
+2025-06-04T04:28:22.140Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-08-15 10:10 Quark
+2025-06-04T04:28:22.140Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-01-01 00:01 Recordings
+2025-06-04T04:28:22.140Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-02 15:33 Ringtones
+2025-06-04T04:28:22.140Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-02-18 10:41 SigmobAndroid
+2025-06-04T04:28:22.140Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 SpeedSoftware
+2025-06-04T04:28:22.140Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-04 18:37 Subtitles
+2025-06-04T04:28:22.140Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-02-14 07:48 Trusfort
+2025-06-04T04:28:22.141Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-12-19 19:34 Unicom
+2025-06-04T04:28:22.141Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 597K 2023-12-05 16:22 WhatsAppOldMedia.tar
+2025-06-04T04:28:22.141Z [WARN]: 无法解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2024-02-08 10:37 XiaoJi
+2025-06-04T04:28:22.141Z [WARN]: 无法解析行: drwxrws---  8 u0_a237  media_rw 3.3K 2024-04-07 16:48 alipay
+2025-06-04T04:28:22.141Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-05-04 08:38 amaplocationapi
+2025-06-04T04:28:22.141Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-22 17:06 apm
+2025-06-04T04:28:22.141Z [WARN]: 无法解析行: drwxrws---  9 u0_a237  media_rw 3.3K 2025-02-06 08:56 apminsight
+2025-06-04T04:28:22.141Z [WARN]: 无法解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2025-06-01 14:49 backups
+2025-06-04T04:28:22.141Z [WARN]: 无法解析行: drwxrws---  5 u0_a237  media_rw 3.3K 2025-01-23 09:01 baidu
+2025-06-04T04:28:22.141Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw  52K 2023-11-14 15:44 bluetooth
+2025-06-04T04:28:22.141Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 cdsmy
+2025-06-04T04:28:22.142Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 4.8K 2024-09-26 21:47 client.ovpn
+2025-06-04T04:28:22.142Z [WARN]: 无法解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2023-11-14 15:41 cloudwalk
+2025-06-04T04:28:22.142Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-12-02 01:16 com.heytap.browser
+2025-06-04T04:28:22.142Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:55 com.hpplay.happycast
+2025-06-04T04:28:22.142Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-02 01:16 com.jifen.ac
+2025-06-04T04:28:22.142Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-02-25 22:19 com.mfcloudcalculate.networkdisk
+2025-06-04T04:28:22.142Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 146M 2024-07-18 10:36 com.nianticlabs.pokemongo_0.321.0.apk
+2025-06-04T04:28:22.142Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 146M 2024-07-18 10:37 com.nianticlabs.pokemongo_0.321.0_sign.apk
+2025-06-04T04:28:22.142Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 d32713460f1711edb28d0242ac130002
+2025-06-04T04:28:22.142Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw   14 2023-02-06 10:50 deviceId.txt
+2025-06-04T04:28:22.143Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-01 15:05 esShare
+2025-06-04T04:28:22.143Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-04-12 10:03 geetest
+2025-06-04T04:28:22.143Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 hgem5aa4-keb1-7k45-khm4-1mfh27mbc845
+2025-06-04T04:28:22.143Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 idcardscan
+2025-06-04T04:28:22.143Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-04-04 16:36 imageloader
+2025-06-04T04:28:22.143Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 kfcCache
+2025-06-04T04:28:22.143Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 misdktest
+2025-06-04T04:28:22.143Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-11-17 04:32 mit
+2025-06-04T04:28:22.143Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-21 11:43 msc
+2025-06-04T04:28:22.143Z [WARN]: 无法解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2024-09-27 22:45 netease
+2025-06-04T04:28:22.143Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw  327 2024-09-27 15:48 oppo-find-x6.conf
+2025-06-04T04:28:22.144Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 4.8K 2024-10-14 17:27 oppo-find-x6.ovpn
+2025-06-04T04:28:22.144Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 17:54 oua_classifier
+2025-06-04T04:28:22.144Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 phCache
+2025-06-04T04:28:22.144Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 4.8K 2023-12-19 16:15 pixel6.ovpn
+2025-06-04T04:28:22.144Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw  89K 2023-02-02 17:35 please_stand_away.mp3
+2025-06-04T04:28:22.144Z [WARN]: 无法解析行: drwxrws--- 27 u0_a237  media_rw 3.3K 2025-05-25 08:01 qqmusic
+2025-06-04T04:28:22.144Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-11-05 10:07 qvs
+2025-06-04T04:28:22.144Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 raw
+2025-06-04T04:28:22.144Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 sina
+2025-06-04T04:28:22.144Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 spdb
+2025-06-04T04:28:22.145Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-18 19:23 system
+2025-06-04T04:28:22.145Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-27 18:02 taptap_did
+2025-06-04T04:28:22.145Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-05-10 09:37 taptapupdate
+2025-06-04T04:28:22.145Z [WARN]: 无法解析行: drwxrws--- 15 u0_a237  media_rw 3.3K 2025-04-23 17:25 tencent
+2025-06-04T04:28:22.145Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw  10M 2023-03-02 21:12 testvideo.mp4
+2025-06-04T04:28:22.146Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:43 tieba
+2025-06-04T04:28:22.146Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 ucdownloads
+2025-06-04T04:28:22.147Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-27 18:02 va_shared
+2025-06-04T04:28:22.147Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-02-16 23:23 vmp
+2025-06-04T04:28:22.147Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 6.2K 2024-09-27 14:36 vpnclient.sswan
+2025-06-04T04:28:22.147Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-02-23 14:17 warp
+2025-06-04T04:28:22.147Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw  17K 2024-04-01 14:09 warp.zip
+2025-06-04T04:28:22.147Z [WARN]: 无法解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2023-12-14 10:25 whatsapp
+2025-06-04T04:28:22.147Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-03-28 16:45 wsgw_h5
+2025-06-04T04:28:22.148Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 2.4K 2025-05-06 11:07 xchat.log
+2025-06-04T04:28:22.148Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 yumcCache
+2025-06-04T04:28:22.148Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 图片
+2025-06-04T04:28:22.148Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw  298 2023-12-11 20:07 无标题文档 1.txt
+2025-06-04T04:28:22.148Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 8.0K 2023-12-22 16:04 谷歌绕过企业锁
+2025-06-04T04:28:22.153Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:28:22 +0000] "GET /api/get_files?id=7DSSBM9H8T7XCYHM&path=%2Fsdcard%2F HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:52:57.862Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T04:52:57.937Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1-full_build-www.gyan.dev
+2025-06-04T04:52:57.940Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T04:52:57.940Z [INFO]: 存储目录: C:\Users\xiong\AndroidFileServer\storage
+2025-06-04T04:53:03.646Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell ls -lh '/sdcard/'
+2025-06-04T04:53:03.687Z [ERROR]: 获取文件失败: ADB命令失败: adb.exe: device '7DSSBM9H8T7XCYHM' not found
+
+2025-06-04T04:53:03.691Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:53:03 +0000] "GET /api/get_files?id=7DSSBM9H8T7XCYHM&path=%2Fsdcard%2F HTTP/1.1" 500 111 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T04:53:18.269Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell ls -lh '/sdcard/'
+2025-06-04T04:53:18.377Z [WARN]: 无法解析行: total 313K
+2025-06-04T04:53:18.378Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 -1983762891
+2025-06-04T04:53:18.378Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 5.3M 2023-05-03 21:27 00001.png
+2025-06-04T04:53:18.378Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 0_FaceDistinguish
+2025-06-04T04:53:18.378Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 4.0M 2023-12-01 09:30 11月份加班报销.zip
+2025-06-04T04:53:18.378Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-02-25 22:19 123云盘
+2025-06-04T04:53:18.379Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 20220822232256
+2025-06-04T04:53:18.379Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw  56K 2025-02-22 00:13 2023-07-08
+2025-06-04T04:53:18.379Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 120K 2025-02-22 00:13 2023-07-09
+2025-06-04T04:53:18.379Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-02 15:33 Alarms
+2025-06-04T04:53:18.379Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 AliYunPan
+2025-06-04T04:53:18.379Z [WARN]: 无法解析行: drwxrws--x  9 media_rw media_rw 3.3K 2024-11-24 14:34 Android
+2025-06-04T04:53:18.379Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 AnyMirror
+2025-06-04T04:53:18.379Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-01-01 00:01 Audiobooks
+2025-06-04T04:53:18.379Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:40 Backup
+2025-06-04T04:53:18.379Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 BaiduNetdisk
+2025-06-04T04:53:18.379Z [WARN]: 无法解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2024-04-08 21:40 ColorOS
+2025-06-04T04:53:18.380Z [WARN]: 无法解析行: drwxrws--- 26 u0_a237  media_rw 3.3K 2025-06-02 15:33 DCIM
+2025-06-04T04:53:18.380Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-01-02 23:43 DingTalk
+2025-06-04T04:53:18.380Z [WARN]: 无法解析行: drwxrws--- 19 u0_a237  media_rw 3.3K 2025-05-21 09:58 Documents
+2025-06-04T04:53:18.380Z [WARN]: 无法解析行: drwxrws--- 41 u0_a237  media_rw 8.0K 2025-06-02 15:33 Download
+2025-06-04T04:53:18.380Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-04-15 10:27 Fonts
+2025-06-04T04:53:18.380Z [WARN]: 无法解析行: drwxrws--- 20 u0_a237  media_rw 3.3K 2024-02-08 10:37 Games
+2025-06-04T04:53:18.380Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 IntsigLog
+2025-06-04T04:53:18.380Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:55 LMC8.4
+2025-06-04T04:53:18.380Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-05-04 08:39 Local
+2025-06-04T04:53:18.380Z [WARN]: 无法解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2023-11-14 15:41 MIUI
+2025-06-04T04:53:18.380Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-03-12 20:27 MT2
+2025-06-04T04:53:18.380Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-04-12 10:03 MiShare
+2025-06-04T04:53:18.381Z [WARN]: 无法解析行: drwxrws--- 10 u0_a237  media_rw 3.3K 2025-06-02 15:33 Movies
+2025-06-04T04:53:18.381Z [WARN]: 无法解析行: drwxrws---  7 u0_a237  media_rw 3.3K 2025-06-02 15:33 Music
+2025-06-04T04:53:18.381Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-05-23 19:25 MxPlayerAd
+2025-06-04T04:53:18.381Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-12-25 22:47 My Documents
+2025-06-04T04:53:18.381Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-05-23 17:56 New Folder
+2025-06-04T04:53:18.381Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-06-02 15:33 Notifications
+2025-06-04T04:53:18.381Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-05-11 17:16 Octopus
+2025-06-04T04:53:18.381Z [WARN]: 无法解析行: drwxrws--- 35 u0_a237  media_rw 8.0K 2025-06-02 15:33 Pictures
+2025-06-04T04:53:18.381Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-02 15:33 Podcasts
+2025-06-04T04:53:18.381Z [WARN]: 无法解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2024-02-17 19:43 PonyEmu
+2025-06-04T04:53:18.381Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-08-15 10:10 Quark
+2025-06-04T04:53:18.382Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-01-01 00:01 Recordings
+2025-06-04T04:53:18.382Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-02 15:33 Ringtones
+2025-06-04T04:53:18.382Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-02-18 10:41 SigmobAndroid
+2025-06-04T04:53:18.382Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 SpeedSoftware
+2025-06-04T04:53:18.382Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-04 18:37 Subtitles
+2025-06-04T04:53:18.382Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-02-14 07:48 Trusfort
+2025-06-04T04:53:18.382Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-12-19 19:34 Unicom
+2025-06-04T04:53:18.382Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 597K 2023-12-05 16:22 WhatsAppOldMedia.tar
+2025-06-04T04:53:18.382Z [WARN]: 无法解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2024-02-08 10:37 XiaoJi
+2025-06-04T04:53:18.382Z [WARN]: 无法解析行: drwxrws---  8 u0_a237  media_rw 3.3K 2024-04-07 16:48 alipay
+2025-06-04T04:53:18.382Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-05-04 08:38 amaplocationapi
+2025-06-04T04:53:18.382Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-22 17:06 apm
+2025-06-04T04:53:18.383Z [WARN]: 无法解析行: drwxrws---  9 u0_a237  media_rw 3.3K 2025-02-06 08:56 apminsight
+2025-06-04T04:53:18.383Z [WARN]: 无法解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2025-06-01 14:49 backups
+2025-06-04T04:53:18.383Z [WARN]: 无法解析行: drwxrws---  5 u0_a237  media_rw 3.3K 2025-01-23 09:01 baidu
+2025-06-04T04:53:18.383Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw  52K 2023-11-14 15:44 bluetooth
+2025-06-04T04:53:18.383Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 cdsmy
+2025-06-04T04:53:18.383Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 4.8K 2024-09-26 21:47 client.ovpn
+2025-06-04T04:53:18.383Z [WARN]: 无法解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2023-11-14 15:41 cloudwalk
+2025-06-04T04:53:18.383Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-12-02 01:16 com.heytap.browser
+2025-06-04T04:53:18.383Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:55 com.hpplay.happycast
+2025-06-04T04:53:18.383Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-02 01:16 com.jifen.ac
+2025-06-04T04:53:18.383Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-02-25 22:19 com.mfcloudcalculate.networkdisk
+2025-06-04T04:53:18.384Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 146M 2024-07-18 10:36 com.nianticlabs.pokemongo_0.321.0.apk
+2025-06-04T04:53:18.384Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 146M 2024-07-18 10:37 com.nianticlabs.pokemongo_0.321.0_sign.apk
+2025-06-04T04:53:18.384Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 d32713460f1711edb28d0242ac130002
+2025-06-04T04:53:18.384Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw   14 2023-02-06 10:50 deviceId.txt
+2025-06-04T04:53:18.384Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-01 15:05 esShare
+2025-06-04T04:53:18.384Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-04-12 10:03 geetest
+2025-06-04T04:53:18.384Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 hgem5aa4-keb1-7k45-khm4-1mfh27mbc845
+2025-06-04T04:53:18.384Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 idcardscan
+2025-06-04T04:53:18.384Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-04-04 16:36 imageloader
+2025-06-04T04:53:18.384Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 kfcCache
+2025-06-04T04:53:18.384Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 misdktest
+2025-06-04T04:53:18.384Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-11-17 04:32 mit
+2025-06-04T04:53:18.385Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-21 11:43 msc
+2025-06-04T04:53:18.385Z [WARN]: 无法解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2024-09-27 22:45 netease
+2025-06-04T04:53:18.385Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw  327 2024-09-27 15:48 oppo-find-x6.conf
+2025-06-04T04:53:18.385Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 4.8K 2024-10-14 17:27 oppo-find-x6.ovpn
+2025-06-04T04:53:18.385Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 17:54 oua_classifier
+2025-06-04T04:53:18.385Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 phCache
+2025-06-04T04:53:18.385Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 4.8K 2023-12-19 16:15 pixel6.ovpn
+2025-06-04T04:53:18.385Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw  89K 2023-02-02 17:35 please_stand_away.mp3
+2025-06-04T04:53:18.385Z [WARN]: 无法解析行: drwxrws--- 27 u0_a237  media_rw 3.3K 2025-05-25 08:01 qqmusic
+2025-06-04T04:53:18.385Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-11-05 10:07 qvs
+2025-06-04T04:53:18.385Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 raw
+2025-06-04T04:53:18.386Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 sina
+2025-06-04T04:53:18.386Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 spdb
+2025-06-04T04:53:18.386Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-18 19:23 system
+2025-06-04T04:53:18.386Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-27 18:02 taptap_did
+2025-06-04T04:53:18.386Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-05-10 09:37 taptapupdate
+2025-06-04T04:53:18.386Z [WARN]: 无法解析行: drwxrws--- 15 u0_a237  media_rw 3.3K 2025-04-23 17:25 tencent
+2025-06-04T04:53:18.386Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw  10M 2023-03-02 21:12 testvideo.mp4
+2025-06-04T04:53:18.386Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:43 tieba
+2025-06-04T04:53:18.386Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 ucdownloads
+2025-06-04T04:53:18.386Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-27 18:02 va_shared
+2025-06-04T04:53:18.387Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-02-16 23:23 vmp
+2025-06-04T04:53:18.387Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 6.2K 2024-09-27 14:36 vpnclient.sswan
+2025-06-04T04:53:18.387Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-02-23 14:17 warp
+2025-06-04T04:53:18.387Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw  17K 2024-04-01 14:09 warp.zip
+2025-06-04T04:53:18.387Z [WARN]: 无法解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2023-12-14 10:25 whatsapp
+2025-06-04T04:53:18.387Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-03-28 16:45 wsgw_h5
+2025-06-04T04:53:18.387Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 2.4K 2025-05-06 11:07 xchat.log
+2025-06-04T04:53:18.387Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 yumcCache
+2025-06-04T04:53:18.387Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 图片
+2025-06-04T04:53:18.387Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw  298 2023-12-11 20:07 无标题文档 1.txt
+2025-06-04T04:53:18.387Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 8.0K 2023-12-22 16:04 谷歌绕过企业锁
+2025-06-04T04:53:18.389Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:04:53:18 +0000] "GET /api/get_files?id=7DSSBM9H8T7XCYHM&path=%2Fsdcard%2F HTTP/1.1" 200 170 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:19:28.807Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T06:19:28.891Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1-full_build-www.gyan.dev
+2025-06-04T06:19:28.895Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T06:19:28.895Z [INFO]: 存储目录: C:\Users\xiong\AndroidFileServer\storage
+2025-06-04T06:19:41.695Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell ls -lh '/sdcard/'
+2025-06-04T06:19:41.790Z [WARN]: 无法解析行: total 313K
+2025-06-04T06:19:41.791Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 -1983762891
+2025-06-04T06:19:41.791Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 5.3M 2023-05-03 21:27 00001.png
+2025-06-04T06:19:41.791Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 0_FaceDistinguish
+2025-06-04T06:19:41.791Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 4.0M 2023-12-01 09:30 11月份加班报销.zip
+2025-06-04T06:19:41.792Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-02-25 22:19 123云盘
+2025-06-04T06:19:41.792Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 20220822232256
+2025-06-04T06:19:41.792Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw  56K 2025-02-22 00:13 2023-07-08
+2025-06-04T06:19:41.792Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 120K 2025-02-22 00:13 2023-07-09
+2025-06-04T06:19:41.792Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-02 15:33 Alarms
+2025-06-04T06:19:41.792Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 AliYunPan
+2025-06-04T06:19:41.792Z [WARN]: 无法解析行: drwxrws--x  9 media_rw media_rw 3.3K 2024-11-24 14:34 Android
+2025-06-04T06:19:41.792Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 AnyMirror
+2025-06-04T06:19:41.793Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-01-01 00:01 Audiobooks
+2025-06-04T06:19:41.793Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:40 Backup
+2025-06-04T06:19:41.793Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 BaiduNetdisk
+2025-06-04T06:19:41.793Z [WARN]: 无法解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2024-04-08 21:40 ColorOS
+2025-06-04T06:19:41.793Z [WARN]: 无法解析行: drwxrws--- 26 u0_a237  media_rw 3.3K 2025-06-02 15:33 DCIM
+2025-06-04T06:19:41.793Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-01-02 23:43 DingTalk
+2025-06-04T06:19:41.793Z [WARN]: 无法解析行: drwxrws--- 19 u0_a237  media_rw 3.3K 2025-05-21 09:58 Documents
+2025-06-04T06:19:41.793Z [WARN]: 无法解析行: drwxrws--- 41 u0_a237  media_rw 8.0K 2025-06-02 15:33 Download
+2025-06-04T06:19:41.793Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-04-15 10:27 Fonts
+2025-06-04T06:19:41.793Z [WARN]: 无法解析行: drwxrws--- 20 u0_a237  media_rw 3.3K 2024-02-08 10:37 Games
+2025-06-04T06:19:41.793Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 IntsigLog
+2025-06-04T06:19:41.794Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:55 LMC8.4
+2025-06-04T06:19:41.794Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-05-04 08:39 Local
+2025-06-04T06:19:41.794Z [WARN]: 无法解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2023-11-14 15:41 MIUI
+2025-06-04T06:19:41.794Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-03-12 20:27 MT2
+2025-06-04T06:19:41.794Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-04-12 10:03 MiShare
+2025-06-04T06:19:41.794Z [WARN]: 无法解析行: drwxrws--- 10 u0_a237  media_rw 3.3K 2025-06-02 15:33 Movies
+2025-06-04T06:19:41.794Z [WARN]: 无法解析行: drwxrws---  7 u0_a237  media_rw 3.3K 2025-06-02 15:33 Music
+2025-06-04T06:19:41.794Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-05-23 19:25 MxPlayerAd
+2025-06-04T06:19:41.794Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-12-25 22:47 My Documents
+2025-06-04T06:19:41.794Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-05-23 17:56 New Folder
+2025-06-04T06:19:41.794Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-06-02 15:33 Notifications
+2025-06-04T06:19:41.794Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-05-11 17:16 Octopus
+2025-06-04T06:19:41.794Z [WARN]: 无法解析行: drwxrws--- 35 u0_a237  media_rw 8.0K 2025-06-02 15:33 Pictures
+2025-06-04T06:19:41.794Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-02 15:33 Podcasts
+2025-06-04T06:19:41.795Z [WARN]: 无法解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2024-02-17 19:43 PonyEmu
+2025-06-04T06:19:41.795Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-08-15 10:10 Quark
+2025-06-04T06:19:41.795Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-01-01 00:01 Recordings
+2025-06-04T06:19:41.795Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-02 15:33 Ringtones
+2025-06-04T06:19:41.795Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-02-18 10:41 SigmobAndroid
+2025-06-04T06:19:41.795Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 SpeedSoftware
+2025-06-04T06:19:41.795Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-04 18:37 Subtitles
+2025-06-04T06:19:41.795Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-02-14 07:48 Trusfort
+2025-06-04T06:19:41.795Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-12-19 19:34 Unicom
+2025-06-04T06:19:41.795Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 597K 2023-12-05 16:22 WhatsAppOldMedia.tar
+2025-06-04T06:19:41.795Z [WARN]: 无法解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2024-02-08 10:37 XiaoJi
+2025-06-04T06:19:41.795Z [WARN]: 无法解析行: drwxrws---  8 u0_a237  media_rw 3.3K 2024-04-07 16:48 alipay
+2025-06-04T06:19:41.795Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-05-04 08:38 amaplocationapi
+2025-06-04T06:19:41.795Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-22 17:06 apm
+2025-06-04T06:19:41.796Z [WARN]: 无法解析行: drwxrws---  9 u0_a237  media_rw 3.3K 2025-02-06 08:56 apminsight
+2025-06-04T06:19:41.796Z [WARN]: 无法解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2025-06-01 14:49 backups
+2025-06-04T06:19:41.796Z [WARN]: 无法解析行: drwxrws---  5 u0_a237  media_rw 3.3K 2025-01-23 09:01 baidu
+2025-06-04T06:19:41.796Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw  52K 2023-11-14 15:44 bluetooth
+2025-06-04T06:19:41.796Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 cdsmy
+2025-06-04T06:19:41.796Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 4.8K 2024-09-26 21:47 client.ovpn
+2025-06-04T06:19:41.796Z [WARN]: 无法解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2023-11-14 15:41 cloudwalk
+2025-06-04T06:19:41.796Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-12-02 01:16 com.heytap.browser
+2025-06-04T06:19:41.796Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:55 com.hpplay.happycast
+2025-06-04T06:19:41.796Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-02 01:16 com.jifen.ac
+2025-06-04T06:19:41.796Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-02-25 22:19 com.mfcloudcalculate.networkdisk
+2025-06-04T06:19:41.797Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 146M 2024-07-18 10:36 com.nianticlabs.pokemongo_0.321.0.apk
+2025-06-04T06:19:41.797Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 146M 2024-07-18 10:37 com.nianticlabs.pokemongo_0.321.0_sign.apk
+2025-06-04T06:19:41.797Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 d32713460f1711edb28d0242ac130002
+2025-06-04T06:19:41.797Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw   14 2023-02-06 10:50 deviceId.txt
+2025-06-04T06:19:41.797Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-01 15:05 esShare
+2025-06-04T06:19:41.797Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-04-12 10:03 geetest
+2025-06-04T06:19:41.797Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 hgem5aa4-keb1-7k45-khm4-1mfh27mbc845
+2025-06-04T06:19:41.797Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 idcardscan
+2025-06-04T06:19:41.797Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-04-04 16:36 imageloader
+2025-06-04T06:19:41.797Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 kfcCache
+2025-06-04T06:19:41.797Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 misdktest
+2025-06-04T06:19:41.797Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-11-17 04:32 mit
+2025-06-04T06:19:41.797Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-21 11:43 msc
+2025-06-04T06:19:41.798Z [WARN]: 无法解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2024-09-27 22:45 netease
+2025-06-04T06:19:41.798Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw  327 2024-09-27 15:48 oppo-find-x6.conf
+2025-06-04T06:19:41.798Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 4.8K 2024-10-14 17:27 oppo-find-x6.ovpn
+2025-06-04T06:19:41.798Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 17:54 oua_classifier
+2025-06-04T06:19:41.798Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 phCache
+2025-06-04T06:19:41.798Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 4.8K 2023-12-19 16:15 pixel6.ovpn
+2025-06-04T06:19:41.798Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw  89K 2023-02-02 17:35 please_stand_away.mp3
+2025-06-04T06:19:41.798Z [WARN]: 无法解析行: drwxrws--- 27 u0_a237  media_rw 3.3K 2025-05-25 08:01 qqmusic
+2025-06-04T06:19:41.798Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-11-05 10:07 qvs
+2025-06-04T06:19:41.798Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 raw
+2025-06-04T06:19:41.798Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 sina
+2025-06-04T06:19:41.798Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 spdb
+2025-06-04T06:19:41.798Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-18 19:23 system
+2025-06-04T06:19:41.799Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-27 18:02 taptap_did
+2025-06-04T06:19:41.799Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-05-10 09:37 taptapupdate
+2025-06-04T06:19:41.799Z [WARN]: 无法解析行: drwxrws--- 15 u0_a237  media_rw 3.3K 2025-04-23 17:25 tencent
+2025-06-04T06:19:41.799Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw  10M 2023-03-02 21:12 testvideo.mp4
+2025-06-04T06:19:41.799Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:43 tieba
+2025-06-04T06:19:41.799Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 ucdownloads
+2025-06-04T06:19:41.799Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-27 18:02 va_shared
+2025-06-04T06:19:41.799Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-02-16 23:23 vmp
+2025-06-04T06:19:41.799Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 6.2K 2024-09-27 14:36 vpnclient.sswan
+2025-06-04T06:19:41.800Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-02-23 14:17 warp
+2025-06-04T06:19:41.800Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw  17K 2024-04-01 14:09 warp.zip
+2025-06-04T06:19:41.800Z [WARN]: 无法解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2023-12-14 10:25 whatsapp
+2025-06-04T06:19:41.800Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-03-28 16:45 wsgw_h5
+2025-06-04T06:19:41.800Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 2.4K 2025-05-06 11:07 xchat.log
+2025-06-04T06:19:41.800Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 yumcCache
+2025-06-04T06:19:41.800Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 图片
+2025-06-04T06:19:41.800Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw  298 2023-12-11 20:07 无标题文档 1.txt
+2025-06-04T06:19:41.800Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 8.0K 2023-12-22 16:04 谷歌绕过企业锁
+2025-06-04T06:19:41.805Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:19:41 +0000] "GET /api/get_files?id=7DSSBM9H8T7XCYHM&path=%2Fsdcard%2F HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:20:06.540Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T06:20:06.603Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1-full_build-www.gyan.dev
+2025-06-04T06:20:06.606Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T06:20:06.607Z [INFO]: 存储目录: C:\Users\xiong\AndroidFileServer\storage
+2025-06-04T06:20:15.866Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T06:20:15.922Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1-full_build-www.gyan.dev
+2025-06-04T06:20:15.925Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T06:20:15.926Z [INFO]: 存储目录: C:\Users\xiong\AndroidFileServer\storage
+2025-06-04T06:20:35.773Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T06:20:35.829Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1-full_build-www.gyan.dev
+2025-06-04T06:20:35.833Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T06:20:35.834Z [INFO]: 存储目录: C:\Users\xiong\AndroidFileServer\storage
+2025-06-04T06:20:40.170Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell ls -lh '/sdcard/'
+2025-06-04T06:20:49.926Z [WARN]: 无法解析行: total 313K
+2025-06-04T06:20:53.961Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 -1983762891
+2025-06-04T06:20:54.714Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 5.3M 2023-05-03 21:27 00001.png
+2025-06-04T06:20:57.297Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 0_FaceDistinguish
+2025-06-04T06:20:57.298Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 4.0M 2023-12-01 09:30 11月份加班报销.zip
+2025-06-04T06:20:57.298Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-02-25 22:19 123云盘
+2025-06-04T06:20:57.298Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 20220822232256
+2025-06-04T06:20:57.299Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw  56K 2025-02-22 00:13 2023-07-08
+2025-06-04T06:20:57.299Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 120K 2025-02-22 00:13 2023-07-09
+2025-06-04T06:20:57.299Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-02 15:33 Alarms
+2025-06-04T06:20:57.299Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 AliYunPan
+2025-06-04T06:20:57.299Z [WARN]: 无法解析行: drwxrws--x  9 media_rw media_rw 3.3K 2024-11-24 14:34 Android
+2025-06-04T06:20:57.300Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 AnyMirror
+2025-06-04T06:20:57.300Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-01-01 00:01 Audiobooks
+2025-06-04T06:20:57.300Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:40 Backup
+2025-06-04T06:20:57.300Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 BaiduNetdisk
+2025-06-04T06:20:57.300Z [WARN]: 无法解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2024-04-08 21:40 ColorOS
+2025-06-04T06:20:57.300Z [WARN]: 无法解析行: drwxrws--- 26 u0_a237  media_rw 3.3K 2025-06-02 15:33 DCIM
+2025-06-04T06:20:57.300Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-01-02 23:43 DingTalk
+2025-06-04T06:20:57.301Z [WARN]: 无法解析行: drwxrws--- 19 u0_a237  media_rw 3.3K 2025-05-21 09:58 Documents
+2025-06-04T06:20:57.301Z [WARN]: 无法解析行: drwxrws--- 41 u0_a237  media_rw 8.0K 2025-06-02 15:33 Download
+2025-06-04T06:20:57.301Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-04-15 10:27 Fonts
+2025-06-04T06:20:57.301Z [WARN]: 无法解析行: drwxrws--- 20 u0_a237  media_rw 3.3K 2024-02-08 10:37 Games
+2025-06-04T06:20:57.301Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 IntsigLog
+2025-06-04T06:20:57.301Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:55 LMC8.4
+2025-06-04T06:20:57.301Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-05-04 08:39 Local
+2025-06-04T06:20:57.301Z [WARN]: 无法解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2023-11-14 15:41 MIUI
+2025-06-04T06:20:57.302Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-03-12 20:27 MT2
+2025-06-04T06:20:57.302Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-04-12 10:03 MiShare
+2025-06-04T06:20:57.302Z [WARN]: 无法解析行: drwxrws--- 10 u0_a237  media_rw 3.3K 2025-06-02 15:33 Movies
+2025-06-04T06:20:57.302Z [WARN]: 无法解析行: drwxrws---  7 u0_a237  media_rw 3.3K 2025-06-02 15:33 Music
+2025-06-04T06:20:57.302Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-05-23 19:25 MxPlayerAd
+2025-06-04T06:20:57.302Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-12-25 22:47 My Documents
+2025-06-04T06:20:57.302Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-05-23 17:56 New Folder
+2025-06-04T06:20:57.302Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-06-02 15:33 Notifications
+2025-06-04T06:20:57.302Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-05-11 17:16 Octopus
+2025-06-04T06:20:57.303Z [WARN]: 无法解析行: drwxrws--- 35 u0_a237  media_rw 8.0K 2025-06-02 15:33 Pictures
+2025-06-04T06:20:57.303Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-02 15:33 Podcasts
+2025-06-04T06:20:57.303Z [WARN]: 无法解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2024-02-17 19:43 PonyEmu
+2025-06-04T06:20:57.303Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-08-15 10:10 Quark
+2025-06-04T06:20:57.303Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-01-01 00:01 Recordings
+2025-06-04T06:20:57.303Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-02 15:33 Ringtones
+2025-06-04T06:20:57.303Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-02-18 10:41 SigmobAndroid
+2025-06-04T06:20:57.303Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 SpeedSoftware
+2025-06-04T06:20:57.304Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-04 18:37 Subtitles
+2025-06-04T06:20:57.304Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-02-14 07:48 Trusfort
+2025-06-04T06:20:57.304Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-12-19 19:34 Unicom
+2025-06-04T06:20:57.304Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 597K 2023-12-05 16:22 WhatsAppOldMedia.tar
+2025-06-04T06:20:57.304Z [WARN]: 无法解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2024-02-08 10:37 XiaoJi
+2025-06-04T06:20:57.304Z [WARN]: 无法解析行: drwxrws---  8 u0_a237  media_rw 3.3K 2024-04-07 16:48 alipay
+2025-06-04T06:20:57.304Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-05-04 08:38 amaplocationapi
+2025-06-04T06:20:57.304Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-22 17:06 apm
+2025-06-04T06:20:57.304Z [WARN]: 无法解析行: drwxrws---  9 u0_a237  media_rw 3.3K 2025-02-06 08:56 apminsight
+2025-06-04T06:20:57.305Z [WARN]: 无法解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2025-06-01 14:49 backups
+2025-06-04T06:20:57.305Z [WARN]: 无法解析行: drwxrws---  5 u0_a237  media_rw 3.3K 2025-01-23 09:01 baidu
+2025-06-04T06:20:57.305Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw  52K 2023-11-14 15:44 bluetooth
+2025-06-04T06:20:57.305Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 cdsmy
+2025-06-04T06:20:57.305Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 4.8K 2024-09-26 21:47 client.ovpn
+2025-06-04T06:20:57.305Z [WARN]: 无法解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2023-11-14 15:41 cloudwalk
+2025-06-04T06:20:57.305Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-12-02 01:16 com.heytap.browser
+2025-06-04T06:20:57.305Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:55 com.hpplay.happycast
+2025-06-04T06:20:57.306Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-02 01:16 com.jifen.ac
+2025-06-04T06:20:57.306Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-02-25 22:19 com.mfcloudcalculate.networkdisk
+2025-06-04T06:20:57.306Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 146M 2024-07-18 10:36 com.nianticlabs.pokemongo_0.321.0.apk
+2025-06-04T06:20:57.306Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 146M 2024-07-18 10:37 com.nianticlabs.pokemongo_0.321.0_sign.apk
+2025-06-04T06:20:57.306Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 d32713460f1711edb28d0242ac130002
+2025-06-04T06:20:57.306Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw   14 2023-02-06 10:50 deviceId.txt
+2025-06-04T06:20:57.306Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-01 15:05 esShare
+2025-06-04T06:20:57.306Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-04-12 10:03 geetest
+2025-06-04T06:20:57.306Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 hgem5aa4-keb1-7k45-khm4-1mfh27mbc845
+2025-06-04T06:20:57.307Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 idcardscan
+2025-06-04T06:20:57.307Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-04-04 16:36 imageloader
+2025-06-04T06:20:57.307Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 kfcCache
+2025-06-04T06:20:57.307Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 misdktest
+2025-06-04T06:20:57.307Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-11-17 04:32 mit
+2025-06-04T06:20:57.307Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-21 11:43 msc
+2025-06-04T06:20:57.307Z [WARN]: 无法解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2024-09-27 22:45 netease
+2025-06-04T06:20:57.308Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw  327 2024-09-27 15:48 oppo-find-x6.conf
+2025-06-04T06:20:57.308Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 4.8K 2024-10-14 17:27 oppo-find-x6.ovpn
+2025-06-04T06:20:57.308Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 17:54 oua_classifier
+2025-06-04T06:20:57.308Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 phCache
+2025-06-04T06:20:57.308Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 4.8K 2023-12-19 16:15 pixel6.ovpn
+2025-06-04T06:20:57.308Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw  89K 2023-02-02 17:35 please_stand_away.mp3
+2025-06-04T06:20:57.308Z [WARN]: 无法解析行: drwxrws--- 27 u0_a237  media_rw 3.3K 2025-05-25 08:01 qqmusic
+2025-06-04T06:20:57.308Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-11-05 10:07 qvs
+2025-06-04T06:20:57.308Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 raw
+2025-06-04T06:20:57.309Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 sina
+2025-06-04T06:20:57.309Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 spdb
+2025-06-04T06:20:57.309Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-18 19:23 system
+2025-06-04T06:20:57.309Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-27 18:02 taptap_did
+2025-06-04T06:20:57.309Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-05-10 09:37 taptapupdate
+2025-06-04T06:20:57.309Z [WARN]: 无法解析行: drwxrws--- 15 u0_a237  media_rw 3.3K 2025-04-23 17:25 tencent
+2025-06-04T06:20:57.310Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw  10M 2023-03-02 21:12 testvideo.mp4
+2025-06-04T06:20:57.310Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:43 tieba
+2025-06-04T06:20:57.310Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 ucdownloads
+2025-06-04T06:20:57.310Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-27 18:02 va_shared
+2025-06-04T06:20:57.310Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-02-16 23:23 vmp
+2025-06-04T06:20:57.310Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 6.2K 2024-09-27 14:36 vpnclient.sswan
+2025-06-04T06:20:57.310Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-02-23 14:17 warp
+2025-06-04T06:20:57.311Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw  17K 2024-04-01 14:09 warp.zip
+2025-06-04T06:20:57.311Z [WARN]: 无法解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2023-12-14 10:25 whatsapp
+2025-06-04T06:20:57.311Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-03-28 16:45 wsgw_h5
+2025-06-04T06:20:57.311Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw 2.4K 2025-05-06 11:07 xchat.log
+2025-06-04T06:20:57.311Z [WARN]: 无法解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 yumcCache
+2025-06-04T06:20:57.311Z [WARN]: 无法解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 图片
+2025-06-04T06:20:57.311Z [WARN]: 无法解析行: -rw-rw----  1 u0_a237  media_rw  298 2023-12-11 20:07 无标题文档 1.txt
+2025-06-04T06:21:14.242Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 8.0K 2023-12-22 16:04 谷歌绕过企业锁
+2025-06-04T06:21:14.247Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:21:14 +0000] "GET /api/get_files?id=7DSSBM9H8T7XCYHM&path=%2Fsdcard%2F HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:21:26.131Z [INFO]: adb验证结果: true, 信息: ✅ ADB 验证成功: Android Debug Bridge version 1.0.41
+2025-06-04T06:21:26.196Z [INFO]: ffmpeg验证结果: true, 信息: ✅ FFmpeg 验证成功: 版本 7.1.1-full_build-www.gyan.dev
+2025-06-04T06:21:26.200Z [INFO]: 服务器运行在 http://0.0.0.0:5001
+2025-06-04T06:21:26.201Z [INFO]: 存储目录: C:\Users\xiong\AndroidFileServer\storage
+2025-06-04T06:21:30.685Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell ls -lh '/sdcard/'
+2025-06-04T06:21:30.785Z [WARN]: 无法解析行: total 313K
+2025-06-04T06:21:30.786Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 -1983762891
+2025-06-04T06:21:30.786Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw 5.3M 2023-05-03 21:27 00001.png
+2025-06-04T06:21:30.786Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 0_FaceDistinguish
+2025-06-04T06:21:30.787Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw 4.0M 2023-12-01 09:30 11月份加班报销.zip
+2025-06-04T06:21:30.787Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-02-25 22:19 123云盘
+2025-06-04T06:21:30.787Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 20220822232256
+2025-06-04T06:21:30.787Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw  56K 2025-02-22 00:13 2023-07-08
+2025-06-04T06:21:30.787Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 120K 2025-02-22 00:13 2023-07-09
+2025-06-04T06:21:30.787Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-02 15:33 Alarms
+2025-06-04T06:21:30.788Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 AliYunPan
+2025-06-04T06:21:30.788Z [INFO]: 解析行: drwxrws--x  9 media_rw media_rw 3.3K 2024-11-24 14:34 Android
+2025-06-04T06:21:30.788Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 AnyMirror
+2025-06-04T06:21:30.788Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-01-01 00:01 Audiobooks
+2025-06-04T06:21:30.788Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:40 Backup
+2025-06-04T06:21:30.788Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 BaiduNetdisk
+2025-06-04T06:21:30.788Z [INFO]: 解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2024-04-08 21:40 ColorOS
+2025-06-04T06:21:30.789Z [INFO]: 解析行: drwxrws--- 26 u0_a237  media_rw 3.3K 2025-06-02 15:33 DCIM
+2025-06-04T06:21:30.789Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-01-02 23:43 DingTalk
+2025-06-04T06:21:30.789Z [INFO]: 解析行: drwxrws--- 19 u0_a237  media_rw 3.3K 2025-05-21 09:58 Documents
+2025-06-04T06:21:30.789Z [INFO]: 解析行: drwxrws--- 41 u0_a237  media_rw 8.0K 2025-06-02 15:33 Download
+2025-06-04T06:21:30.789Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-04-15 10:27 Fonts
+2025-06-04T06:21:30.789Z [INFO]: 解析行: drwxrws--- 20 u0_a237  media_rw 3.3K 2024-02-08 10:37 Games
+2025-06-04T06:21:30.789Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 IntsigLog
+2025-06-04T06:21:30.790Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:55 LMC8.4
+2025-06-04T06:21:30.790Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-05-04 08:39 Local
+2025-06-04T06:21:30.790Z [INFO]: 解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2023-11-14 15:41 MIUI
+2025-06-04T06:21:30.790Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-03-12 20:27 MT2
+2025-06-04T06:21:30.790Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-04-12 10:03 MiShare
+2025-06-04T06:21:30.790Z [INFO]: 解析行: drwxrws--- 10 u0_a237  media_rw 3.3K 2025-06-02 15:33 Movies
+2025-06-04T06:21:30.790Z [INFO]: 解析行: drwxrws---  7 u0_a237  media_rw 3.3K 2025-06-02 15:33 Music
+2025-06-04T06:21:30.790Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-05-23 19:25 MxPlayerAd
+2025-06-04T06:21:30.791Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-12-25 22:47 My Documents
+2025-06-04T06:21:30.791Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-05-23 17:56 New Folder
+2025-06-04T06:21:30.791Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-06-02 15:33 Notifications
+2025-06-04T06:21:30.791Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-05-11 17:16 Octopus
+2025-06-04T06:21:30.791Z [INFO]: 解析行: drwxrws--- 35 u0_a237  media_rw 8.0K 2025-06-02 15:33 Pictures
+2025-06-04T06:21:30.791Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-02 15:33 Podcasts
+2025-06-04T06:21:30.791Z [INFO]: 解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2024-02-17 19:43 PonyEmu
+2025-06-04T06:21:30.791Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-08-15 10:10 Quark
+2025-06-04T06:21:30.792Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-01-01 00:01 Recordings
+2025-06-04T06:21:30.792Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-02 15:33 Ringtones
+2025-06-04T06:21:30.792Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-02-18 10:41 SigmobAndroid
+2025-06-04T06:21:30.792Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 SpeedSoftware
+2025-06-04T06:21:30.792Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-04 18:37 Subtitles
+2025-06-04T06:21:30.792Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-02-14 07:48 Trusfort
+2025-06-04T06:21:30.792Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-12-19 19:34 Unicom
+2025-06-04T06:21:30.793Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw 597K 2023-12-05 16:22 WhatsAppOldMedia.tar
+2025-06-04T06:21:30.793Z [INFO]: 解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2024-02-08 10:37 XiaoJi
+2025-06-04T06:21:30.793Z [INFO]: 解析行: drwxrws---  8 u0_a237  media_rw 3.3K 2024-04-07 16:48 alipay
+2025-06-04T06:21:30.793Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-05-04 08:38 amaplocationapi
+2025-06-04T06:21:30.793Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-22 17:06 apm
+2025-06-04T06:21:30.793Z [INFO]: 解析行: drwxrws---  9 u0_a237  media_rw 3.3K 2025-02-06 08:56 apminsight
+2025-06-04T06:21:30.793Z [INFO]: 解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2025-06-01 14:49 backups
+2025-06-04T06:21:30.793Z [INFO]: 解析行: drwxrws---  5 u0_a237  media_rw 3.3K 2025-01-23 09:01 baidu
+2025-06-04T06:21:30.794Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw  52K 2023-11-14 15:44 bluetooth
+2025-06-04T06:21:30.794Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 cdsmy
+2025-06-04T06:21:30.794Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw 4.8K 2024-09-26 21:47 client.ovpn
+2025-06-04T06:21:30.794Z [INFO]: 解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2023-11-14 15:41 cloudwalk
+2025-06-04T06:21:30.794Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-12-02 01:16 com.heytap.browser
+2025-06-04T06:21:30.794Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:55 com.hpplay.happycast
+2025-06-04T06:21:30.794Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-02 01:16 com.jifen.ac
+2025-06-04T06:21:30.795Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-02-25 22:19 com.mfcloudcalculate.networkdisk
+2025-06-04T06:21:30.795Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw 146M 2024-07-18 10:36 com.nianticlabs.pokemongo_0.321.0.apk
+2025-06-04T06:21:30.795Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw 146M 2024-07-18 10:37 com.nianticlabs.pokemongo_0.321.0_sign.apk
+2025-06-04T06:21:30.795Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 d32713460f1711edb28d0242ac130002
+2025-06-04T06:21:30.795Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw   14 2023-02-06 10:50 deviceId.txt
+2025-06-04T06:21:30.795Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-01 15:05 esShare
+2025-06-04T06:21:30.795Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-04-12 10:03 geetest
+2025-06-04T06:21:30.796Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 hgem5aa4-keb1-7k45-khm4-1mfh27mbc845
+2025-06-04T06:21:30.796Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 idcardscan
+2025-06-04T06:21:30.796Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-04-04 16:36 imageloader
+2025-06-04T06:21:30.796Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 kfcCache
+2025-06-04T06:21:30.796Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 misdktest
+2025-06-04T06:21:30.796Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-11-17 04:32 mit
+2025-06-04T06:21:30.797Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-21 11:43 msc
+2025-06-04T06:21:30.797Z [INFO]: 解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2024-09-27 22:45 netease
+2025-06-04T06:21:30.797Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw  327 2024-09-27 15:48 oppo-find-x6.conf
+2025-06-04T06:21:30.797Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw 4.8K 2024-10-14 17:27 oppo-find-x6.ovpn
+2025-06-04T06:21:30.797Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 17:54 oua_classifier
+2025-06-04T06:21:30.797Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 phCache
+2025-06-04T06:21:30.798Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw 4.8K 2023-12-19 16:15 pixel6.ovpn
+2025-06-04T06:21:30.798Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw  89K 2023-02-02 17:35 please_stand_away.mp3
+2025-06-04T06:21:30.798Z [INFO]: 解析行: drwxrws--- 27 u0_a237  media_rw 3.3K 2025-05-25 08:01 qqmusic
+2025-06-04T06:21:30.798Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-11-05 10:07 qvs
+2025-06-04T06:21:30.798Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 raw
+2025-06-04T06:21:30.798Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 sina
+2025-06-04T06:21:30.799Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 spdb
+2025-06-04T06:21:30.799Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-18 19:23 system
+2025-06-04T06:21:30.799Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-27 18:02 taptap_did
+2025-06-04T06:21:30.799Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-05-10 09:37 taptapupdate
+2025-06-04T06:21:30.799Z [INFO]: 解析行: drwxrws--- 15 u0_a237  media_rw 3.3K 2025-04-23 17:25 tencent
+2025-06-04T06:21:30.800Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw  10M 2023-03-02 21:12 testvideo.mp4
+2025-06-04T06:21:30.800Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:43 tieba
+2025-06-04T06:21:30.800Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 ucdownloads
+2025-06-04T06:21:30.800Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-27 18:02 va_shared
+2025-06-04T06:21:30.800Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-02-16 23:23 vmp
+2025-06-04T06:21:30.800Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw 6.2K 2024-09-27 14:36 vpnclient.sswan
+2025-06-04T06:21:30.801Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-02-23 14:17 warp
+2025-06-04T06:21:30.801Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw  17K 2024-04-01 14:09 warp.zip
+2025-06-04T06:21:30.801Z [INFO]: 解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2023-12-14 10:25 whatsapp
+2025-06-04T06:21:30.801Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-03-28 16:45 wsgw_h5
+2025-06-04T06:21:30.801Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw 2.4K 2025-05-06 11:07 xchat.log
+2025-06-04T06:21:30.801Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 yumcCache
+2025-06-04T06:21:30.801Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 图片
+2025-06-04T06:21:30.802Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw  298 2023-12-11 20:07 无标题文档 1.txt
+2025-06-04T06:21:30.802Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 8.0K 2023-12-22 16:04 谷歌绕过企业锁
+2025-06-04T06:21:30.807Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:21:30 +0000] "GET /api/get_files?id=7DSSBM9H8T7XCYHM&path=%2Fsdcard%2F HTTP/1.1" 200 15754 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:21:33.729Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell ls -lh '/sdcard/Documents/'
+2025-06-04T06:21:33.857Z [WARN]: 无法解析行: total 33
+2025-06-04T06:21:33.858Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2023-12-14 10:51 GBBackup
+2025-06-04T06:21:33.858Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2024-08-20 19:28 OPPO 文档
+2025-06-04T06:21:33.858Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2025-02-05 16:27 PayGateWayLibrary
+2025-06-04T06:21:33.858Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2024-02-14 07:48 Unicom
+2025-06-04T06:21:33.859Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2024-11-25 09:33 _.bjhloaid-hubble-Ey8649Qs5hZC8ri9tPgOQTeTe5gbEq2XLL7KC哈H3pa9lee8saCIkEaz7YKvs3GUtEtpenNRyxslfJ6pK0fRMeJMASTWdHdHz1HdlrqPEqSJokv4gUA0L9ZTyxpfJrmygbjhl
+2025-06-04T06:21:33.859Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2024-11-25 09:33 _.bjhlselfid-hubble-opo3OwGuLO6j0mPSZF9Ip2Uh09vTSvQ3SSVJhohMYWYLByUaTiFpFG0K哈7vdv2CL3rV0VjtQDKF8zTfUQfHCXQ==bjhl
+2025-06-04T06:21:33.859Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2023-11-16 17:38 app_dump
+2025-06-04T06:21:33.860Z [INFO]: 解析行: drwxrws--- 3 u0_a237 media_rw 3.3K 2024-01-11 16:19 ringtone
+2025-06-04T06:21:33.860Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2023-12-27 18:02 tap_sandbox_backup
+2025-06-04T06:21:33.860Z [INFO]: 解析行: drwxrws--- 3 u0_a237 media_rw 3.3K 2024-11-26 18:27 user
+2025-06-04T06:21:33.860Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2025-01-19 13:34 图片转文档
+2025-06-04T06:21:33.862Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:21:33 +0000] "GET /api/get_files?id=7DSSBM9H8T7XCYHM&path=%2Fsdcard%2FDocuments HTTP/1.1" 200 2340 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:21:35.191Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell ls -lh '/sdcard/Documents/图片转文档/'
+2025-06-04T06:21:35.282Z [WARN]: 无法解析行: total 456
+2025-06-04T06:21:35.282Z [INFO]: 解析行: -rw-rw---- 1 u0_a237 media_rw 454K 2025-01-19 13:34 2025-01-19 13-34-10.pdf
+2025-06-04T06:21:35.284Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:21:35 +0000] "GET /api/get_files?id=7DSSBM9H8T7XCYHM&path=%2Fsdcard%2FDocuments%2F%E5%9B%BE%E7%89%87%E8%BD%AC%E6%96%87%E6%A1%A3 HTTP/1.1" 200 228 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:21:42.799Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell ls -lh '/sdcard/Documents/'
+2025-06-04T06:21:42.894Z [WARN]: 无法解析行: total 33
+2025-06-04T06:21:42.895Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2023-12-14 10:51 GBBackup
+2025-06-04T06:21:42.896Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2024-08-20 19:28 OPPO 文档
+2025-06-04T06:21:42.896Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2025-02-05 16:27 PayGateWayLibrary
+2025-06-04T06:21:42.896Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2024-02-14 07:48 Unicom
+2025-06-04T06:21:42.897Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2024-11-25 09:33 _.bjhloaid-hubble-Ey8649Qs5hZC8ri9tPgOQTeTe5gbEq2XLL7KC哈H3pa9lee8saCIkEaz7YKvs3GUtEtpenNRyxslfJ6pK0fRMeJMASTWdHdHz1HdlrqPEqSJokv4gUA0L9ZTyxpfJrmygbjhl
+2025-06-04T06:21:42.897Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2024-11-25 09:33 _.bjhlselfid-hubble-opo3OwGuLO6j0mPSZF9Ip2Uh09vTSvQ3SSVJhohMYWYLByUaTiFpFG0K哈7vdv2CL3rV0VjtQDKF8zTfUQfHCXQ==bjhl
+2025-06-04T06:21:42.897Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2023-11-16 17:38 app_dump
+2025-06-04T06:21:42.898Z [INFO]: 解析行: drwxrws--- 3 u0_a237 media_rw 3.3K 2024-01-11 16:19 ringtone
+2025-06-04T06:21:42.898Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2023-12-27 18:02 tap_sandbox_backup
+2025-06-04T06:21:42.898Z [INFO]: 解析行: drwxrws--- 3 u0_a237 media_rw 3.3K 2024-11-26 18:27 user
+2025-06-04T06:21:42.899Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2025-01-19 13:34 图片转文档
+2025-06-04T06:21:42.900Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:21:42 +0000] "GET /api/get_files?id=7DSSBM9H8T7XCYHM&path=%2Fsdcard%2FDocuments HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:21:45.285Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell ls -lh '/sdcard/Documents/图片转文档/'
+2025-06-04T06:21:45.370Z [WARN]: 无法解析行: total 456
+2025-06-04T06:21:45.371Z [INFO]: 解析行: -rw-rw---- 1 u0_a237 media_rw 454K 2025-01-19 13:34 2025-01-19 13-34-10.pdf
+2025-06-04T06:21:45.372Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:21:45 +0000] "GET /api/get_files?id=7DSSBM9H8T7XCYHM&path=%2Fsdcard%2FDocuments%2F%E5%9B%BE%E7%89%87%E8%BD%AC%E6%96%87%E6%A1%A3 HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:21:48.866Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:21:48 +0000] "GET /api/file?file_path=%2Fsdcard%2FDocuments%2F%E5%9B%BE%E7%89%87%E8%BD%AC%E6%96%87%E6%A1%A3%2F2025-01-19%2013-34-10.pdf&category=documents&file_name=2025-01-19%2013-34-10.pdf&id=7DSSBM9H8T7XCYHM HTTP/1.1" 200 464788 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:21:54.909Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell ls -lh '/sdcard/Documents/'
+2025-06-04T06:21:55.012Z [WARN]: 无法解析行: total 33
+2025-06-04T06:21:55.013Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2023-12-14 10:51 GBBackup
+2025-06-04T06:21:55.014Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2024-08-20 19:28 OPPO 文档
+2025-06-04T06:21:55.014Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2025-02-05 16:27 PayGateWayLibrary
+2025-06-04T06:21:55.014Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2024-02-14 07:48 Unicom
+2025-06-04T06:21:55.015Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2024-11-25 09:33 _.bjhloaid-hubble-Ey8649Qs5hZC8ri9tPgOQTeTe5gbEq2XLL7KC哈H3pa9lee8saCIkEaz7YKvs3GUtEtpenNRyxslfJ6pK0fRMeJMASTWdHdHz1HdlrqPEqSJokv4gUA0L9ZTyxpfJrmygbjhl
+2025-06-04T06:21:55.015Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2024-11-25 09:33 _.bjhlselfid-hubble-opo3OwGuLO6j0mPSZF9Ip2Uh09vTSvQ3SSVJhohMYWYLByUaTiFpFG0K哈7vdv2CL3rV0VjtQDKF8zTfUQfHCXQ==bjhl
+2025-06-04T06:21:55.015Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2023-11-16 17:38 app_dump
+2025-06-04T06:21:55.015Z [INFO]: 解析行: drwxrws--- 3 u0_a237 media_rw 3.3K 2024-01-11 16:19 ringtone
+2025-06-04T06:21:55.016Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2023-12-27 18:02 tap_sandbox_backup
+2025-06-04T06:21:55.016Z [INFO]: 解析行: drwxrws--- 3 u0_a237 media_rw 3.3K 2024-11-26 18:27 user
+2025-06-04T06:21:55.016Z [INFO]: 解析行: drwxrws--- 2 u0_a237 media_rw 3.3K 2025-01-19 13:34 图片转文档
+2025-06-04T06:21:55.018Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:21:55 +0000] "GET /api/get_files?id=7DSSBM9H8T7XCYHM&path=%2Fsdcard%2FDocuments HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:21:56.326Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell ls -lh '/sdcard/'
+2025-06-04T06:21:56.423Z [WARN]: 无法解析行: total 313K
+2025-06-04T06:21:56.423Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 -1983762891
+2025-06-04T06:21:56.424Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw 5.3M 2023-05-03 21:27 00001.png
+2025-06-04T06:21:56.424Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 0_FaceDistinguish
+2025-06-04T06:21:56.424Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw 4.0M 2023-12-01 09:30 11月份加班报销.zip
+2025-06-04T06:21:56.425Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-02-25 22:19 123云盘
+2025-06-04T06:21:56.425Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 20220822232256
+2025-06-04T06:21:56.425Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw  56K 2025-02-22 00:13 2023-07-08
+2025-06-04T06:21:56.426Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 120K 2025-02-22 00:13 2023-07-09
+2025-06-04T06:21:56.426Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-02 15:33 Alarms
+2025-06-04T06:21:56.427Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 AliYunPan
+2025-06-04T06:21:56.427Z [INFO]: 解析行: drwxrws--x  9 media_rw media_rw 3.3K 2024-11-24 14:34 Android
+2025-06-04T06:21:56.427Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 AnyMirror
+2025-06-04T06:21:56.428Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-01-01 00:01 Audiobooks
+2025-06-04T06:21:56.428Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:40 Backup
+2025-06-04T06:21:56.429Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 BaiduNetdisk
+2025-06-04T06:21:56.429Z [INFO]: 解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2024-04-08 21:40 ColorOS
+2025-06-04T06:21:56.429Z [INFO]: 解析行: drwxrws--- 26 u0_a237  media_rw 3.3K 2025-06-02 15:33 DCIM
+2025-06-04T06:21:56.430Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-01-02 23:43 DingTalk
+2025-06-04T06:21:56.430Z [INFO]: 解析行: drwxrws--- 19 u0_a237  media_rw 3.3K 2025-05-21 09:58 Documents
+2025-06-04T06:21:56.431Z [INFO]: 解析行: drwxrws--- 41 u0_a237  media_rw 8.0K 2025-06-02 15:33 Download
+2025-06-04T06:21:56.431Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-04-15 10:27 Fonts
+2025-06-04T06:21:56.431Z [INFO]: 解析行: drwxrws--- 20 u0_a237  media_rw 3.3K 2024-02-08 10:37 Games
+2025-06-04T06:21:56.432Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 IntsigLog
+2025-06-04T06:21:56.432Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:55 LMC8.4
+2025-06-04T06:21:56.433Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-05-04 08:39 Local
+2025-06-04T06:21:56.433Z [INFO]: 解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2023-11-14 15:41 MIUI
+2025-06-04T06:21:56.433Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-03-12 20:27 MT2
+2025-06-04T06:21:56.434Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-04-12 10:03 MiShare
+2025-06-04T06:21:56.434Z [INFO]: 解析行: drwxrws--- 10 u0_a237  media_rw 3.3K 2025-06-02 15:33 Movies
+2025-06-04T06:21:56.434Z [INFO]: 解析行: drwxrws---  7 u0_a237  media_rw 3.3K 2025-06-02 15:33 Music
+2025-06-04T06:21:56.435Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-05-23 19:25 MxPlayerAd
+2025-06-04T06:21:56.435Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-12-25 22:47 My Documents
+2025-06-04T06:21:56.436Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-05-23 17:56 New Folder
+2025-06-04T06:21:56.436Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-06-02 15:33 Notifications
+2025-06-04T06:21:56.436Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-05-11 17:16 Octopus
+2025-06-04T06:21:56.437Z [INFO]: 解析行: drwxrws--- 35 u0_a237  media_rw 8.0K 2025-06-02 15:33 Pictures
+2025-06-04T06:21:56.437Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-02 15:33 Podcasts
+2025-06-04T06:21:56.437Z [INFO]: 解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2024-02-17 19:43 PonyEmu
+2025-06-04T06:21:56.437Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-08-15 10:10 Quark
+2025-06-04T06:21:56.438Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-01-01 00:01 Recordings
+2025-06-04T06:21:56.438Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-02 15:33 Ringtones
+2025-06-04T06:21:56.438Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-02-18 10:41 SigmobAndroid
+2025-06-04T06:21:56.439Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 SpeedSoftware
+2025-06-04T06:21:56.439Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-04 18:37 Subtitles
+2025-06-04T06:21:56.439Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-02-14 07:48 Trusfort
+2025-06-04T06:21:56.439Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-12-19 19:34 Unicom
+2025-06-04T06:21:56.440Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw 597K 2023-12-05 16:22 WhatsAppOldMedia.tar
+2025-06-04T06:21:56.440Z [INFO]: 解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2024-02-08 10:37 XiaoJi
+2025-06-04T06:21:56.440Z [INFO]: 解析行: drwxrws---  8 u0_a237  media_rw 3.3K 2024-04-07 16:48 alipay
+2025-06-04T06:21:56.441Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2025-05-04 08:38 amaplocationapi
+2025-06-04T06:21:56.441Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-22 17:06 apm
+2025-06-04T06:21:56.441Z [INFO]: 解析行: drwxrws---  9 u0_a237  media_rw 3.3K 2025-02-06 08:56 apminsight
+2025-06-04T06:21:56.441Z [INFO]: 解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2025-06-01 14:49 backups
+2025-06-04T06:21:56.442Z [INFO]: 解析行: drwxrws---  5 u0_a237  media_rw 3.3K 2025-01-23 09:01 baidu
+2025-06-04T06:21:56.442Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw  52K 2023-11-14 15:44 bluetooth
+2025-06-04T06:21:56.442Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 cdsmy
+2025-06-04T06:21:56.443Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw 4.8K 2024-09-26 21:47 client.ovpn
+2025-06-04T06:21:56.443Z [INFO]: 解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2023-11-14 15:41 cloudwalk
+2025-06-04T06:21:56.443Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-12-02 01:16 com.heytap.browser
+2025-06-04T06:21:56.443Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:55 com.hpplay.happycast
+2025-06-04T06:21:56.444Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-02 01:16 com.jifen.ac
+2025-06-04T06:21:56.444Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-02-25 22:19 com.mfcloudcalculate.networkdisk
+2025-06-04T06:21:56.444Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw 146M 2024-07-18 10:36 com.nianticlabs.pokemongo_0.321.0.apk
+2025-06-04T06:21:56.445Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw 146M 2024-07-18 10:37 com.nianticlabs.pokemongo_0.321.0_sign.apk
+2025-06-04T06:21:56.445Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 d32713460f1711edb28d0242ac130002
+2025-06-04T06:21:56.445Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw   14 2023-02-06 10:50 deviceId.txt
+2025-06-04T06:21:56.445Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-06-01 15:05 esShare
+2025-06-04T06:21:56.446Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-04-12 10:03 geetest
+2025-06-04T06:21:56.446Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 hgem5aa4-keb1-7k45-khm4-1mfh27mbc845
+2025-06-04T06:21:56.446Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 idcardscan
+2025-06-04T06:21:56.446Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-04-04 16:36 imageloader
+2025-06-04T06:21:56.447Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 kfcCache
+2025-06-04T06:21:56.447Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 misdktest
+2025-06-04T06:21:56.447Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-11-17 04:32 mit
+2025-06-04T06:21:56.447Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-21 11:43 msc
+2025-06-04T06:21:56.448Z [INFO]: 解析行: drwxrws---  4 u0_a237  media_rw 3.3K 2024-09-27 22:45 netease
+2025-06-04T06:21:56.448Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw  327 2024-09-27 15:48 oppo-find-x6.conf
+2025-06-04T06:21:56.448Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw 4.8K 2024-10-14 17:27 oppo-find-x6.ovpn
+2025-06-04T06:21:56.449Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 17:54 oua_classifier
+2025-06-04T06:21:56.449Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 phCache
+2025-06-04T06:21:56.449Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw 4.8K 2023-12-19 16:15 pixel6.ovpn
+2025-06-04T06:21:56.450Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw  89K 2023-02-02 17:35 please_stand_away.mp3
+2025-06-04T06:21:56.450Z [INFO]: 解析行: drwxrws--- 27 u0_a237  media_rw 3.3K 2025-05-25 08:01 qqmusic
+2025-06-04T06:21:56.450Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-11-05 10:07 qvs
+2025-06-04T06:21:56.450Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 raw
+2025-06-04T06:21:56.451Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 sina
+2025-06-04T06:21:56.451Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:41 spdb
+2025-06-04T06:21:56.451Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-18 19:23 system
+2025-06-04T06:21:56.452Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-27 18:02 taptap_did
+2025-06-04T06:21:56.452Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-05-10 09:37 taptapupdate
+2025-06-04T06:21:56.453Z [INFO]: 解析行: drwxrws--- 15 u0_a237  media_rw 3.3K 2025-04-23 17:25 tencent
+2025-06-04T06:21:56.453Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw  10M 2023-03-02 21:12 testvideo.mp4
+2025-06-04T06:21:56.453Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:43 tieba
+2025-06-04T06:21:56.454Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 ucdownloads
+2025-06-04T06:21:56.454Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-12-27 18:02 va_shared
+2025-06-04T06:21:56.455Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2024-02-16 23:23 vmp
+2025-06-04T06:21:56.455Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw 6.2K 2024-09-27 14:36 vpnclient.sswan
+2025-06-04T06:21:56.455Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2024-02-23 14:17 warp
+2025-06-04T06:21:56.455Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw  17K 2024-04-01 14:09 warp.zip
+2025-06-04T06:21:56.456Z [INFO]: 解析行: drwxrws---  6 u0_a237  media_rw 3.3K 2023-12-14 10:25 whatsapp
+2025-06-04T06:21:56.456Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2025-03-28 16:45 wsgw_h5
+2025-06-04T06:21:56.456Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw 2.4K 2025-05-06 11:07 xchat.log
+2025-06-04T06:21:56.457Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 3.3K 2023-11-14 15:55 yumcCache
+2025-06-04T06:21:56.457Z [INFO]: 解析行: drwxrws---  3 u0_a237  media_rw 3.3K 2023-11-14 15:41 图片
+2025-06-04T06:21:56.458Z [INFO]: 解析行: -rw-rw----  1 u0_a237  media_rw  298 2023-12-11 20:07 无标题文档 1.txt
+2025-06-04T06:21:56.458Z [INFO]: 解析行: drwxrws---  2 u0_a237  media_rw 8.0K 2023-12-22 16:04 谷歌绕过企业锁
+2025-06-04T06:21:56.462Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:21:56 +0000] "GET /api/get_files?id=7DSSBM9H8T7XCYHM&path=%2Fsdcard%2F HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:21:58.493Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM pull /sdcard/00001.png C:\Users\xiong\AndroidFileServer\storage\7DSSBM9H8T7XCYHM\images\00001.png
+2025-06-04T06:21:58.719Z [INFO]: 文件拉取成功: /sdcard/00001.png -> C:\Users\xiong\AndroidFileServer\storage\7DSSBM9H8T7XCYHM\images\00001.png
+2025-06-04T06:21:58.761Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:21:58 +0000] "GET /api/file?file_path=%2Fsdcard%2F00001.png&category=images&file_name=00001.png&id=7DSSBM9H8T7XCYHM HTTP/1.1" 200 5652721 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:21:58.902Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:21:58 +0000] "GET /api/file?file_path=%2Fsdcard%2F00001.png&category=images&file_name=00001.png&id=7DSSBM9H8T7XCYHM HTTP/1.1" 200 5652721 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:22:02.438Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell ls -lh '/sdcard/DingTalk/'
+2025-06-04T06:22:02.527Z [WARN]: 无法解析行: total 3.9K
+2025-06-04T06:22:02.528Z [INFO]: 解析行: -rw-rw---- 1 u0_a237 media_rw  11K 2023-10-13 15:37 AI服务器配置单.xlsx
+2025-06-04T06:22:02.529Z [INFO]: 解析行: -rw-rw---- 1 u0_a237 media_rw 185K 2023-02-02 17:36 ATI第二版优化和其他产品优化迭代.pdf
+2025-06-04T06:22:02.529Z [INFO]: 解析行: -rw-rw---- 1 u0_a237 media_rw 104K 2023-02-14 16:43 SimSimi - Talk.pdf
+2025-06-04T06:22:02.529Z [INFO]: 解析行: -rw-rw---- 1 u0_a237 media_rw 902K 2023-11-29 20:08 VBCABLE_Setup_x64.exe
+2025-06-04T06:22:02.530Z [INFO]: 解析行: -rw-rw---- 1 u0_a237 media_rw 2.4K 2023-05-07 01:21 index.html
+2025-06-04T06:22:02.530Z [INFO]: 解析行: -rw-rw---- 1 u0_a237 media_rw 916K 2023-09-03 16:03 jd.pdf
+2025-06-04T06:22:02.531Z [INFO]: 解析行: -rw-rw---- 1 u0_a237 media_rw 336K 2023-11-29 20:48 voicechanger(1).zip
+2025-06-04T06:22:02.531Z [INFO]: 解析行: -rw-rw---- 1 u0_a237 media_rw  23K 2023-11-29 19:56 voicechanger.zip
+2025-06-04T06:22:02.532Z [INFO]: 解析行: -rw-rw---- 1 u0_a237 media_rw 256K 2023-12-26 09:46 【妥妥E行-37.00元-1个行程】高德打车电子行程单.pdf
+2025-06-04T06:22:02.532Z [INFO]: 解析行: -rw-rw---- 1 u0_a237 media_rw 502K 2023-12-25 10:38 加班交通费用报销流程说明(1).docx
+2025-06-04T06:22:02.532Z [INFO]: 解析行: -rw-rw---- 1 u0_a237 media_rw  15K 2023-06-06 15:29 安卓垃圾清理.docx
+2025-06-04T06:22:02.533Z [INFO]: 解析行: -rw-rw---- 1 u0_a237 media_rw 123K 2023-11-09 10:15 拼多多商家电子发票 (1)(2).pdf
+2025-06-04T06:22:02.533Z [INFO]: 解析行: -rw-rw---- 1 u0_a237 media_rw  21K 2023-04-20 22:34 注意事项.docx
+2025-06-04T06:22:02.533Z [INFO]: 解析行: -rw-rw---- 1 u0_a237 media_rw 621K 2023-12-25 10:37 艾欧比员工费用报销制度.pdf
+2025-06-04T06:22:02.535Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:22:02 +0000] "GET /api/get_files?id=7DSSBM9H8T7XCYHM&path=%2Fsdcard%2FDingTalk HTTP/1.1" 200 3057 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:22:12.988Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM pull /sdcard/DingTalk/注意事项.docx C:\Users\xiong\AndroidFileServer\storage\7DSSBM9H8T7XCYHM\documents\注意事项.docx
+2025-06-04T06:22:13.045Z [INFO]: 文件拉取成功: /sdcard/DingTalk/注意事项.docx -> C:\Users\xiong\AndroidFileServer\storage\7DSSBM9H8T7XCYHM\documents\注意事项.docx
+2025-06-04T06:22:13.049Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:22:13 +0000] "GET /api/file?file_path=%2Fsdcard%2FDingTalk%2F%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.docx&category=documents&file_name=%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.docx&id=7DSSBM9H8T7XCYHM HTTP/1.1" 200 21043 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:22:19.079Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell content query --uri content://media/external/file --projection _id:_data:mime_type:_size:_display_name:date_added | grep -E '\.(zip|rar|7z|tar|gz)'
+2025-06-04T06:22:20.831Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell content query --uri content://media/external/file --projection _id:_data:mime_type:_size:_display_name:date_added | grep -E '\.(apk)'
+2025-06-04T06:22:21.332Z [INFO]: 成功解析 31 个document条目
+2025-06-04T06:22:21.334Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:22:21 +0000] "GET /api/get_documents?id=7DSSBM9H8T7XCYHM&document_type=zip HTTP/1.1" 200 7468 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:22:22.392Z [INFO]: 成功解析 12 个document条目
+2025-06-04T06:22:22.394Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:22:22 +0000] "GET /api/get_documents?id=7DSSBM9H8T7XCYHM&document_type=apk HTTP/1.1" 200 3420 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:22:22.738Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell content query --uri content://media/external/file --projection _id:_data:mime_type:_size:_display_name:date_added | grep -E '\.(pdf|doc|docx|xls|xlsx|ppt|pptx|txt|odt|ods|odp)'
+2025-06-04T06:22:24.496Z [INFO]: 成功解析 123 个document条目
+2025-06-04T06:22:24.499Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:22:24 +0000] "GET /api/get_documents?id=7DSSBM9H8T7XCYHM&document_type=document HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:22:26.066Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell content query --uri content://media/external/audio/media --projection _id:_data:mime_type:_size:_display_name:date_added
+2025-06-04T06:22:27.284Z [INFO]: 成功解析 359 个audio条目
+2025-06-04T06:22:27.287Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:22:27 +0000] "GET /api/get_audios?id=7DSSBM9H8T7XCYHM HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:22:28.351Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell content query --uri content://media/external/video/media --projection _id:_data:mime_type:_size:_display_name:width:height:date_added
+2025-06-04T06:22:29.572Z [INFO]: 成功解析 1462 个video条目
+2025-06-04T06:22:29.582Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:22:29 +0000] "GET /api/get_videos?id=7DSSBM9H8T7XCYHM HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:22:41.312Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM pull /storage/emulated/0/Movies/[www.domp4.cc]目z无r.2022.HD1080p.国语中字.mp4 C:\Users\xiong\AndroidFileServer\storage\7DSSBM9H8T7XCYHM\video\[www.domp4.cc]目z无r.2022.HD1080p.国语中字.mp4
+2025-06-04T06:22:47.604Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM pull /storage/emulated/0/Pictures/WeiXin/wx_camera_1676029759625.mp4 C:\Users\xiong\AndroidFileServer\storage\7DSSBM9H8T7XCYHM\video\wx_camera_1676029759625.mp4
+2025-06-04T06:22:47.988Z [INFO]: 文件拉取成功: /storage/emulated/0/Pictures/WeiXin/wx_camera_1676029759625.mp4 -> C:\Users\xiong\AndroidFileServer\storage\7DSSBM9H8T7XCYHM\video\wx_camera_1676029759625.mp4
+2025-06-04T06:22:48.296Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:22:48 +0000] "GET /api/file?file_path=%2Fstorage%2Femulated%2F0%2FPictures%2FWeiXin%2Fwx_camera_1676029759625.mp4&category=video&file_name=wx_camera_1676029759625.mp4&id=7DSSBM9H8T7XCYHM HTTP/1.1" 206 5022116 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:22:48.297Z [ERROR]: 传输中断:
+2025-06-04T06:22:51.450Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:22:51 +0000] "GET /api/file?file_path=%2Fstorage%2Femulated%2F0%2FPictures%2FWeiXin%2Fwx_camera_1676029759625.mp4&category=video&file_name=wx_camera_1676029759625.mp4&id=7DSSBM9H8T7XCYHM HTTP/1.1" 206 3776932 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:23:03.698Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell content query --uri content://media/external/audio/media --projection _id:_data:mime_type:_size:_display_name:date_added
+2025-06-04T06:23:04.957Z [INFO]: 成功解析 359 个audio条目
+2025-06-04T06:23:04.960Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:23:04 +0000] "GET /api/get_audios?id=7DSSBM9H8T7XCYHM HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:23:05.063Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell content query --uri content://media/external/file --projection _id:_data:mime_type:_size:_display_name:date_added | grep -E '\.(pdf|doc|docx|xls|xlsx|ppt|pptx|txt|odt|ods|odp)'
+2025-06-04T06:23:06.628Z [INFO]: 成功解析 123 个document条目
+2025-06-04T06:23:06.630Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:23:06 +0000] "GET /api/get_documents?id=7DSSBM9H8T7XCYHM&document_type=document HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:23:07.663Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM shell content query --uri content://media/external/audio/media --projection _id:_data:mime_type:_size:_display_name:date_added
+2025-06-04T06:23:08.854Z [INFO]: 成功解析 359 个audio条目
+2025-06-04T06:23:08.857Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:23:08 +0000] "GET /api/get_audios?id=7DSSBM9H8T7XCYHM HTTP/1.1" 304 - "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:23:11.338Z [ERROR]: 文件拉取失败: ADB命令失败: 未知错误
+2025-06-04T06:23:11.339Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:23:11 +0000] "GET /api/thumbnail?file_path=%2Fstorage%2Femulated%2F0%2FMovies%2F%5Bwww.domp4.cc%5D%E7%9B%AEz%E6%97%A0r.2022.HD1080p.%E5%9B%BD%E8%AF%AD%E4%B8%AD%E5%AD%97.mp4&category=video&file_name=%5Bwww.domp4.cc%5D%E7%9B%AEz%E6%97%A0r.2022.HD1080p.%E5%9B%BD%E8%AF%AD%E4%B8%AD%E5%AD%97.mp4&id=7DSSBM9H8T7XCYHM HTTP/1.1" 500 94 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:23:17.347Z [INFO]: 执行ADB命令: adb -s 7DSSBM9H8T7XCYHM pull /storage/emulated/0/Music/QQMusic/吴若希 - 越难越爱 (粤语) [qmms2].mp3 C:\Users\xiong\AndroidFileServer\storage\7DSSBM9H8T7XCYHM\audio\吴若希 - 越难越爱 (粤语) [qmms2].mp3
+2025-06-04T06:23:17.690Z [INFO]: 文件拉取成功: /storage/emulated/0/Music/QQMusic/吴若希 - 越难越爱 (粤语) [qmms2].mp3 -> C:\Users\xiong\AndroidFileServer\storage\7DSSBM9H8T7XCYHM\audio\吴若希 - 越难越爱 (粤语) [qmms2].mp3
+2025-06-04T06:23:17.697Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:23:17 +0000] "GET /api/file?file_path=%2Fstorage%2Femulated%2F0%2FMusic%2FQQMusic%2F%E5%90%B4%E8%8B%A5%E5%B8%8C%20-%20%E8%B6%8A%E9%9A%BE%E8%B6%8A%E7%88%B1%20(%E7%B2%A4%E8%AF%AD)%20%5Bqmms2%5D.mp3&category=audio&file_name=%E5%90%B4%E8%8B%A5%E5%B8%8C%20-%20%E8%B6%8A%E9%9A%BE%E8%B6%8A%E7%88%B1%20(%E7%B2%A4%E8%AF%AD)%20%5Bqmms2%5D.mp3&id=7DSSBM9H8T7XCYHM HTTP/1.1" 206 9515664 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:23:17.699Z [ERROR]: 传输中断:
+2025-06-04T06:23:20.468Z [INFO]: ::ffff:127.0.0.1 - - [04/Jun/2025:06:23:20 +0000] "GET /api/file?file_path=%2Fstorage%2Femulated%2F0%2FMusic%2FQQMusic%2F%E5%90%B4%E8%8B%A5%E5%B8%8C%20-%20%E8%B6%8A%E9%9A%BE%E8%B6%8A%E7%88%B1%20(%E7%B2%A4%E8%AF%AD)%20%5Bqmms2%5D.mp3&category=audio&file_name=%E5%90%B4%E8%8B%A5%E5%B8%8C%20-%20%E8%B6%8A%E9%9A%BE%E8%B6%8A%E7%88%B1%20(%E7%B2%A4%E8%AF%AD)%20%5Bqmms2%5D.mp3&id=7DSSBM9H8T7XCYHM HTTP/1.1" 206 9319056 "http://127.0.0.1:5001/index.html?id=7DSSBM9H8T7XCYHM" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+2025-06-04T06:23:20.469Z [ERROR]: 传输中断:

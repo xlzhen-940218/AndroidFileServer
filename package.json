@@ -1,0 +1,28 @@
+{
+  "name": "androidfileserver",
+  "version": "1.0.0",
+  "description": "## 🧩 项目简介 / Project Overview",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xlzhen-940218/AndroidFileServer.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xlzhen-940218/AndroidFileServer/issues"
+  },
+  "homepage": "https://github.com/xlzhen-940218/AndroidFileServer#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "mime-types": "^3.0.1",
+    "morgan": "^1.10.0",
+    "multer": "^2.0.1",
+    "uuid": "^11.1.0",
+    "winston": "^3.17.0"
+  }
+}
