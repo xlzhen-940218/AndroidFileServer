@@ -1,7 +1,3 @@
-以下是适用于你的项目 `Android文件管理器` 的中英文 `README.md` 示例，涵盖功能描述、技术栈和后续计划：
-
----
-
 # Android文件管理器 / Android File Manager
 
 ## 🧩 项目简介 / Project Overview
