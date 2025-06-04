@@ -4,137 +4,23 @@ from flask import Flask, render_template, request, jsonify, Response, make_respo
 import subprocess
 import re
 from functools import wraps
-
 from pathlib import Path
-
 from datetime import datetime
 import mimetypes
 import os
 from install_tools import install_adb, install_ffmpeg, verify_installation, install_all
 
-
-
-def parse_ls_output(ls_text,dir:str):
-    result = []
-    lines = ls_text.strip().split('\n')
-    
-    for line in lines:
-        # 改进后的正则表达式，处理额外的空格和新的用户/组格式
-        match = re.match(r'^([d-])([rwxst-]{9})\s+(\d+)\s+(\S+)\s+(\S+)\s+(\d+\.?\d*[KMG]?)\s+(\d{4}-\d{2}-\d{2})\s+(\d{2}:\d{2})\s+(.+)$', line)
-        if not match:
-            # 尝试备用模式处理大小字段前的空格
-            match = re.match(r'^([d-])([rwxst-]{9})\s+(\d+)\s+(\S+)\s+(\S+)\s+(\s*\d+\.?\d*[KMG]?)\s+(\d{4}-\d{2}-\d{2})\s+(\d{2}:\d{2})\s+(.+)$', line)
-            if not match:
-                continue
-        
-        # 解析匹配的组
-        entry_type = match.group(1)
-        permissions = match.group(2)
-        links = int(match.group(3))
-        owner = match.group(4)
-        group = match.group(5)
-        size_str = match.group(6).strip()  # 移除可能的前导空格
-        date_str = match.group(7)
-        time_str = match.group(8)
-        name = match.group(9)
-        
-        # 处理文件大小（支持小数和不同单位）
-        size_multiplier = 1
-        size_val = re.search(r'[\d.]+', size_str)
-        if size_val:
-            size_val = float(size_val.group(0))
-        else:
-            size_val = 0.0
-            
-        if 'K' in size_str.upper():
-            size_multiplier = 1024
-        elif 'M' in size_str.upper():
-            size_multiplier = 1024 * 1024
-        elif 'G' in size_str.upper():
-            size_multiplier = 1024 * 1024 * 1024
-        
-        size = int(size_val * size_multiplier)
-        
-        # 转换日期时间
-        try:
-            dt = datetime.strptime(f"{date_str} {time_str}", "%Y-%m-%d %H:%M")
-            timestamp = str(int(dt.timestamp()))
-        except ValueError:
-            timestamp = "0"
-        
-        # 确定MIME类型
-        if entry_type == 'd':
-            mime_type = 'inode/directory'
-        else:
-            mime_type, _ = mimetypes.guess_type(name)
-            if mime_type is None:
-                mime_type = 'application/octet-stream'
-        if not dir.endswith('/'):
-            dir = dir + '/'
-        # 构建结果对象
-        entry = {
-            "_data": dir + name,
-            "_display_name": name,
-            "_size": size,
-            "date_added": timestamp,
-            "mime_type": mime_type,
-            "path":dir
-        }
-        result.append(entry)
-    return result
-
-def generate_thumbnail(media_path: str) -> str:
-    """
-    为视频/图片生成缩略图，缓存到.cache_thumbnail目录
-    :param media_path: 媒体文件路径
-    :return: 缩略图路径（生成失败返回空字符串）
-    """
-    # 创建缓存目录
-    cache_dir = Path.cwd() / ".cache_thumbnail"
-    cache_dir.mkdir(exist_ok=True, parents=True)
-    
-    # 构建输出路径：原文件名 + _thumb.jpg
-    media_file = Path(media_path)
-    thumb_name = f"{media_file.stem}_thumb.jpg"
-    thumb_path = cache_dir / thumb_name
-    
-    # 如果缩略图已存在则直接返回
-    if thumb_path.exists():
-        return str(thumb_path)
-    
-    try:
-        # FFmpeg命令：缩放并裁剪（保持宽高比）
-        ffmpeg_cmd = [
-            'ffmpeg',
-            '-i', media_path,              # 输入文件
-            '-vf', 'scale=960:960:force_original_aspect_ratio=decrease',  # 缩放并居中裁剪
-            '-vframes', '1',               # 只处理1帧
-            '-y',                          # 覆盖已存在文件
-            '-loglevel', 'error',          # 仅显示错误信息
-            str(thumb_path)
-        ]
-        
-        # 执行命令（隐藏命令行窗口）
-        subprocess.run(ffmpeg_cmd, check=True)
-        
-        return str(thumb_path)
-    
-    except (subprocess.CalledProcessError, FileNotFoundError, Exception) as e:
-        print(f"缩略图生成失败: {e}")
-        return ""
-
-# 初始化Flask应用
-app = Flask(__name__)
-
-# 配置日志
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
-
 # 常量定义
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STORAGE_DIR = os.path.join(BASE_DIR, 'storage')
-PER_PAGE = 64  # 每页显示数量
-ADB_TIMEOUT = 30  # ADB命令超时时间(秒)
+PER_PAGE = 64
+ADB_TIMEOUT = 3000 # ADB命令超时时间，单位为秒 考虑到大视频传输问题
+LS_OUTPUT_REGEX = re.compile(
+    r'^([d-])([rwxst-]{9})\s+(\d+)\s+(\S+)\s+(\S+)\s+(\d+\.?\d*[KMG]?)\s+(\d{4}-\d{2}-\d{2})\s+(\d{2}:\d{2})\s+(.+)$'
+)
+LS_OUTPUT_ALT_REGEX = re.compile(
+    r'^([d-])([rwxst-]{9})\s+(\d+)\s+(\S+)\s+(\S+)\s+(\s*\d+\.?\d*[KMG]?)\s+(\d{4}-\d{2}-\d{2})\s+(\d{2}:\d{2})\s+(.+)$'
+)
 IMAGE_REGEX = re.compile(
     r"Row: \d+ _id=(?P<_id>[^,]+),\s+"
     r"_data=(?P<_data>[^,]+),\s+"
@@ -145,7 +31,6 @@ IMAGE_REGEX = re.compile(
     r"height=(?P<height>[^,]+),\s+"
     r"date_added=(?P<date_added>[^,]+)"
 )
-
 AUDIO_REGEX = re.compile(
     r"Row: \d+ _id=(?P<_id>[^,]+),\s+"
     r"_data=(?P<_data>[^,]+),\s+"
@@ -154,8 +39,6 @@ AUDIO_REGEX = re.compile(
     r"_display_name=(?P<_display_name>[^,]+),\s+"
     r"date_added=(?P<date_added>[^,]+)"
 )
-
-# MIME类型映射
 MIME_TYPES = {
     '.jpg': 'image/jpeg',
     '.jpeg': 'image/jpeg',
@@ -165,47 +48,112 @@ MIME_TYPES = {
     '.txt': 'text/plain',
     '.log': 'text/plain',
 }
+MEDIA_URIS = {
+    'image': 'content://media/external/images/media',
+    'video': 'content://media/external/video/media',
+    'audio': 'content://media/external/audio/media',
+    'file': 'content://media/external/file'
+}
+MEDIA_PROJECTIONS = {
+    'image': '_id:_data:mime_type:_size:_display_name:width:height:date_added',
+    'video': '_id:_data:mime_type:_size:_display_name:width:height:date_added',
+    'audio': '_id:_data:mime_type:_size:_display_name:date_added'
+}
+
+# 初始化Flask应用
+app = Flask(__name__)
+
+# 配置日志
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+def parse_ls_output(ls_text, dir_path: str):
+    """解析ls命令输出为结构化数据"""
+    result = []
+    dir_path = dir_path.rstrip('/') + '/'
+    
+    for line in ls_text.strip().split('\n'):
+        match = LS_OUTPUT_REGEX.match(line) or LS_OUTPUT_ALT_REGEX.match(line)
+        if not match:
+            continue
+        
+        # 提取匹配组
+        entry_type, permissions, links, owner, group, size_str, date_str, time_str, name = match.groups()
+        size_str = size_str.strip()
+        
+        # 转换文件大小
+        size_val = float(re.search(r'[\d.]+', size_str).group(0))
+        multipliers = {'K': 1024, 'M': 1024**2, 'G': 1024**3}
+        multiplier = next((v for k, v in multipliers.items() if k in size_str.upper()), 1)
+        size = int(size_val * multiplier)
+        
+        # 转换日期时间
+        try:
+            dt = datetime.strptime(f"{date_str} {time_str}", "%Y-%m-%d %H:%M")
+            timestamp = str(int(dt.timestamp()))
+        except ValueError:
+            timestamp = "0"
+        
+        # 确定MIME类型
+        mime_type = 'inode/directory' if entry_type == 'd' else mimetypes.guess_type(name)[0] or 'application/octet-stream'
+        
+        # 构建结果对象
+        result.append({
+            "_data": dir_path + name,
+            "_display_name": name,
+            "_size": size,
+            "date_added": timestamp,
+            "mime_type": mime_type,
+            "path": dir_path
+        })
+    
+    return result
+
+def generate_thumbnail(media_path: str) -> str:
+    """为媒体文件生成缩略图"""
+    cache_dir = Path.cwd() / ".cache_thumbnail"
+    cache_dir.mkdir(exist_ok=True, parents=True)
+    
+    media_file = Path(media_path)
+    thumb_path = cache_dir / f"{media_file.stem}_thumb.jpg"
+    
+    if thumb_path.exists():
+        return str(thumb_path)
+    
+    try:
+        subprocess.run([
+            'ffmpeg', '-i', media_path,
+            '-vf', 'scale=960:960:force_original_aspect_ratio=decrease',
+            '-vframes', '1', '-y', '-loglevel', 'error', str(thumb_path)
+        ], check=True)
+        return str(thumb_path)
+    except (subprocess.CalledProcessError, FileNotFoundError, Exception) as e:
+        logger.error(f"缩略图生成失败: {e}")
+        return ""
 
 def ensure_directory(path):
-    """确保目录存在，不存在则创建"""
+    """确保目录存在"""
     os.makedirs(path, exist_ok=True)
     logger.info(f"确保目录存在: {path}")
 
 def device_id_required(func):
-    """装饰器：验证请求中是否包含设备ID"""
+    """装饰器：验证设备ID"""
     @wraps(func)
     def wrapper(*args, **kwargs):
         device_id = request.args.get('id') or request.json.get('id')
         if not device_id:
             logger.warning("缺少设备ID参数")
             return jsonify({'error': 'Missing device ID'}), 400
-        return func(*args, **kwargs)
+        return func(*args, device_id=device_id, **kwargs)
     return wrapper
 
 def run_adb_command(command, device_id=None, timeout=ADB_TIMEOUT, capture_output=True):
-    """
-    执行ADB命令的通用函数
-    
-    参数:
-        command: ADB命令列表或字符串
-        device_id: 设备ID(可选)
-        timeout: 命令超时时间
-        capture_output: 是否捕获输出
-    
-    返回:
-        subprocess.CompletedProcess对象
-    """
-    # 构建基础命令
+    """执行ADB命令的通用函数"""
     base_cmd = ['adb']
     if device_id:
         base_cmd.extend(['-s', device_id])
     
-    # 处理命令格式
-    if isinstance(command, str):
-        full_cmd = base_cmd + command.split()
-    else:
-        full_cmd = base_cmd + command
-    
+    full_cmd = base_cmd + (command.split() if isinstance(command, str) else command)
     logger.info(f"执行ADB命令: {' '.join(full_cmd)}")
     
     try:
@@ -215,8 +163,8 @@ def run_adb_command(command, device_id=None, timeout=ADB_TIMEOUT, capture_output
             text=True,
             timeout=timeout,
             check=True,
-            encoding='utf-8',        # 指定 UTF-8 编码
-            errors='ignore'          # 忽略无法解码的字符（可选：'replace' 用占位符替代）
+            encoding='utf-8',
+            errors='ignore'
         )
     except subprocess.CalledProcessError as e:
         logger.error(f"ADB命令执行失败: {e.stderr}")
@@ -226,7 +174,7 @@ def run_adb_command(command, device_id=None, timeout=ADB_TIMEOUT, capture_output
         raise RuntimeError("ADB命令超时") from e
 
 def pull_file_from_device(device_id, remote_path, local_path):
-    """使用ADB从设备拉取文件到本地"""
+    """从设备拉取文件到本地"""
     try:
         result = run_adb_command(['pull', remote_path, local_path], device_id)
         logger.info(f"文件拉取成功: {remote_path} -> {local_path}")
@@ -236,31 +184,35 @@ def pull_file_from_device(device_id, remote_path, local_path):
         logger.error(error_msg)
         return False, error_msg
 
-def parse_adb_output(output,type='image'):
-    """解析adb命令输出的文本，转换为结构化数据"""
+def parse_adb_output(output, media_type='image'):
+    """解析adb命令输出的文本"""
     result = []
+    regex = IMAGE_REGEX if media_type in ('image', 'video') else AUDIO_REGEX
     
     for line in output.splitlines():
-        match = IMAGE_REGEX.match(line) if type == 'image' else AUDIO_REGEX.match(line)
-        if match:
-            try:
-                item = match.groupdict()
-                # 转换数值类型字段
-                if type == 'image':
-                    for key in ['_id', '_size', 'width', 'height']:
-                        item[key] = int(item[key])
-                else:
-                    for key in ['_id', '_size']:
-                        item[key] = int(item[key])
-                item['path'] = item['_data'][:item['_data'].rfind('/') + 1] # 提取路径
-                if item['_display_name'].__eq__('NULL'):
-                    item['_display_name'] = item['_data'].split('/')[-1]
-
-                result.append(item)
-            except (ValueError, TypeError) as e:
-                logger.warning(f"解析行失败: {line} - {str(e)}")
+        match = regex.match(line)
+        if not match:
+            continue
+        
+        try:
+            item = match.groupdict()
+            # 转换数值类型字段
+            int_fields = ['_id', '_size'] + (['width', 'height'] if media_type in ('image', 'video') else [])
+            for key in int_fields:
+                if key in item:
+                    item[key] = int(item[key])
+            
+            # 处理显示名称
+            if item['_display_name'] == 'NULL':
+                item['_display_name'] = item['_data'].split('/')[-1]
+            
+            # 添加路径信息
+            item['path'] = item['_data'][:item['_data'].rfind('/') + 1]
+            result.append(item)
+        except (ValueError, TypeError) as e:
+            logger.warning(f"解析行失败: {line} - {str(e)}")
     
-    logger.info(f"成功解析 {len(result)} 个图像条目")
+    logger.info(f"成功解析 {len(result)} 个条目")
     return result
 
 def get_mime_type(filename):
@@ -268,360 +220,176 @@ def get_mime_type(filename):
     _, ext = os.path.splitext(filename)
     return MIME_TYPES.get(ext.lower(), 'application/octet-stream')
 
+def download_or_get_local(device_id, category, file_path, file_name):
+    """下载文件或获取本地缓存路径"""
+    target_dir = os.path.join(STORAGE_DIR, device_id, category)
+    ensure_directory(target_dir)
+    
+    local_file = os.path.join(target_dir, file_name)
+    
+    if not os.path.exists(local_file):
+        success, message = pull_file_from_device(device_id, file_path, local_file)
+        if not success or not os.path.exists(local_file):
+            return None, message
+    
+    return local_file, ""
+
+def get_media_list(device_id, media_type):
+    """通用媒体获取函数"""
+    if media_type not in MEDIA_URIS:
+        raise ValueError(f"不支持的媒体类型: {media_type}")
+    
+    adb_command = [
+        'shell', 'content', 'query',
+        '--uri', MEDIA_URIS[media_type],
+        '--projection', MEDIA_PROJECTIONS.get(media_type, MEDIA_PROJECTIONS['audio'])
+    ]
+    
+    result = run_adb_command(adb_command, device_id)
+    return parse_adb_output(result.stdout, media_type)
+
+def handle_api_errors(func):
+    """API错误处理装饰器"""
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        try:
+            return func(*args, **kwargs)
+        except RuntimeError as e:
+            logger.error(f"ADB命令执行失败: {str(e)}")
+            return jsonify({"error": "ADB命令执行失败", "details": str(e)}), 500
+        except Exception as e:
+            logger.exception(f"{func.__name__} 发生意外错误")
+            return jsonify({"error": "服务器内部错误", "details": str(e)}), 500
+    return wrapper
+
 # 路由定义
 @app.route('/')
 def wait_connect():
-    """等待设备连接页面"""
     return render_template('device_connect.html')
 
 @app.route('/index.html')
 def home():
-    """首页"""
     return render_template('index.html')
 
 @app.route('/api/file', methods=['GET'])
 @device_id_required
-def get_file():
-    """
-    API: 获取设备文件
-    
-    参数:
-        file_path: 设备上的文件路径
-        category: 文件类别
-        file_name: 文件名
-        id: 设备ID
-    """
-    # 获取查询参数
+@handle_api_errors
+def get_file(device_id):
+    """API: 获取设备文件"""
     file_path = request.args.get('file_path')
     category = request.args.get('category')
     file_name = request.args.get('file_name')
-    device_id = request.args.get('id')
     
-    # 验证必要参数
     if not all([file_path, category, file_name]):
-        logger.warning("缺少必要参数: file_path, category, file_name")
-        return jsonify({
-            'error': 'Missing required parameters: file_path, category, file_name'
-        }), 400
+        return jsonify({'error': 'Missing required parameters'}), 400
     
-    # 创建目标目录
-    target_dir = os.path.join(STORAGE_DIR, device_id, category)
-    ensure_directory(target_dir)
+    local_file, error = download_or_get_local(device_id, category, file_path, file_name)
+    if not local_file:
+        return jsonify({'error': 'File transfer failed', 'details': error}), 500
     
-    # 构建本地文件路径
-    local_file = os.path.join(target_dir, file_name)
-    
-    # 如果文件不存在，尝试从设备拉取
-    if not os.path.exists(local_file):
-        success, message = pull_file_from_device(device_id, file_path, local_file)
-        if not success:
-            return jsonify({
-                'error': 'File transfer failed',
-                'details': message
-            }), 500
-            
-        # 再次验证是否拉取成功
-        if not os.path.exists(local_file):
-            return jsonify({
-                'error': 'File not found after transfer attempt',
-                'details': message
-            }), 404
-    
-    # 直接返回文件内容
     try:
-        return send_file(
-            local_file,
-            as_attachment=True
-    )
+        return send_file(local_file, as_attachment=True)
     except Exception as e:
         logger.error(f"发送文件失败: {str(e)}")
         return jsonify({'error': f'Failed to send file: {str(e)}'}), 500
-    
+
 @app.route('/api/thumbnail', methods=['GET'])
 @device_id_required
-def get_thumbnail():
-    """
-    API: 获取设备文件缩略图
-
-    参数:
-        file_path: 设备上的文件路径
-        category: 文件类别
-        file_name: 文件名
-        id: 设备ID
-    """
-    # 获取查询参数
+@handle_api_errors
+def get_thumbnail(device_id):
+    """API: 获取设备文件缩略图"""
     file_path = request.args.get('file_path')
     category = request.args.get('category')
     file_name = request.args.get('file_name')
-    device_id = request.args.get('id')
     
-    # 验证必要参数
     if not all([file_path, category, file_name]):
-        logger.warning("缺少必要参数: file_path, category, file_name")
-        return jsonify({
-            'error': 'Missing required parameters: file_path, category, file_name'
-        }), 400
+        return jsonify({'error': 'Missing required parameters'}), 400
     
-    # 创建目标目录
-    target_dir = os.path.join(STORAGE_DIR, device_id, category)
-    ensure_directory(target_dir)
+    local_file, error = download_or_get_local(device_id, category, file_path, file_name)
+    if not local_file:
+        return jsonify({'error': 'File transfer failed', 'details': error}), 500
     
-    # 构建本地文件路径
-    local_file = os.path.join(target_dir, file_name)
-    
-    # 如果文件不存在，尝试从设备拉取
-    if not os.path.exists(local_file):
-        success, message = pull_file_from_device(device_id, file_path, local_file)
-        if not success:
-            return jsonify({
-                'error': 'File transfer failed',
-                'details': message
-            }), 500
-            
-        # 再次验证是否拉取成功
-        if not os.path.exists(local_file):
-            return jsonify({
-                'error': 'File not found after transfer attempt',
-                'details': message
-            }), 404
-    
-    # 直接返回文件内容
     try:
-        mimetype = get_mime_type(file_name)
-        response = make_response(send_file(generate_thumbnail(local_file), mimetype=mimetype))
-        response.headers['Cache-Control'] = 'public, max-age=86400'  # 1天缓存
+        thumb_path = generate_thumbnail(local_file)
+        if not thumb_path:
+            return jsonify({'error': 'Thumbnail generation failed'}), 500
+            
+        response = make_response(send_file(thumb_path, mimetype='image/jpeg'))
+        response.headers['Cache-Control'] = 'public, max-age=86400'
         return response
     except Exception as e:
-        logger.error(f"发送文件失败: {str(e)}")
-        return jsonify({'error': f'Failed to send file: {str(e)}'}), 500
+        logger.error(f"发送缩略图失败: {str(e)}")
+        return jsonify({'error': f'Failed to send thumbnail: {str(e)}'}), 500
 
 @app.route('/api/get_images', methods=['GET'])
 @device_id_required
-def get_images():
-    """
-    API: 获取设备图像列表
-    
-    参数:
-        id: 设备ID
-    """
-    device_id = request.args.get('id')
-    
-    try:
-        # 构建ADB命令
-        adb_command = [
-            'shell', 'content', 'query',
-            '--uri', 'content://media/external/images/media',
-            '--projection', '_id:_data:mime_type:_size:_display_name:width:height:date_added'
-        ]
-        
-        # 执行命令
-        result = run_adb_command(adb_command, device_id)
-        
-        # 解析输出
-        image_data = parse_adb_output(result.stdout)
-        return jsonify(image_data)
-    
-    except RuntimeError as e:
-        return jsonify({
-            "error": "ADB命令执行失败",
-            "details": str(e)
-        }), 500
-    except Exception as e:
-        logger.exception("获取图像时发生意外错误")
-        return jsonify({
-            "error": "服务器内部错误",
-            "details": str(e)
-        }), 500
-    
+@handle_api_errors
+def get_images(device_id):
+    """API: 获取设备图像列表"""
+    return jsonify(get_media_list(device_id, 'image'))
+
 @app.route('/api/get_videos', methods=['GET'])
 @device_id_required
-def get_videos():
-    """
-    API: 获取设备视频列表
+@handle_api_errors
+def get_videos(device_id):
+    """API: 获取设备视频列表"""
+    return jsonify(get_media_list(device_id, 'video'))
 
-    参数:
-        id: 设备ID
-    """
-    device_id = request.args.get('id')
-    
-    try:
-        # 构建ADB命令
-        adb_command = [
-            'shell', 'content', 'query',
-            '--uri', 'content://media/external/video/media',
-            '--projection', '_id:_data:mime_type:_size:_display_name:width:height:date_added'
-        ]
-        
-        # 执行命令
-        result = run_adb_command(adb_command, device_id)
-        
-        # 解析输出
-        video_data = parse_adb_output(result.stdout)
-        return jsonify(video_data)
-
-    except RuntimeError as e:
-        return jsonify({
-            "error": "ADB命令执行失败",
-            "details": str(e)
-        }), 500
-    except Exception as e:
-        logger.exception("获取图像时发生意外错误")
-        return jsonify({
-            "error": "服务器内部错误",
-            "details": str(e)
-        }), 500
-    
 @app.route('/api/get_audios', methods=['GET'])
 @device_id_required
-def get_audios():
-    """
-    API: 获取设备音频列表
+@handle_api_errors
+def get_audios(device_id):
+    """API: 获取设备音频列表"""
+    return jsonify(get_media_list(device_id, 'audio'))
 
-    参数:
-        id: 设备ID
-    """
-    device_id = request.args.get('id')
-    
-    try:
-        # 构建ADB命令
-        adb_command = [
-            'shell', 'content', 'query',
-            '--uri', 'content://media/external/audio/media',
-            '--projection', '_id:_data:mime_type:_size:_display_name:date_added'
-        ]
-        
-        # 执行命令
-        result = run_adb_command(adb_command, device_id)
-        
-        # 解析输出
-        audio_data = parse_adb_output(result.stdout, type='audio')
-        return jsonify(audio_data)
-
-    except RuntimeError as e:
-        return jsonify({
-            "error": "ADB命令执行失败",
-            "details": str(e)
-        }), 500
-    except Exception as e:
-        logger.exception("获取音频时发生意外错误")
-        return jsonify({
-            "error": "服务器内部错误",
-            "details": str(e)
-        }), 500
-    
 @app.route('/api/get_documents', methods=['GET'])
 @device_id_required
-def get_documents():
-    """
-    API: 获取设备文档列表
-
-    参数:
-        id: 设备ID
-    """
-    device_id = request.args.get('id')
+@handle_api_errors
+def get_documents(device_id):
+    """API: 获取设备文档列表"""
     document_type = request.args.get('document_type', 'document')
+    suffix_map = {
+        'document': r"'\.(pdf|doc|docx|xls|xlsx|ppt|pptx|txt|odt|ods|odp)'",
+        'zip': r"'\.(zip|rar|7z|tar|gz)'",
+        'apk': r"'\.(apk)'"
+    }
     
-    # 验证必要参数
-    if not all([document_type]):
-        logger.warning("缺少必要参数: document_type")
-        return jsonify({
-            'error': 'Missing required parameters: document_type'
-        }), 400
+    if document_type not in suffix_map:
+        return jsonify({'error': 'Invalid document type'}), 400
     
-    try:
-        document_end_suffix = "'\\.(pdf|doc|docx|xls|xlsx|ppt|pptx|txt|odt|ods|odp)'"
-        if document_type == 'zip':
-            document_end_suffix = "'\\.(zip|rar|7z|tar|gz)'"
-        elif document_type == 'apk':
-            document_end_suffix = "'\\.(apk)'"
+    adb_command = [
+        'shell', f"content query --uri {MEDIA_URIS['file']} --projection {MEDIA_PROJECTIONS['audio']} | grep -E {suffix_map[document_type]}"
+    ]
+    
+    result = run_adb_command(adb_command, device_id)
+    document_data = parse_adb_output(result.stdout, media_type='document')
+    return jsonify(document_data)
 
-        # 构建ADB命令
-        adb_command = [
-            'shell', "content query --uri content://media/external/file --projection _id:_data:mime_type:_size:_display_name:date_added | grep -E "+ document_end_suffix
-        ]
-        
-        # 执行命令
-        result = run_adb_command(adb_command, device_id)
-        
-        # 解析输出
-        document_data = parse_adb_output(result.stdout, type='document')
-        return jsonify(document_data)
-
-    except RuntimeError as e:
-        return jsonify({
-            "error": "ADB命令执行失败",
-            "details": str(e)
-        }), 500
-    except Exception as e:
-        logger.exception("获取文档时发生意外错误")
-        return jsonify({
-            "error": "服务器内部错误",
-            "details": str(e)
-        }), 500
-    
 @app.route('/api/get_files', methods=['GET'])
 @device_id_required
-def get_files():
-    """
-    API: 获取设备文件列表
-
-    参数:
-        id: 设备ID
-    """
-    device_id = request.args.get('id')
-    path = request.args.get('path', '/sdcard/')
-    try:
-        # 构建ADB命令
-        adb_command = [
-            'shell', "ls", "-lh" ,f"'{path}'",
-        ]
-        
-        # 执行命令
-        result = run_adb_command(adb_command, device_id)
-        
-        # 解析输出
-        files_data = parse_ls_output(result.stdout, dir=path)
-        return jsonify(files_data)
-
-    except RuntimeError as e:
-        return jsonify({
-            "error": "ADB命令执行失败",
-            "details": str(e)
-        }), 500
-    except Exception as e:
-        logger.exception("获取文件时发生意外错误")
-        return jsonify({
-            "error": "服务器内部错误",
-            "details": str(e)
-        }), 500
+@handle_api_errors
+def get_files(device_id):
+    """API: 获取设备文件列表"""
+    path = request.args.get('path', '/sdcard/').rstrip('/') + '/'
+    adb_command = ['shell', "ls", "-lh", f"'{path}'"]
+    
+    result = run_adb_command(adb_command, device_id)
+    files_data = parse_ls_output(result.stdout, dir_path=path)
+    return jsonify(files_data)
 
 @app.route('/screenshot/<device_id>')
+@handle_api_errors
 def get_screenshot(device_id):
-    try:
-        # 构建 ADB 命令
-        command = f"adb -s {device_id} exec-out screencap -p"
-        
-        # 执行命令并捕获二进制输出
-        result = subprocess.run(
-            command.split(),
-            check=True,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            timeout=10  # 设置超时防止卡死
-        )
-        
-        # 返回二进制图像数据
-        return Response(
-            result.stdout,
-            mimetype='image/png'
-        )
-        
-    except subprocess.CalledProcessError as e:
-        return f"ADB Error: {e.stderr.decode('utf-8')}", 500
-    except subprocess.TimeoutExpired:
-        return "ADB command timed out", 504
-    except Exception as e:
-        return f"Unexpected error: {str(e)}", 500
+    """获取设备截图"""
+    command = f"adb -s {device_id} exec-out screencap -p"
+    result = subprocess.run(
+        command.split(),
+        check=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        timeout=10
+    )
+    return Response(result.stdout, mimetype='image/png')
 
 def get_device_name(device_id):
     """获取设备名称"""
@@ -629,119 +397,74 @@ def get_device_name(device_id):
     return result.stdout.strip()
 
 def get_storage_info(device_id):
-    """获取存储空间信息（单位：GB）"""
+    """获取存储空间信息"""
     result = run_adb_command('shell df /data', device_id)
     lines = result.stdout.strip().splitlines()
     
     if len(lines) < 2:
         raise ValueError("存储信息格式错误")
     
-    # 获取最后一行（数据行）
     parts = lines[-1].split()
     if len(parts) < 5:
         raise ValueError("存储信息格式错误")
     
-    # 转换为GB (1块 = 1KB)
+    # 转换为GB
     total_kb = int(parts[1])
     used_kb = int(parts[2])
-    available_kb = int(parts[3])
-    
-    # 转换为GB (1 GB = 1024*1024 KB)
     total_gb = round(total_kb / (1024 * 1024), 2)
     used_gb = round(used_kb / (1024 * 1024), 2)
-    available_gb = round(available_kb / (1024 * 1024), 2)
     
-    return {
-        "total": total_gb,
-        "used": used_gb,
-        "available": available_gb
-    }
+    return {"total": total_gb, "used": used_gb}
 
 def get_battery_level(device_id):
     """获取电池电量百分比"""
     result = run_adb_command('shell dumpsys battery', device_id)
-    
-    # 使用正则表达式匹配电量值
     match = re.search(r'level:\s*(\d+)', result.stdout)
-    if not match:
-        raise ValueError("未找到电池电量信息")
-    
-    return int(match.group(1))
+    return int(match.group(1)) if match else 0
 
 @app.route('/api/device_info', methods=['POST'])
 @device_id_required
-def get_device_info():
-    """
-    API: 获取设备信息
+@handle_api_errors
+def get_device_info(device_id):
+    """API: 获取设备信息"""
+    device_name = get_device_name(device_id)
+    storage_info = get_storage_info(device_id)
+    battery_level = get_battery_level(device_id)
     
-    参数(JSON):
-        id: 设备ID
-    """
-    device_id = request.json.get('id')
-    
-    try:
-        device_name = get_device_name(device_id)
-        storage_info = get_storage_info(device_id)
-        battery_level = get_battery_level(device_id)
-        
-        return jsonify({
-            'cover_img': f'/screenshot/{device_id}',
-            'phone_name': device_name,
-            'storage_total_size': storage_info["total"],
-            'storage_use_size': storage_info["used"],
-            'battery_use': battery_level
-        })
-    except Exception as e:
-        logger.error(f"获取设备信息失败: {str(e)}")
-        return jsonify({'error': str(e)}), 500
+    return jsonify({
+        'cover_img': f'/screenshot/{device_id}',
+        'phone_name': device_name,
+        'storage_total_size': storage_info["total"],
+        'storage_use_size': storage_info["used"],
+        'battery_use': battery_level
+    })
 
 def get_adb_devices():
     """获取已连接的ADB设备列表"""
     try:
         result = run_adb_command('devices', timeout=10)
-        output = result.stdout
-        
-        # 解析设备列表
-        devices = []
-        for line in output.splitlines()[1:]:  # 跳过标题行
-            if line.strip() and 'device' in line:
-                parts = line.split()
-                if len(parts) >= 2 and parts[1] == 'device':
-                    devices.append(parts[0])
-        
-        return {
-            'connected': bool(devices),
-            'devices': devices  # 返回所有设备列表
-        }
-    except Exception as e:
-        logger.error(f"获取ADB设备失败: {str(e)}")
+        devices = [
+            parts[0] for line in result.stdout.splitlines()[1:]
+            if (parts := line.split()) and len(parts) >= 2 and parts[1] == 'device'
+        ]
+        return {'connected': bool(devices), 'devices': devices}
+    except Exception:
         return {'connected': False, 'devices': []}
 
 @app.route('/api/get_device', methods=['GET'])
+@handle_api_errors
 def device_status():
     """API: 获取设备连接状态"""
     return jsonify(get_adb_devices())
 
 if __name__ == '__main__':
-
-    # 验证安装
-    success, version_info = verify_installation("adb")
-    print(f"ADB验证结果: {success}, 信息: {version_info}")
-
-    if not success:
-        # 单独安装ADB
-        success, message = install_adb()
-        print(f"ADB安装结果: {success}, 信息: {message}")
-
-    # 验证安装
-    success, version_info = verify_installation("ffmpeg")
-    print(f"FFmpeg验证结果: {success}, 信息: {version_info}")
-
-    if not success:
-        # 单独安装FFmpeg
-        success, message = install_ffmpeg()
-        print(f"FFmpeg安装结果: {success}, 信息: {message}")
-
+    # 验证和安装必要工具
+    for tool, installer in [('adb', install_adb), ('ffmpeg', install_ffmpeg)]:
+        success, info = verify_installation(tool)
+        logger.info(f"{tool}验证结果: {success}, 信息: {info}")
+        if not success:
+            success, message = installer()
+            logger.info(f"{tool}安装结果: {success}, 信息: {message}")
 
     ensure_directory(STORAGE_DIR)
     logger.info("应用启动，存储目录: %s", STORAGE_DIR)
