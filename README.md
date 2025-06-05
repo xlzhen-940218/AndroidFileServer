@@ -5,7 +5,8 @@
 **Android文件管理器** 是一个基于网页的安卓设备文件浏览和管理工具，前端使用 HTML 编写，后端使用 Python和Nodejs 实现。通过 ADB（Android Debug Bridge）与安卓设备通信，支持图像、音频、视频的缩略图和预览，借助 FFmpeg 生成媒体缩略图，提供简洁直观的文件管理界面。
 
 **Android File Manager** is a web-based file explorer and manager for Android devices. It uses HTML for the frontend and Python and Nodejs for the backend. The project connects to Android devices via ADB (Android Debug Bridge), provides previews for media files using FFmpeg, and offers a clean interface for managing files.
-![alt text](preview/3FD65107-850B-44ad-AA4D-AB4FF27FD1E3.png "preivew gui")
+![alt text](preview/4AF21A48-C30C-4d44-99EB-42AB2F7944A3.png "preivew gui 1")
+![alt text](preview/30118C61-2AD2-441a-9135-E73843E9445B.png "preivew gui 2")
 ---
 
 ## 🚀 当前功能 / Features
@@ -61,14 +62,31 @@
   ```
 2. **启动后端服务 Start the backend**
 
-  ***python start***
-  ```bash
-  python main.py
-  ```
-  ***or nodejs start***
-  ```bash
-  node main.js
-  ```
+    ***python start***
+    ```bash
+    python -m venv .venv
+    ```
+    ****win activate****
+    ```bash
+    .venv/Scripts/activate
+    ```
+    ****macos/linux activate****
+    ```bash
+    source .venv/bin/activate
+    ```
+    ```bash
+    pip install flask
+    ```
+    ```bash
+    python main.py
+    ```
+    ***or nodejs start***
+    ```bash
+    npm install
+    ```
+    ```bash
+    node main.js
+    ```
 3. **在浏览器访问 Open in browser**
 
   ```
